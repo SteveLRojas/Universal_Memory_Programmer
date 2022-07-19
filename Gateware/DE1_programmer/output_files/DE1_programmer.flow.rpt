@@ -1,0 +1,176 @@
+Flow report for DE1_programmer
+Mon Jul 18 12:57:24 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Mon Jul 18 12:57:24 2022           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; DE1_programmer                                  ;
+; Top-level Entity Name              ; DE1_programmer                                  ;
+; Family                             ; Cyclone II                                      ;
+; Device                             ; EP2C20F484C7                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 4,046 / 18,752 ( 22 % )                         ;
+;     Total combinational functions  ; 3,083 / 18,752 ( 16 % )                         ;
+;     Dedicated logic registers      ; 2,889 / 18,752 ( 15 % )                         ;
+; Total registers                    ; 2889                                            ;
+; Total pins                         ; 166 / 315 ( 53 % )                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 196,608 / 239,616 ( 82 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 07/18/2022 12:56:58 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; DE1_programmer      ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                      ;
++--------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 233497588670757.165817061701256 ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; testbench      ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                       ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl               ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog) ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; BRAM_8K.v                       ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; DE1_flash_controller.sv         ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; DE1_hex_driver.sv               ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; de1_programmer.mif              ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; DE1_PS2_driver.sv               ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; interrupt_controller.v          ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; IOMM16.v                        ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; keyboard.v                      ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; PLL0.v                          ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; BRAM_8K.qip                     ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; PLL0.ppf                        ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; PLL0.qip                        ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; serial.v                        ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; testbench.v                     ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; timer.v                         ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; Toplevel.v                      ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; UART.v                          ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; CPU/ALU.v                       ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; CPU/decode_unit.v               ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; CPU/hazard_unit.v               ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; CPU/NeonFox.v                   ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; CPU/PC.v                        ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; CPU/reg_file.v                  ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; sdr.sv                          ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; sdr_parameters.sv               ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; SDRAM_DP64_I.v                  ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; queue_8_8.sv                    ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; ps2_host.sv                     ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; button_debounce.sv              ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; riptide3_snake.mif              ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; IOMM64.sv                       ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_FILE                  ; DE1_SRAM_controller.sv          ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench                       ; --            ; --          ; testbench      ;
+; EDA_TEST_BENCH_NAME                  ; testbench                       ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 us                          ; --            ; --          ; testbench      ;
+; EDA_TIME_SCALE                       ; 1 ps                            ; --            ; --          ; eda_simulation ;
+; IP_TOOL_NAME                         ; ALTPLL                          ; --            ; --          ; --             ;
+; IP_TOOL_NAME                         ; RAM: 2-PORT                     ; --            ; --          ; --             ;
+; IP_TOOL_NAME                         ; RAM: 2-PORT                     ; --            ; --          ; --             ;
+; IP_TOOL_NAME                         ; ROM: 1-PORT                     ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                      ; 13.0                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                      ; 13.0                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                      ; 13.0                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                      ; 13.0                            ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; PLL0.ppf                        ; --            ; --          ; --             ;
+; MISC_FILE                            ; PRG_ROM_bb.v                    ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; 16764057                        ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                          ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                    ; --            ; --          ; --             ;
++--------------------------------------+---------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 4639 MB             ; 00:00:07                           ;
+; Fitter                    ; 00:00:11     ; 1.6                     ; 5791 MB             ; 00:00:19                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4584 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4668 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4578 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:31                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-SL2658E  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-SL2658E  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-SL2658E  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-SL2658E  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-SL2658E  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off DE1_programmer -c DE1_programmer
+quartus_fit --read_settings_files=off --write_settings_files=off DE1_programmer -c DE1_programmer
+quartus_asm --read_settings_files=off --write_settings_files=off DE1_programmer -c DE1_programmer
+quartus_sta DE1_programmer -c DE1_programmer
+quartus_eda --read_settings_files=off --write_settings_files=off DE1_programmer -c DE1_programmer
+
+
+

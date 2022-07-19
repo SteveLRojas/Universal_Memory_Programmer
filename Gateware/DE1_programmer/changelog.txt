@@ -1,0 +1,155 @@
+NeonFox Revision 1:
+Created quartus project (18.1).
+Initial cache and memory controller testing done separately.
+Fixed bug memory controller that caused banks to be activated immediately before refresh.
+Fixed bug in cache controller that caused a stall after reset and main memory initialization.
+Fixed bug in cache controller that caused first write (from main memory) to happen at the wrong address.
+Fixed bug in CPU decoder module that caused ADD instructions to be inserted instead of NOPs after reset or P miss.
+Fixed bug in CPU decoder module that caused the first instruction after a P miss to be executed twice. This bug may be present in RIPTIDE 2 and 3.
+Fixed bug in CPU PC module that caused incorrect address tracking after P miss. This bug may be present in RIPTIDE 2 and 3.
+Fixed bug in CPU PC module that caused incorrect branch targets if P miss happens on cycle following a branch is taken. This bug may be present in RIPTIDE 2 and 3.
+Fixed bug in CPU PC module that caused branch target to be executed twice if a branch is taken during P miss. This bug may be present in RIPTIDE 2 and 3.
+
+Revision 2:
+Optimized out cache LRU memory.
+Updated MSC to support new cache controller.
+Removed hex display registers in top level and used MSC page registers to drive hex displays and LEDs (paging not used).
+Replaced MC6847_gen3 with MC6847_gen4 and updated VGA module for HDMI output.
+Fixed bug in MC6847_gen4 module. The fix was copied from the MC6847_gen3 module from the RIPTIDE-III project.
+Fixed bug in NeonFox (Missing hazard detection for CALL or JMP after writing CAH or CAL).
+Fixed bug in hex display driver (seg_sel was inverted).
+Fixed bug in register file (independent forwarding for high and low bytes).
+Fixed bug in ALU (LIM H was not working).
+Fixed bug in PC (Missing some branch hazard checks for CALL and JMP).
+Fixed multiple bugs in memory controller, some performance issues still need to be fixed (activate bank before IO machine becomes idle).
+Fixed bug in PC module (A_next_I need to be stopped by hazard).
+Fixed bug in hazard unit (D miss does not stop the CPU).
+Fixed bug in SDRAM controller (precharge timer cleared wrong flag).
+Fixed bug in SDRAM controller (timing issue with burst offset counters in IO state machine).
+Fixed bug in cache controller (incorrect mem_wren output).
+Fixed bug in register file (wrong DIO timing).
+Fixed bug in SDRAM controller (Timing issue in memory writes).
+
+Revision 3:
+Fixed bug in cache controller (issue with write hits).
+Fixed bug in XenonGecko (Update high nibble of bg_shift).
+Fixed bug in XenonGecko (issue with attribute shift registers).
+Fixed bug in XenonGecko (timing issue with next_row_base).
+Fixed bug in XenonGecko (timing issue with swap_pattern and swap_attribute).
+Fixed bug in xgmm (use next attribute buffer for pattern fetching when next_line_pair is zero).
+Created xgri module.
+Created queue_16_16 module.
+Created queue_16_4 module.
+
+Revision 4:
+Added xgri interface to xgmm.
+Instantiated xgri in XenonGecko.
+Changed graphics data address range.
+Connected XenonGecko CPU interface in NeonFox_PVP.
+Fixed bug in NeonFox (some modules were using IO_wren and data_wren instead of IO_wren0 and data_wren0).
+Fixed bug in PC module (instructions executed twice when p_cache miss happens during hazard).
+Disconnected pc_stall signal from decoder. pc_stall is now unused.
+Cleaned project files.
+Split CPU into multiple files.
+Created folder for CPU files.
+
+Revision 5:
+Added missing default case in cache_8K_2S module. Quartus does not generate a warning for this even though it is in an always_comb block...
+Split always block in call_stack.
+Found possible bug in call stack (internal processing of push is stopped when module is not enabled). This can unexpectedly increase the latency of the module.
+Added hsync and vsync outputs to XenonGecko.
+Fixed bug in PC module (instructions skipped when hazard happens during p_cache miss).
+Fixed A_miss update logic in PC module.
+Fixed p_miss_override logic in PC module.
+Added jmp_rst output to PC module.
+Added jmp_rst input to decoder module.
+Added brx_rst input to decoder module.
+Separated reset logic for each branch type in the decoder. This is needed to prevent branches from being taken multiple times during pipeline stalls.
+
+Revision 6:
+Added hold logic for branch signals in NeonFox. This is needed to ensure that the decoder is reset one cycle after a branch even if a hazard was present during the branch.
+Fixed bug in PC p_miss_override logic.
+Added flush input to decoder (needed to reset only the output stage of the decoder).
+Added decoder flush output to hazard unit.
+Created extend_flush signal in NeonFox (needed to reset the decoder when more than 2 instructions after a branch have been fetched).
+	I'm not 100% sure this logic is correct, maybe p_miss_override should be used instead (I have not found a case where using p_miss_override would have a different result). 
+Added decoder_flush_inhibit output to PC module (needed to prevent the decoder from being flushed when only one instruction after a branch is fetched).
+Fixed auto increment logic in XGRI module. The CPU no longer has to write data in bursts, data can be written whenever the buffers are not completely full.
+Created XenonGecko_gen2.
+Created xgmm_gen2.
+Created xgri_gen2.
+Implemented horizontal fine scrolling (in XenonGecko_gen2).
+Implemented horizontal coarse scrolling.
+Implemented vertical fine scrolling.
+Implemented vertical coarse scrolling.
+
+Revision 7:
+Optimized vesa line and col logic in XenonGecko.
+Fixed bug in PC module (created delay_p_miss to correctly determine if the instruction after the last branch was fetched).
+Added busy flag to XGRI status register.
+Added busy flag to serial module status register.
+Fixed bug in PC module (added backtrack_enable to catch single cycle hazard edge cases).
+Fixed bug in XenonGecko_gen2 (shift registers should be enabled by active_draw_area).
+Fixed bug in PC module (A_next_I should be driven by prg_address).
+Fixed bug in PC module (separated logic for return address from A_next_I).
+Fixed bug in NeonFox (restructured decoder reset and flush logic, added separate input and output flush controls).
+Fixed bug in decoder (address_select, data_select, and IO_select signals are now reset by output_flush).
+	Not resetting these signals can cause forwarding logic to forward invalid data.
+Fixed bug in PC module (changed priority for A_miss logic).
+Restructured decoder into multiple block with separate reset logic.
+Fixed bug in decode_unit (prev_hazard should also depend on prev_p_cache miss and should be cleared on the falling edge of hazard).
+	This signal should be renamed, prev_hazard is misleading.
+Removed unnecessary logic for A_current_I from PC module. This logic had been present since the first revision of NeonFox but was not present in RIPTIDE-III.
+
+Revision 8:
+Fixed bug in XenonGecko (next_row_base should only be updated when scrolled_line % 8 = 7).
+Fixed bug in XenonGecko (setting next_row_base at line 511 should have priority over wraparound).
+Fixed bug in XenonGecko (changed timing of pattern and attribute prefetch, moved force_next_buff logic out of xgmm and added logic to handle prefetch edge cases).
+Made changes in NeonFox to fully support interrupts.
+Initial interrupt testing and debugging.
+Fixed bug in PC module (interrupt overrides p cache miss).
+Fixed bug in PC module (interrupt prevents PC backtracking).
+
+Revision 9:
+Created new ISE project (version 14.7)
+Copied source files from NeonFox_SDRAM project revision 9.
+Removed both cache controllers.
+Removed SDRAM controller.
+Removed PRG ROM.
+Removed MSC module.
+Removed all graphics related modules.
+Converted all SystemVerilog source files to Verilog.
+Created Nexys2_PS2_driver module.
+Created Nexys2_hex_driver module.
+Created IOMM module.
+Created Nexys2_flash_controller module.
+Created main memory module (BRAM).
+Created PLL module.
+Instantiated new modules and cleaned up top level.
+Created constraints file.
+Created testbench.
+Fixed bug in NeonFox core (branch hazard signal needs to be considered for pc_jmp_hold and pc_call_hold).
+Renamed jmp_rst signal to take_jmp.
+Merged pc_jmp1 and pc_call1 into take_jmp1.
+Merged pc_jmp_hold and pc_call_hold into take_jmp_hold.
+
+Revision 10:
+Found bug in decoder module (prev_hazard and prev_p_cache_miss should not be affected by input_flush).
+Fixed bugs in flash controller.
+Fixed bug in IOMM.
+
+Revision 11:
+Created new Quartus project (13.0)
+Copied source files from NeonFox_SDRAM project revision 9 and Nexys2_programmer revision 10.
+Updated DE1_ps2_driver.
+Updated DE1_flash_controller.
+Created main memory module (BRAM).
+Created PLL module.
+Created constraints file.
+Created DE1_SRAM_controller module.
+Added SDRAM_DP64_I module from RIPTIDE-III_SDRAM project revision 12.
+Added IOMM64 module from DragonBoard_programmer_V12 project revision 12.
+Added button_debounce module.
+Updated interrupt_controller module from DragonBoard programmer_V12 project revision 12.
+Updated ps2_host module from RIPTIDE-III_DragonBoard_V12 project revision 12.
+Updated SDC file.

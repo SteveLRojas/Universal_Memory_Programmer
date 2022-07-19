@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Jul 10 15:32:29 2022
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : DragonBoard_programmer
+Top-level Entity Name : DragonBoard_programmer
+Family : Cyclone IV E
+Total logic elements : 4,881
+    Total combinational functions : 2,972
+    Dedicated logic registers : 2,881
+Total registers : 2881
+Total pins : 47
+Total virtual pins : 0
+Total memory bits : 196,608
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

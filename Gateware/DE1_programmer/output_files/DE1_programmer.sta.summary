@@ -1,0 +1,125 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'PLL_inst|altpll_component|pll|clk[1]'
+Slack : 4.933
+TNS   : 0.000
+
+Type  : Slow Model Setup 'mem_clk'
+Slack : 13.832
+TNS   : 0.000
+
+Type  : Slow Model Setup 'PLL_inst|altpll_component|pll|clk[0]'
+Slack : 18.450
+TNS   : 0.000
+
+Type  : Slow Model Hold 'PLL_inst|altpll_component|pll|clk[0]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'PLL_inst|altpll_component|pll|clk[1]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'mem_clk'
+Slack : 2.616
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'PLL_inst|altpll_component|pll|clk[1]'
+Slack : 13.231
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'PLL_inst|altpll_component|pll|clk[0]'
+Slack : 35.985
+TNS   : 0.000
+
+Type  : Slow Model Removal 'PLL_inst|altpll_component|pll|clk[0]'
+Slack : 3.767
+TNS   : 0.000
+
+Type  : Slow Model Removal 'PLL_inst|altpll_component|pll|clk[1]'
+Slack : 3.767
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'PLL_inst|altpll_component|pll|clk[1]'
+Slack : 7.436
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'PLL_inst|altpll_component|pll|clk[2]'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'mem_clk'
+Slack : 14.118
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'PLL_inst|altpll_component|pll|clk[0]'
+Slack : 18.889
+TNS   : 0.000
+
+Type  : Fast Model Setup 'PLL_inst|altpll_component|pll|clk[1]'
+Slack : 10.038
+TNS   : 0.000
+
+Type  : Fast Model Setup 'mem_clk'
+Slack : 16.015
+TNS   : 0.000
+
+Type  : Fast Model Setup 'PLL_inst|altpll_component|pll|clk[0]'
+Slack : 19.387
+TNS   : 0.000
+
+Type  : Fast Model Hold 'PLL_inst|altpll_component|pll|clk[0]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'PLL_inst|altpll_component|pll|clk[1]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'mem_clk'
+Slack : 1.094
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'PLL_inst|altpll_component|pll|clk[1]'
+Slack : 16.674
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'PLL_inst|altpll_component|pll|clk[0]'
+Slack : 37.770
+TNS   : 0.000
+
+Type  : Fast Model Removal 'PLL_inst|altpll_component|pll|clk[0]'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast Model Removal 'PLL_inst|altpll_component|pll|clk[1]'
+Slack : 2.111
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'PLL_inst|altpll_component|pll|clk[1]'
+Slack : 7.873
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'PLL_inst|altpll_component|pll|clk[2]'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'mem_clk'
+Slack : 15.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'PLL_inst|altpll_component|pll|clk[0]'
+Slack : 19.000
+TNS   : 0.000
+
+------------------------------------------------------------

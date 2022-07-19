@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at I2C_phy.sv(61): always construct contains both blocking and non-blocking assignments File: C:/Users/Steve/Workspace/I2C_NeonFox_programmer/I2C_phy.sv Line: 61

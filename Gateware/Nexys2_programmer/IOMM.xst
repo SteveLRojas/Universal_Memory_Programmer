@@ -1,0 +1,5 @@
+set -tmpdir "/home/ise/VM_share/Nexys2_programmer/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/VM_share/Nexys2_programmer/xst"
+elaborate
+-ifn IOMM.prj
+-ifmt mixed

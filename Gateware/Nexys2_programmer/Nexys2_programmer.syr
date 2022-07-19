@@ -1,0 +1,1498 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: Nexys2_programmer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Nexys2_programmer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Nexys2_programmer"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Nexys2_programmer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "UART.v" in library work
+Compiling verilog file "queue_8_8.v" in library work
+Module <UART> compiled
+Compiling verilog file "ps2_host.v" in library work
+Module <queue_8_8> compiled
+Compiling verilog file "CPU/reg_file.v" in library work
+Module <ps2_host> compiled
+Compiling verilog file "CPU/PC.v" in library work
+Module <reg_file> compiled
+Module <PC> compiled
+Compiling verilog file "CPU/hazard_unit.v" in library work
+Module <call_stack> compiled
+Compiling verilog file "CPU/decode_unit.v" in library work
+Module <hazard_unit> compiled
+Compiling verilog file "CPU/ALU.v" in library work
+Module <decode_unit> compiled
+Compiling verilog file "timer.v" in library work
+Module <ALU> compiled
+Compiling verilog file "serial.v" in library work
+Module <timer> compiled
+Compiling verilog file "Nexys2_PS2_driver.v" in library work
+Module <serial> compiled
+Compiling verilog file "Nexys2_memory_controller.v" in library work
+Module <Nexys2_PS2_driver> compiled
+Compiling verilog file "Nexys2_hex_driver.v" in library work
+Module <Nexys2_memory_controller> compiled
+Module <Nexys2_hex_driver> compiled
+Module <hexdriver> compiled
+Compiling verilog file "keyboard.v" in library work
+Module <frame_clk> compiled
+Compiling verilog file "PLL0.v" in library work
+Module <keyboard> compiled
+Compiling verilog file "ipcore_dir/BRAM_16K.v" in library work
+Module <PLL0> compiled
+Compiling verilog file "IOMM16.v" in library work
+Module <BRAM_16K> compiled
+Compiling verilog file "interrupt_controller.v" in library work
+Module <IOMM> compiled
+Compiling verilog file "CPU/NeonFox.v" in library work
+Module <interrupt_controller> compiled
+Compiling verilog file "button_debounce.v" in library work
+Module <NeonFox> compiled
+Compiling verilog file "Toplevel.v" in library work
+Module <button_debounce> compiled
+Module <Nexys2_programmer> compiled
+No errors in compilation
+Analysis of file <"Nexys2_programmer.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Nexys2_programmer> in library <work>.
+
+Analyzing hierarchy for module <PLL0> in library <work>.
+
+Analyzing hierarchy for module <Nexys2_hex_driver> in library <work>.
+
+Analyzing hierarchy for module <button_debounce> in library <work>.
+
+Analyzing hierarchy for module <serial> in library <work>.
+
+Analyzing hierarchy for module <keyboard> in library <work>.
+
+Analyzing hierarchy for module <Nexys2_PS2_driver> in library <work>.
+
+Analyzing hierarchy for module <timer> in library <work>.
+
+Analyzing hierarchy for module <interrupt_controller> in library <work>.
+
+Analyzing hierarchy for module <IOMM> in library <work>.
+
+Analyzing hierarchy for module <Nexys2_memory_controller> in library <work> with parameters.
+	FLASH_CYCLES_DEACTIVATE = "00000000001"
+	FLASH_CYCLES_PAGE = "00000000100"
+	FLASH_CYCLES_RECOVER = "00000000000"
+	FLASH_CYCLES_RELEASE = "00000001011"
+	FLASH_CYCLES_RESET = "10011100010"
+	FLASH_CYCLES_WORD = "00000000001"
+	FLASH_CYCLES_WRITE = "00000000011"
+	PSRAM_CYCLES_DEACTIVATE = "00000000000"
+	PSRAM_CYCLES_READ = "00000000100"
+	PSRAM_CYCLES_WRITE = "00000000100"
+	S_FLASH_DEAC = "0110"
+	S_FLASH_IDLE = "0011"
+	S_FLASH_READ = "0100"
+	S_FLASH_RELEASE = "0010"
+	S_FLASH_RESET = "0001"
+	S_FLASH_WRITE = "0101"
+	S_INIT = "0000"
+	S_PSRAM_DEAC = "1010"
+	S_PSRAM_IDLE = "0111"
+	S_PSRAM_READ = "1000"
+	S_PSRAM_WRITE = "1001"
+
+Analyzing hierarchy for module <NeonFox> in library <work>.
+
+Analyzing hierarchy for module <hexdriver> in library <work>.
+
+Analyzing hierarchy for module <frame_clk> in library <work>.
+
+Analyzing hierarchy for module <queue_8_8> in library <work>.
+
+Analyzing hierarchy for module <UART> in library <work>.
+
+Analyzing hierarchy for module <ps2_host> in library <work>.
+
+Analyzing hierarchy for module <reg_file> in library <work>.
+
+Analyzing hierarchy for module <ALU> in library <work>.
+
+Analyzing hierarchy for module <PC> in library <work>.
+
+Analyzing hierarchy for module <decode_unit> in library <work> with parameters.
+	ALU_ADD = "0000"
+	ALU_ADDC = "1000"
+	ALU_AND = "0100"
+	ALU_BITT = "1111"
+	ALU_MOVE = "0010"
+	ALU_NOP = "0111"
+	ALU_NOT = "1010"
+	ALU_OR = "0110"
+	ALU_ROL = "1011"
+	ALU_ROR = "0011"
+	ALU_SUB = "0001"
+	ALU_SUBC = "1001"
+	ALU_XOR = "0101"
+
+Analyzing hierarchy for module <hazard_unit> in library <work>.
+
+Analyzing hierarchy for module <call_stack> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Nexys2_programmer>.
+WARNING:Xst:2211 - "ipcore_dir/BRAM_16K.v" line 190: Instantiating black box module <BRAM_16K>.
+Module <Nexys2_programmer> is correct for synthesis.
+ 
+Analyzing module <PLL0> in library <work>.
+Module <PLL0> is correct for synthesis.
+ 
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <PLL0>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <PLL0>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <PLL0>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <PLL0>.
+    Set user-defined property "CLKDV_DIVIDE =  2.000000" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "CLKIN_PERIOD =  20.000000" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <PLL0>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <PLL0>.
+Analyzing module <Nexys2_hex_driver> in library <work>.
+Module <Nexys2_hex_driver> is correct for synthesis.
+ 
+Analyzing module <hexdriver> in library <work>.
+Module <hexdriver> is correct for synthesis.
+ 
+Analyzing module <frame_clk> in library <work>.
+Module <frame_clk> is correct for synthesis.
+ 
+Analyzing module <button_debounce> in library <work>.
+Module <button_debounce> is correct for synthesis.
+ 
+Analyzing module <serial> in library <work>.
+Module <serial> is correct for synthesis.
+ 
+Analyzing module <queue_8_8> in library <work>.
+Module <queue_8_8> is correct for synthesis.
+ 
+WARNING:Xst:37 - Detected unknown constraint/property "ramstyle". This constraint/property is not supported by the current software release and will be ignored.
+Analyzing module <UART> in library <work>.
+Module <UART> is correct for synthesis.
+ 
+Analyzing module <keyboard> in library <work>.
+Module <keyboard> is correct for synthesis.
+ 
+Analyzing module <ps2_host> in library <work>.
+Module <ps2_host> is correct for synthesis.
+ 
+Analyzing module <Nexys2_PS2_driver> in library <work>.
+Module <Nexys2_PS2_driver> is correct for synthesis.
+ 
+Analyzing module <timer> in library <work>.
+Module <timer> is correct for synthesis.
+ 
+Analyzing module <interrupt_controller> in library <work>.
+Module <interrupt_controller> is correct for synthesis.
+ 
+Analyzing module <IOMM> in library <work>.
+Module <IOMM> is correct for synthesis.
+ 
+Analyzing module <Nexys2_memory_controller> in library <work>.
+	FLASH_CYCLES_DEACTIVATE = 11'b00000000001
+	FLASH_CYCLES_PAGE = 11'b00000000100
+	FLASH_CYCLES_RECOVER = 11'b00000000000
+	FLASH_CYCLES_RELEASE = 11'b00000001011
+	FLASH_CYCLES_RESET = 11'b10011100010
+	FLASH_CYCLES_WORD = 11'b00000000001
+	FLASH_CYCLES_WRITE = 11'b00000000011
+	PSRAM_CYCLES_DEACTIVATE = 11'b00000000000
+	PSRAM_CYCLES_READ = 11'b00000000100
+	PSRAM_CYCLES_WRITE = 11'b00000000100
+	S_FLASH_DEAC = 4'b0110
+	S_FLASH_IDLE = 4'b0011
+	S_FLASH_READ = 4'b0100
+	S_FLASH_RELEASE = 4'b0010
+	S_FLASH_RESET = 4'b0001
+	S_FLASH_WRITE = 4'b0101
+	S_INIT = 4'b0000
+	S_PSRAM_DEAC = 4'b1010
+	S_PSRAM_IDLE = 4'b0111
+	S_PSRAM_READ = 4'b1000
+	S_PSRAM_WRITE = 4'b1001
+Module <Nexys2_memory_controller> is correct for synthesis.
+ 
+Analyzing module <NeonFox> in library <work>.
+Module <NeonFox> is correct for synthesis.
+ 
+Analyzing module <reg_file> in library <work>.
+Module <reg_file> is correct for synthesis.
+ 
+Analyzing module <ALU> in library <work>.
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <PC> in library <work>.
+Module <PC> is correct for synthesis.
+ 
+Analyzing module <call_stack> in library <work>.
+Module <call_stack> is correct for synthesis.
+ 
+WARNING:Xst:37 - Detected unknown constraint/property "ramstyle". This constraint/property is not supported by the current software release and will be ignored.
+Analyzing module <decode_unit> in library <work>.
+	ALU_ADD = 4'b0000
+	ALU_ADDC = 4'b1000
+	ALU_AND = 4'b0100
+	ALU_BITT = 4'b1111
+	ALU_MOVE = 4'b0010
+	ALU_NOP = 4'b0111
+	ALU_NOT = 4'b1010
+	ALU_OR = 4'b0110
+	ALU_ROL = 4'b1011
+	ALU_ROR = 4'b0011
+	ALU_SUB = 4'b0001
+	ALU_SUBC = 4'b1001
+	ALU_XOR = 4'b0101
+Module <decode_unit> is correct for synthesis.
+ 
+Analyzing module <hazard_unit> in library <work>.
+Module <hazard_unit> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <button_debounce>.
+    Related source file is "button_debounce.v".
+    Found 4-bit register for signal <button_out>.
+    Found 4-bit updown counter for signal <button_0_count>.
+    Found 4-bit updown counter for signal <button_1_count>.
+    Found 4-bit updown counter for signal <button_2_count>.
+    Found 4-bit updown counter for signal <button_3_count>.
+    Found 4-bit register for signal <button_s>.
+    Found 16-bit up counter for signal <clk_div>.
+    Summary:
+	inferred   5 Counter(s).
+	inferred   8 D-type flip-flop(s).
+Unit <button_debounce> synthesized.
+
+
+Synthesizing Unit <Nexys2_PS2_driver>.
+    Related source file is "Nexys2_PS2_driver.v".
+    Found 1-bit tristate buffer for signal <ps2_clk>.
+    Found 1-bit tristate buffer for signal <ps2_data>.
+    Found 1-bit register for signal <ps2_data_d>.
+    Found 1-bit register for signal <ps2_clk_d>.
+    Found 1-bit register for signal <ps2_clk_q_s>.
+    Found 1-bit register for signal <ps2_data_q_s>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   2 Tristate(s).
+Unit <Nexys2_PS2_driver> synthesized.
+
+
+Synthesizing Unit <timer>.
+    Related source file is "timer.v".
+    Found 8-bit register for signal <to_cpu>.
+    Found 24-bit subtractor for signal <$sub0000> created at line 33.
+    Found 1-bit register for signal <count_active>.
+    Found 24-bit register for signal <counter>.
+    Found 8-bit 4-to-1 multiplexer for signal <to_cpu$mux0000> created at line 56.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 Multiplexer(s).
+Unit <timer> synthesized.
+
+
+Synthesizing Unit <interrupt_controller>.
+    Related source file is "interrupt_controller.v".
+    Found 4-bit register for signal <int_addr>.
+    Found 16-bit register for signal <to_cpu>.
+    Found 1-bit register for signal <int_rq>.
+    Found 16-bit register for signal <control>.
+    Found 16-bit register for signal <prev_in>.
+    Found 16-bit register for signal <status>.
+    Found 4-bit down counter for signal <timer>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  69 D-type flip-flop(s).
+Unit <interrupt_controller> synthesized.
+
+
+Synthesizing Unit <IOMM>.
+    Related source file is "IOMM16.v".
+    Found 16-bit register for signal <to_CPU>.
+    Found 1-bit register for signal <read_active>.
+    Found 16-bit register for signal <read_address_high>.
+    Found 16-bit register for signal <read_address_low>.
+    Found 16-bit register for signal <read_data>.
+    Found 16-bit register for signal <read_increment>.
+    Found 1-bit register for signal <read_ready>.
+    Found 1-bit register for signal <write_active>.
+    Found 16-bit register for signal <write_address_high>.
+    Found 16-bit register for signal <write_address_low>.
+    Found 16-bit register for signal <write_data>.
+    Found 16-bit register for signal <write_increment>.
+    Found 1-bit register for signal <write_ready>.
+    Summary:
+	inferred 148 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <IOMM> synthesized.
+
+
+Synthesizing Unit <Nexys2_memory_controller>.
+    Related source file is "Nexys2_memory_controller.v".
+WARNING:Xst:646 - Signal <flash_prev_addr<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 32                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 13                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 23-bit register for signal <shared_a>.
+    Found 1-bit register for signal <shared_oe_n>.
+    Found 16-bit tristate buffer for signal <shared_d>.
+    Found 16-bit register for signal <p2_from_mem>.
+    Found 1-bit register for signal <flash_ce_n>.
+    Found 1-bit register for signal <shared_we_n>.
+    Found 1-bit register for signal <psram_ce_n>.
+    Found 16-bit register for signal <p1_from_mem>.
+    Found 1-bit register for signal <p2_ready>.
+    Found 1-bit register for signal <p1_ready>.
+    Found 1-bit register for signal <psram_adv_n>.
+    Found 1-bit register for signal <flash_reset_n>.
+    Found 23-bit register for signal <flash_prev_addr>.
+    Found 1-bit register for signal <flash_prev_addr_valid>.
+    Found 1-bit register for signal <flash_sts_s>.
+    Found 1-bit register for signal <p1_req_flag>.
+    Found 1-bit register for signal <p2_req_flag>.
+    Found 1-bit xor2 for signal <page_miss$xor0000> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0001> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0002> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0003> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0004> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0005> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0006> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0007> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0008> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0009> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0010> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0011> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0012> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0013> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0014> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0015> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0016> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0017> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0018> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0019> created at line 74.
+    Found 1-bit xor2 for signal <page_miss$xor0020> created at line 74.
+    Found 1-bit register for signal <prev_p1_req>.
+    Found 1-bit register for signal <prev_p2_req>.
+    Found 11-bit register for signal <shared_cycle>.
+    Found 11-bit subtractor for signal <shared_cycle$share0000> created at line 120.
+    Found 16-bit register for signal <shared_data>.
+    Found 1-bit register for signal <shared_gate_out>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 120 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 Tristate(s).
+Unit <Nexys2_memory_controller> synthesized.
+
+
+Synthesizing Unit <hexdriver>.
+    Related source file is "Nexys2_hex_driver.v".
+    Found 16x7-bit ROM for signal <Out$mux0000> created at line 77.
+    Found 7-bit register for signal <Out>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   7 D-type flip-flop(s).
+Unit <hexdriver> synthesized.
+
+
+Synthesizing Unit <frame_clk>.
+    Related source file is "Nexys2_hex_driver.v".
+    Found 18-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <frame_clk> synthesized.
+
+
+Synthesizing Unit <queue_8_8>.
+    Related source file is "queue_8_8.v".
+    Found 8x8-bit dual-port RAM <Mram_queue_mem> for signal <queue_mem>.
+    Found 1-bit xor2 for signal <addr_comp$xor0000> created at line 17.
+    Found 1-bit xor2 for signal <addr_comp$xor0001> created at line 17.
+    Found 1-bit xor2 for signal <addr_comp$xor0002> created at line 17.
+    Found 1-bit xor2 for signal <full$xor0000> created at line 20.
+    Found 4-bit up counter for signal <read_addr>.
+    Found 4-bit up counter for signal <write_addr>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Counter(s).
+Unit <queue_8_8> synthesized.
+
+
+Synthesizing Unit <UART>.
+    Related source file is "UART.v".
+    Found 1-bit register for signal <tx_ready>.
+    Found 8-bit register for signal <rx_data>.
+    Found 1-bit register for signal <rx_ready>.
+    Found 1-bit register for signal <prev_tx_req>.
+    Found 1-bit register for signal <rx_active>.
+    Found 10-bit register for signal <rx_frame>.
+    Found 1-bit register for signal <rx_s>.
+    Found 9-bit up counter for signal <rx_timer>.
+    Found 1-bit register for signal <tx_active>.
+    Found 10-bit register for signal <tx_frame>.
+    Found 9-bit up counter for signal <tx_timer>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  34 D-type flip-flop(s).
+Unit <UART> synthesized.
+
+
+Synthesizing Unit <ps2_host>.
+    Related source file is "ps2_host.v".
+    Found 1-bit register for signal <tx_ready>.
+    Found 8-bit register for signal <rx_data>.
+    Found 1-bit register for signal <ps2_data_q>.
+    Found 1-bit register for signal <rx_ready>.
+    Found 1-bit register for signal <ps2_clk_q>.
+    Found 1-bit register for signal <prev_ps2_clk>.
+    Found 1-bit register for signal <prev_tx_last>.
+    Found 1-bit register for signal <prev_tx_req>.
+    Found 1-bit register for signal <ps2_clk_s>.
+    Found 1-bit register for signal <ps2_data_s>.
+    Found 1-bit register for signal <rx_inhibit>.
+    Found 12-bit register for signal <rx_shift_reg>.
+    Found 13-bit down counter for signal <timer>.
+    Found 1-bit register for signal <tx_done>.
+    Found 10-bit register for signal <tx_shift_reg>.
+    Found 1-bit xor8 for signal <tx_shift_reg$xor0000>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  41 D-type flip-flop(s).
+	inferred   1 Xor(s).
+Unit <ps2_host> synthesized.
+
+
+Synthesizing Unit <reg_file>.
+    Related source file is "CPU/reg_file.v".
+    Found 16-bit register for signal <a_reg>.
+    Found 5-bit comparator equal for signal <ah_forward0$cmp_eq0000> created at line 63.
+    Found 5-bit comparator equal for signal <ah_forward1$cmp_eq0000> created at line 65.
+    Found 16-bit register for signal <aux0>.
+    Found 16-bit register for signal <aux1>.
+    Found 16-bit register for signal <aux2>.
+    Found 16-bit register for signal <aux3>.
+    Found 16-bit register for signal <cah>.
+    Found 16-bit register for signal <cal>.
+    Found 16-bit register for signal <dah>.
+    Found 16-bit register for signal <dal>.
+    Found 1-bit register for signal <dio_read>.
+    Found 16-bit register for signal <ial>.
+    Found 5-bit register for signal <prev_a_address>.
+    Found 1-bit register for signal <prev_h_en>.
+    Found 1-bit register for signal <prev_l_en>.
+    Found 5-bit register for signal <prev_w_address>.
+    Found 16-bit register for signal <prev_w_data>.
+    Found 1-bit register for signal <prev_wren>.
+    Found 16-bit register for signal <r0>.
+    Found 16-bit register for signal <r1>.
+    Found 16-bit register for signal <r10>.
+    Found 16-bit register for signal <r11>.
+    Found 16-bit register for signal <r12>.
+    Found 16-bit register for signal <r13>.
+    Found 16-bit register for signal <r14>.
+    Found 16-bit register for signal <r15>.
+    Found 16-bit register for signal <r2>.
+    Found 16-bit register for signal <r3>.
+    Found 16-bit register for signal <r4>.
+    Found 16-bit register for signal <r5>.
+    Found 16-bit register for signal <r6>.
+    Found 16-bit register for signal <r7>.
+    Found 16-bit register for signal <r8>.
+    Found 16-bit register for signal <r9>.
+    Found 16-bit register for signal <rah>.
+    Found 16-bit register for signal <ral>.
+    Summary:
+	inferred 478 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <reg_file> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "CPU/ALU.v".
+    Found 1-bit register for signal <c>.
+    Found 1-bit register for signal <n>.
+    Found 1-bit register for signal <p>.
+    Found 1-bit register for signal <z>.
+    Found 16-bit register for signal <alu_out>.
+    Found 17-bit adder for signal <add_result>.
+    Found 16-bit adder carry out for signal <add_result$addsub0001> created at line 22.
+    Found 16-bit xor2 for signal <add_result$xor0000> created at line 22.
+    Found 16-bit 8-to-1 multiplexer for signal <alu_result>.
+    Found 16-bit xor2 for signal <alu_result$xor0000> created at line 34.
+    Found 16-bit xor2 for signal <alu_result$xor0001> created at line 31.
+    Found 16-bit shifter logical left for signal <bit_sel>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <decode_unit>.
+    Related source file is "CPU/decode_unit.v".
+    Found 1-bit register for signal <regf_wren>.
+    Found 5-bit register for signal <src_raddr>.
+    Found 1-bit register for signal <H_en>.
+    Found 1-bit register for signal <data_ren>.
+    Found 1-bit register for signal <IO_ren>.
+    Found 1-bit register for signal <pc_brxt>.
+    Found 1-bit register for signal <pc_call>.
+    Found 1-bit register for signal <status_ren>.
+    Found 4-bit register for signal <alu_op>.
+    Found 10-bit register for signal <I_field>.
+    Found 5-bit register for signal <dest_waddr>.
+    Found 1-bit register for signal <pc_ret>.
+    Found 1-bit register for signal <L_en>.
+    Found 1-bit register for signal <IO_select>.
+    Found 1-bit register for signal <data_select>.
+    Found 1-bit register for signal <pc_jmp>.
+    Found 1-bit register for signal <address_select>.
+    Found 1-bit register for signal <data_wren>.
+    Found 1-bit register for signal <IO_wren>.
+    Found 1-bit register for signal <pc_brx>.
+    Found 16-bit register for signal <I_alternate>.
+    Found 16-bit register for signal <I_reg>.
+    Found 1-bit register for signal <prev_hazard>.
+    Found 1-bit register for signal <prev_p_cache_miss>.
+    Summary:
+	inferred  74 D-type flip-flop(s).
+Unit <decode_unit> synthesized.
+
+
+Synthesizing Unit <hazard_unit>.
+    Related source file is "CPU/hazard_unit.v".
+Unit <hazard_unit> synthesized.
+
+
+Synthesizing Unit <call_stack>.
+    Related source file is "CPU/PC.v".
+    Found 16x32-bit single-port RAM <Mram_stack_mem> for signal <stack_mem>.
+    Found 4-bit up accumulator for signal <address>.
+    Found 32-bit register for signal <input_buf>.
+    Found 32-bit register for signal <output_buf>.
+    Found 1-bit register for signal <prev_push>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Accumulator(s).
+	inferred  65 D-type flip-flop(s).
+Unit <call_stack> synthesized.
+
+
+Synthesizing Unit <PLL0>.
+    Related source file is "PLL0.v".
+Unit <PLL0> synthesized.
+
+
+Synthesizing Unit <Nexys2_hex_driver>.
+    Related source file is "Nexys2_hex_driver.v".
+    Found 4-bit register for signal <seg_sel>.
+    Found 8-bit register for signal <hex_out>.
+    Found 4-bit register for signal <dp_s>.
+    Found 8-bit 4-to-1 multiplexer for signal <hex_out$mux0000> created at line 61.
+    Found 4-bit register for signal <seg0_s>.
+    Found 4-bit register for signal <seg1_s>.
+    Found 4-bit register for signal <seg2_s>.
+    Found 4-bit register for signal <seg3_s>.
+    Found 1-of-4 decoder for signal <seg_sel$mux0000> created at line 54.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <Nexys2_hex_driver> synthesized.
+
+
+Synthesizing Unit <serial>.
+    Related source file is "serial.v".
+    Found 8-bit register for signal <to_CPU>.
+    Found 1-bit register for signal <busy>.
+    Found 1-bit register for signal <rx_overwrite>.
+    Found 1-bit register for signal <tx_active>.
+    Found 1-bit register for signal <tx_overwrite>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <serial> synthesized.
+
+
+Synthesizing Unit <keyboard>.
+    Related source file is "keyboard.v".
+    Found 8-bit register for signal <to_CPU>.
+    Found 1-bit register for signal <rx_overwrite>.
+    Found 1-bit register for signal <tx_active>.
+    Found 1-bit register for signal <tx_overwrite>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <keyboard> synthesized.
+
+
+Synthesizing Unit <PC>.
+    Related source file is "CPU/PC.v".
+    Register <pc_hazard1> equivalent to <decoder_prev_hazard> has been removed
+    Found 32-bit register for signal <A_current_I>.
+    Found 32-bit 4-to-1 multiplexer for signal <A_current_I$mux0000>.
+    Found 32-bit register for signal <A_current_I_alternate>.
+    Found 32-bit register for signal <A_miss>.
+    Found 32-bit register for signal <A_miss_next>.
+    Found 32-bit register for signal <A_next_I>.
+    Found 32-bit register for signal <A_pipe0>.
+    Found 32-bit register for signal <A_return>.
+    Found 1-bit register for signal <backtrack_enable>.
+    Found 1-bit register for signal <decoder_prev_hazard>.
+    Found 1-bit register for signal <delay_p_miss>.
+    Found 1-bit register for signal <p_miss>.
+    Found 1-bit register for signal <p_miss_override>.
+    Found 1-bit register for signal <pc_hazard2>.
+    Found 32-bit register for signal <PC_reg>.
+    Found 32-bit adder for signal <PC_reg$addsub0000>.
+    Found 1-bit register for signal <prev_branch_taken>.
+    Found 1-bit register for signal <prev_delay_p_miss>.
+    Found 1-bit register for signal <prev_interrupt>.
+    Found 1-bit register for signal <prev_p_miss>.
+    Found 1-bit xor2 for signal <take_brx$xor0000> created at line 55.
+    Summary:
+	inferred 266 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <PC> synthesized.
+
+
+Synthesizing Unit <NeonFox>.
+    Related source file is "CPU/NeonFox.v".
+    Found 1-bit register for signal <address_select1>.
+    Found 1-bit register for signal <address_select2>.
+    Found 4-bit register for signal <alu_op1>.
+    Found 1-bit register for signal <data_select1>.
+    Found 1-bit register for signal <data_select2>.
+    Found 1-bit register for signal <data_wren1>.
+    Found 1-bit register for signal <data_wren2>.
+    Found 5-bit register for signal <dest_waddr1>.
+    Found 5-bit register for signal <dest_waddr2>.
+    Found 16-bit register for signal <DIO_in>.
+    Found 1-bit register for signal <extend_flush>.
+    Found 1-bit register for signal <H_en1>.
+    Found 1-bit register for signal <H_en2>.
+    Found 8-bit register for signal <I_field1>.
+    Found 1-bit register for signal <interrupt>.
+    Found 1-bit register for signal <IO_select1>.
+    Found 1-bit register for signal <IO_select2>.
+    Found 1-bit register for signal <IO_wren1>.
+    Found 1-bit register for signal <IO_wren2>.
+    Found 1-bit register for signal <L_en1>.
+    Found 1-bit register for signal <L_en2>.
+    Found 1-bit register for signal <pc_ret1>.
+    Found 1-bit register for signal <pc_ret_hold>.
+    Found 1-bit register for signal <prev_int_rq>.
+    Found 1-bit register for signal <prev_interrupt>.
+    Found 1-bit register for signal <regf_wren1>.
+    Found 1-bit register for signal <regf_wren2>.
+    Found 1-bit register for signal <reset_hold>.
+    Found 1-bit register for signal <set_cc>.
+    Found 1-bit register for signal <take_brx1>.
+    Found 1-bit register for signal <take_brx_hold>.
+    Found 1-bit register for signal <take_jmp1>.
+    Found 1-bit register for signal <take_jmp_hold>.
+    Summary:
+	inferred  62 D-type flip-flop(s).
+Unit <NeonFox> synthesized.
+
+
+Synthesizing Unit <Nexys2_programmer>.
+    Related source file is "Toplevel.v".
+WARNING:Xst:646 - Signal <prg_address<31:14>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <p2_address<31:23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <p1_address<31:23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <data_address<31:14>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16-bit register for signal <hex_indicators>.
+    Found 12-bit register for signal <led_indicators>.
+    Found 1-bit register for signal <prev_intcon_en>.
+    Found 1-bit register for signal <prev_iomm0_en>.
+    Found 1-bit register for signal <prev_iomm1_en>.
+    Found 1-bit register for signal <prev_keyboard_en>.
+    Found 1-bit register for signal <prev_serial_en>.
+    Found 1-bit register for signal <prev_timer_en>.
+    Found 1-bit register for signal <rst>.
+    Found 1-bit register for signal <rst_s>.
+    Found 2-bit register for signal <switch_s>.
+    Summary:
+	inferred  38 D-type flip-flop(s).
+Unit <Nexys2_programmer> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x32-bit single-port RAM                             : 1
+ 8x8-bit dual-port RAM                                 : 4
+# ROMs                                                 : 4
+ 16x7-bit ROM                                          : 4
+# Adders/Subtractors                                   : 9
+ 11-bit subtractor                                     : 1
+ 16-bit adder carry out                                : 1
+ 17-bit adder                                          : 1
+ 24-bit subtractor                                     : 1
+ 32-bit adder                                          : 5
+# Counters                                             : 18
+ 13-bit down counter                                   : 1
+ 16-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
+ 4-bit down counter                                    : 1
+ 4-bit up counter                                      : 8
+ 4-bit updown counter                                  : 4
+ 9-bit up counter                                      : 2
+# Accumulators                                         : 1
+ 4-bit up accumulator                                  : 1
+# Registers                                            : 901
+ 1-bit register                                        : 838
+ 10-bit register                                       : 4
+ 11-bit register                                       : 1
+ 12-bit register                                       : 1
+ 16-bit register                                       : 17
+ 2-bit register                                        : 1
+ 23-bit register                                       : 2
+ 32-bit register                                       : 10
+ 4-bit register                                        : 10
+ 5-bit register                                        : 6
+ 7-bit register                                        : 4
+ 8-bit register                                        : 7
+# Comparators                                          : 2
+ 5-bit comparator equal                                : 2
+# Multiplexers                                         : 4
+ 16-bit 8-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 32-bit shifter logical left                           : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Tristates                                            : 3
+ 1-bit tristate buffer                                 : 2
+ 16-bit tristate buffer                                : 1
+# Xors                                                 : 42
+ 1-bit xor2                                            : 38
+ 1-bit xor8                                            : 1
+ 16-bit xor2                                           : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <memory_controller_inst/state/FSM> on signal <state[1:11]> with one-hot encoding.
+----------------------
+ State | Encoding
+----------------------
+ 0000  | 00000000001
+ 0001  | 00000000010
+ 0010  | 00000000100
+ 0011  | 00000001000
+ 0100  | 00000100000
+ 0101  | 00000010000
+ 0110  | 00001000000
+ 0111  | 10000000000
+ 1000  | 00100000000
+ 1001  | 00010000000
+ 1010  | 01000000000
+----------------------
+Reading core <ipcore_dir/BRAM_16K.ngc>.
+Loading core <BRAM_16K> for timing and area information for instance <main_mem>.
+INFO:Xst:2261 - The FF/Latch <I_field_5> in Unit <decoder_inst> is equivalent to the following FF/Latch, which will be removed : <src_raddr_0> 
+INFO:Xst:2261 - The FF/Latch <I_field_6> in Unit <decoder_inst> is equivalent to the following FF/Latch, which will be removed : <src_raddr_1> 
+INFO:Xst:2261 - The FF/Latch <I_field_7> in Unit <decoder_inst> is equivalent to the following FF/Latch, which will be removed : <src_raddr_2> 
+INFO:Xst:2261 - The FF/Latch <I_field_8> in Unit <decoder_inst> is equivalent to the following FF/Latch, which will be removed : <src_raddr_3> 
+INFO:Xst:2261 - The FF/Latch <I_field_9> in Unit <decoder_inst> is equivalent to the following FF/Latch, which will be removed : <src_raddr_4> 
+WARNING:Xst:1710 - FF/Latch <p_miss> (without init value) has a constant value of 0 in block <PC_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <prev_p_cache_miss> (without init value) has a constant value of 0 in block <decoder_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_p_miss> (without init value) has a constant value of 0 in block <PC_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <prev_p_miss> (without init value) has a constant value of 0 in block <PC_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <prev_delay_p_miss> (without init value) has a constant value of 0 in block <PC_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <prev_in_1> of sequential type is unconnected in block <intcon_inst>.
+WARNING:Xst:2677 - Node <prev_in_2> of sequential type is unconnected in block <intcon_inst>.
+WARNING:Xst:2677 - Node <prev_in_4> of sequential type is unconnected in block <intcon_inst>.
+WARNING:Xst:2677 - Node <prev_in_5> of sequential type is unconnected in block <intcon_inst>.
+WARNING:Xst:2677 - Node <prev_in_8> of sequential type is unconnected in block <intcon_inst>.
+WARNING:Xst:2677 - Node <prev_in_9> of sequential type is unconnected in block <intcon_inst>.
+WARNING:Xst:2677 - Node <prev_in_11> of sequential type is unconnected in block <intcon_inst>.
+WARNING:Xst:2677 - Node <prev_in_12> of sequential type is unconnected in block <intcon_inst>.
+WARNING:Xst:2677 - Node <prev_in_13> of sequential type is unconnected in block <intcon_inst>.
+WARNING:Xst:2677 - Node <flash_prev_addr_0> of sequential type is unconnected in block <memory_controller_inst>.
+WARNING:Xst:2677 - Node <flash_prev_addr_1> of sequential type is unconnected in block <memory_controller_inst>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pc_hazard2> is unconnected in block <PC_inst>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <backtrack_enable> is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <prev_interrupt> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <p_miss_override> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_0> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_1> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_2> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_3> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_4> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_5> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_6> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_7> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_8> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_9> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_10> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_11> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_12> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_13> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_14> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_15> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_16> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_17> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_18> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_19> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_20> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_21> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_22> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_23> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_24> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_25> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_26> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_27> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_28> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_29> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_30> of sequential type is unconnected in block <PC_inst>.
+WARNING:Xst:2677 - Node <A_miss_31> of sequential type is unconnected in block <PC_inst>.
+
+Synthesizing (advanced) Unit <call_stack>.
+INFO:Xst:3231 - The small RAM <Mram_stack_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <prev_push>     | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <input_buf>     |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <call_stack> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hexdriver>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_Out_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <hexdriver> synthesized (advanced).
+
+Synthesizing (advanced) Unit <queue_8_8>.
+INFO:Xst:3231 - The small RAM <Mram_queue_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <push_0>        | high     |
+    |     addrA          | connected to signal <write_addr>    |          |
+    |     diA            | connected to signal <din>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     addrB          | connected to signal <read_addr>     |          |
+    |     doB            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3217 - HDL ADVISOR - Register <to_CPU> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_queue_mem> for implementation on block RAM resources if you made this reset synchronous instead.
+Unit <queue_8_8> synthesized (advanced).
+WARNING:Xst:2677 - Node <prev_in_1> of sequential type is unconnected in block <interrupt_controller>.
+WARNING:Xst:2677 - Node <prev_in_2> of sequential type is unconnected in block <interrupt_controller>.
+WARNING:Xst:2677 - Node <prev_in_4> of sequential type is unconnected in block <interrupt_controller>.
+WARNING:Xst:2677 - Node <prev_in_5> of sequential type is unconnected in block <interrupt_controller>.
+WARNING:Xst:2677 - Node <prev_in_8> of sequential type is unconnected in block <interrupt_controller>.
+WARNING:Xst:2677 - Node <prev_in_9> of sequential type is unconnected in block <interrupt_controller>.
+WARNING:Xst:2677 - Node <prev_in_11> of sequential type is unconnected in block <interrupt_controller>.
+WARNING:Xst:2677 - Node <prev_in_12> of sequential type is unconnected in block <interrupt_controller>.
+WARNING:Xst:2677 - Node <prev_in_13> of sequential type is unconnected in block <interrupt_controller>.
+WARNING:Xst:2677 - Node <flash_prev_addr_0> of sequential type is unconnected in block <Nexys2_memory_controller>.
+WARNING:Xst:2677 - Node <flash_prev_addr_1> of sequential type is unconnected in block <Nexys2_memory_controller>.
+WARNING:Xst:2677 - Node <tx_frame_0> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <tx_frame_9> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <tx_frame_sliced1_-1> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <tx_frame_sliced1_0> of sequential type is unconnected in block <UART>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 5
+ 16x32-bit single-port distributed RAM                 : 1
+ 8x8-bit dual-port distributed RAM                     : 4
+# ROMs                                                 : 4
+ 16x7-bit ROM                                          : 4
+# Adders/Subtractors                                   : 9
+ 11-bit subtractor                                     : 1
+ 16-bit adder carry out                                : 1
+ 17-bit adder                                          : 1
+ 24-bit subtractor                                     : 1
+ 32-bit adder                                          : 5
+# Counters                                             : 18
+ 13-bit down counter                                   : 1
+ 16-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
+ 4-bit down counter                                    : 1
+ 4-bit up counter                                      : 8
+ 4-bit updown counter                                  : 4
+ 9-bit up counter                                      : 2
+# Accumulators                                         : 1
+ 4-bit up accumulator                                  : 1
+# Registers                                            : 1684
+ Flip-Flops                                            : 1684
+# Comparators                                          : 2
+ 5-bit comparator equal                                : 2
+# Multiplexers                                         : 35
+ 1-bit 4-to-1 multiplexer                              : 32
+ 16-bit 8-to-1 multiplexer                             : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 32-bit shifter logical left                           : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Xors                                                 : 42
+ 1-bit xor2                                            : 38
+ 1-bit xor8                                            : 1
+ 16-bit xor2                                           : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <prev_p_cache_miss> (without init value) has a constant value of 0 in block <decode_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <p_miss> (without init value) has a constant value of 0 in block <PC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_p_miss> (without init value) has a constant value of 0 in block <PC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <prev_p_miss> (without init value) has a constant value of 0 in block <PC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <prev_delay_p_miss> (without init value) has a constant value of 0 in block <PC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <pc_hazard2> is unconnected in block <PC>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <backtrack_enable> is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <prev_interrupt> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <p_miss_override> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_0> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_1> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_2> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_3> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_4> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_5> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_6> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_7> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_8> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_9> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_10> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_11> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_12> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_13> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_14> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_15> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_16> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_17> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_18> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_19> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_20> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_21> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_22> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_23> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_24> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_25> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_26> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_27> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_28> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_29> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_30> of sequential type is unconnected in block <PC>.
+WARNING:Xst:2677 - Node <A_miss_31> of sequential type is unconnected in block <PC>.
+INFO:Xst:2261 - The FF/Latch <I_field_5> in Unit <decode_unit> is equivalent to the following FF/Latch, which will be removed : <src_raddr_0> 
+INFO:Xst:2261 - The FF/Latch <I_field_6> in Unit <decode_unit> is equivalent to the following FF/Latch, which will be removed : <src_raddr_1> 
+INFO:Xst:2261 - The FF/Latch <I_field_7> in Unit <decode_unit> is equivalent to the following FF/Latch, which will be removed : <src_raddr_2> 
+INFO:Xst:2261 - The FF/Latch <I_field_8> in Unit <decode_unit> is equivalent to the following FF/Latch, which will be removed : <src_raddr_3> 
+INFO:Xst:2261 - The FF/Latch <I_field_9> in Unit <decode_unit> is equivalent to the following FF/Latch, which will be removed : <src_raddr_4> 
+WARNING:Xst:1710 - FF/Latch <status_1> (without init value) has a constant value of 0 in block <interrupt_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_2> (without init value) has a constant value of 0 in block <interrupt_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_4> (without init value) has a constant value of 0 in block <interrupt_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_5> (without init value) has a constant value of 0 in block <interrupt_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_8> (without init value) has a constant value of 0 in block <interrupt_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_9> (without init value) has a constant value of 0 in block <interrupt_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_11> (without init value) has a constant value of 0 in block <interrupt_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_12> (without init value) has a constant value of 0 in block <interrupt_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <status_13> (without init value) has a constant value of 0 in block <interrupt_controller>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Nexys2_programmer> ...
+
+Optimizing unit <button_debounce> ...
+
+Optimizing unit <timer> ...
+
+Optimizing unit <interrupt_controller> ...
+
+Optimizing unit <IOMM> ...
+
+Optimizing unit <hexdriver> ...
+
+Optimizing unit <queue_8_8> ...
+
+Optimizing unit <UART> ...
+
+Optimizing unit <ps2_host> ...
+
+Optimizing unit <reg_file> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <decode_unit> ...
+
+Optimizing unit <call_stack> ...
+
+Optimizing unit <Nexys2_hex_driver> ...
+
+Optimizing unit <serial> ...
+
+Optimizing unit <keyboard> ...
+
+Optimizing unit <PC> ...
+
+Optimizing unit <NeonFox> ...
+WARNING:Xst:2677 - Node <IOMM_inst1/read_address_high_7> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/read_address_high_8> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/read_address_high_9> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/read_address_high_10> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/read_address_high_11> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/read_address_high_12> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/read_address_high_13> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/read_address_high_14> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/read_address_high_15> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/write_address_high_7> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/write_address_high_8> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/write_address_high_9> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/write_address_high_10> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/write_address_high_11> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/write_address_high_12> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/write_address_high_13> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/write_address_high_14> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst1/write_address_high_15> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/read_address_high_7> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/read_address_high_8> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/read_address_high_9> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/read_address_high_10> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/read_address_high_11> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/read_address_high_12> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/read_address_high_13> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/read_address_high_14> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/read_address_high_15> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/write_address_high_7> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/write_address_high_8> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/write_address_high_9> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/write_address_high_10> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/write_address_high_11> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/write_address_high_12> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/write_address_high_13> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/write_address_high_14> of sequential type is unconnected in block <Nexys2_programmer>.
+WARNING:Xst:2677 - Node <IOMM_inst0/write_address_high_15> of sequential type is unconnected in block <Nexys2_programmer>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <CPU_inst/reg_file_inst/prev_a_address_0> in Unit <Nexys2_programmer> is equivalent to the following FF/Latch, which will be removed : <CPU_inst/I_field1_5> 
+INFO:Xst:2261 - The FF/Latch <CPU_inst/reg_file_inst/prev_a_address_1> in Unit <Nexys2_programmer> is equivalent to the following FF/Latch, which will be removed : <CPU_inst/I_field1_6> 
+INFO:Xst:2261 - The FF/Latch <CPU_inst/reg_file_inst/prev_a_address_2> in Unit <Nexys2_programmer> is equivalent to the following FF/Latch, which will be removed : <CPU_inst/I_field1_7> 
+Found area constraint ratio of 100 (+ 5) on block Nexys2_programmer, actual ratio is 34.
+FlipFlop CPU_inst/dest_waddr2_1 has been replicated 1 time(s)
+FlipFlop CPU_inst/dest_waddr2_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <Nexys2_programmer> :
+	Found 3-bit shift register for signal <rst>.
+	Found 2-bit shift register for signal <keyboard_inst/ps2_host_inst/ps2_clk_s>.
+	Found 2-bit shift register for signal <keyboard_inst/ps2_host_inst/ps2_data_s>.
+	Found 2-bit shift register for signal <CPU_inst/dest_waddr2_4>.
+	Found 2-bit shift register for signal <CPU_inst/dest_waddr2_3>.
+	Found 2-bit shift register for signal <CPU_inst/dest_waddr2_0>.
+Unit <Nexys2_programmer> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1711
+ Flip-Flops                                            : 1711
+# Shift Registers                                      : 6
+ 2-bit shift register                                  : 5
+ 3-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Nexys2_programmer.ngr
+Top Level Output File Name         : Nexys2_programmer
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 81
+
+Cell Usage :
+# BELS                             : 3172
+#      GND                         : 2
+#      INV                         : 74
+#      LUT1                        : 95
+#      LUT2                        : 169
+#      LUT2_D                      : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 659
+#      LUT3_D                      : 14
+#      LUT3_L                      : 10
+#      LUT4                        : 1146
+#      LUT4_D                      : 27
+#      LUT4_L                      : 28
+#      MULT_AND                    : 30
+#      MUXCY                       : 463
+#      MUXF5                       : 176
+#      MUXF6                       : 34
+#      VCC                         : 2
+#      XORCY                       : 240
+# FlipFlops/Latches                : 1723
+#      FD                          : 274
+#      FDC                         : 149
+#      FDCE                        : 450
+#      FDE                         : 616
+#      FDP                         : 5
+#      FDR                         : 21
+#      FDRE                        : 125
+#      FDRS                        : 12
+#      FDRSE                       : 4
+#      FDS                         : 29
+#      FDSE                        : 38
+# RAMS                             : 79
+#      RAM16X1D                    : 32
+#      RAM16X1S                    : 32
+#      RAMB16_S1_S1                : 7
+#      RAMB16_S9_S9                : 8
+# Shift Registers                  : 6
+#      SRL16                       : 6
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 81
+#      IBUF                        : 8
+#      IBUFG                       : 1
+#      IOBUF                       : 18
+#      OBUF                        : 54
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1587  out of   4656    34%  
+ Number of Slice Flip Flops:           1723  out of   9312    18%  
+ Number of 4 input LUTs:               2327  out of   9312    24%  
+    Number used as logic:              2225
+    Number used as Shift registers:       6
+    Number used as RAMs:                 96
+ Number of IOs:                          81
+ Number of bonded IOBs:                  81  out of    232    34%  
+ Number of BRAMs:                        15  out of     20    75%  
+ Number of GCLKs:                         2  out of     24     8%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)     | Load  |
+-----------------------------------+---------------------------+-------+
+clk                                | PLL_inst/DCM_SP_INST:CLK0 | 1687  |
+clk                                | PLL_inst/DCM_SP_INST:CLKDV| 121   |
+-----------------------------------+---------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-----------------------------+-------+
+Control Signal                     | Buffer(FF name)             | Load  |
+-----------------------------------+-----------------------------+-------+
+rst(rst:Q)                         | NONE(IOMM_inst0/read_active)| 416   |
+_or0000(_or00001:O)                | NONE(CPU_inst/IO_select1)   | 188   |
+-----------------------------------+-----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 15.700ns (Maximum Frequency: 63.694MHz)
+   Minimum input arrival time before clock: 2.059ns
+   Maximum output required time after clock: 6.048ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 15.700ns (frequency: 63.694MHz)
+  Total number of paths / destination ports: 166168 / 4048
+-------------------------------------------------------------------------
+Delay:               15.700ns (Levels of Logic = 20)
+  Source:            CPU_inst/reg_file_inst/prev_w_address_4 (FF)
+  Destination:       CPU_inst/ALU_inst/z (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: CPU_inst/reg_file_inst/prev_w_address_4 to CPU_inst/ALU_inst/z
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.595  CPU_inst/reg_file_inst/prev_w_address_4 (CPU_inst/reg_file_inst/prev_w_address_4)
+     LUT4:I0->O            1   0.704   0.595  CPU_inst/reg_file_inst/ah_forward1_cmp_eq0000526 (CPU_inst/reg_file_inst/ah_forward1_cmp_eq0000526)
+     LUT4:I0->O            2   0.704   0.526  CPU_inst/reg_file_inst/ah_forward1_cmp_eq0000578 (CPU_inst/reg_file_inst/ah_forward1_cmp_eq0000)
+     LUT4:I1->O           20   0.704   1.137  CPU_inst/reg_file_inst/a_data_7_and0000 (CPU_inst/reg_file_inst/a_data_7_and0000)
+     LUT3:I2->O            9   0.704   0.855  CPU_inst/reg_file_inst/a_data_0_mux000031 (CPU_inst/a_data<0>)
+     LUT3:I2->O            1   0.704   0.000  CPU_inst/ALU_inst/Madd_add_result_addsub0001_lut<0> (CPU_inst/ALU_inst/Madd_add_result_addsub0001_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<0> (CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<1> (CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2> (CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3> (CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<4> (CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5> (CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<6> (CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7> (CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>)
+     XORCY:CI->O           2   0.804   0.622  CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<8> (CPU_inst/ALU_inst/add_result<8>)
+     LUT1:I0->O            1   0.704   0.000  CPU_inst/ALU_inst/Mmux_alu_result_4_f5_13_rt (CPU_inst/ALU_inst/Mmux_alu_result_4_f5_13_rt)
+     MUXF5:I0->O           1   0.321   0.000  CPU_inst/ALU_inst/Mmux_alu_result_4_f5_13 (CPU_inst/ALU_inst/Mmux_alu_result_4_f514)
+     MUXF6:I0->O           3   0.521   0.706  CPU_inst/ALU_inst/Mmux_alu_result_2_f6_13 (CPU_inst/ALU_inst/alu_result<8>)
+     LUT4:I0->O            1   0.704   0.455  CPU_inst/ALU_inst/z_and00167 (CPU_inst/ALU_inst/z_and00167)
+     LUT4:I2->O            2   0.704   0.451  CPU_inst/ALU_inst/z_and001621 (CPU_inst/ALU_inst/z_and0016)
+     LUT4:I3->O            1   0.704   0.000  CPU_inst/ALU_inst/p_mux0001 (CPU_inst/ALU_inst/p_mux0001)
+     FDE:D                     0.308          CPU_inst/ALU_inst/p
+    ----------------------------------------
+    Total                     15.700ns (9.758ns logic, 5.942ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 42 / 42
+-------------------------------------------------------------------------
+Offset:              2.059ns (Levels of Logic = 1)
+  Source:            ps2_data (PAD)
+  Destination:       keyboard_inst/ps2_host_inst/Mshreg_ps2_data_s (FF)
+  Destination Clock: clk rising
+
+  Data Path: ps2_data to keyboard_inst/ps2_host_inst/Mshreg_ps2_data_s
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.218   0.420  ps2_data_IOBUF (N287)
+     SRL16:D                   0.421          keyboard_inst/ps2_host_inst/Mshreg_ps2_data_s
+    ----------------------------------------
+    Total                      2.059ns (1.639ns logic, 0.420ns route)
+                                       (79.6% logic, 20.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 84 / 68
+-------------------------------------------------------------------------
+Offset:              6.048ns (Levels of Logic = 2)
+  Source:            memory_controller_inst/shared_gate_out (FF)
+  Destination:       shared_d<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: memory_controller_inst/shared_gate_out to shared_d<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.447  memory_controller_inst/shared_gate_out (memory_controller_inst/shared_gate_out)
+     INV:I->O             16   0.704   1.034  memory_controller_inst/shared_gate_out_inv1_INV_0 (memory_controller_inst/shared_gate_out_inv)
+     IOBUF:T->IO               3.272          shared_d_15_IOBUF (shared_d<15>)
+    ----------------------------------------
+    Total                      6.048ns (4.567ns logic, 1.481ns route)
+                                       (75.5% logic, 24.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 14.17 secs
+ 
+--> 
+
+
+Total memory usage is 672624 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  161 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

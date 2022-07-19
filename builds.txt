@@ -1,0 +1,32 @@
+To build this project you need the main file (neonfox_programmer.asm), a platform header file, and one or more library files.
+See main file for the appropriate places to include the platform header and libraries.
+
+terasIC DE1:
+	neonfox_programmer.asm
+	DE1_PROGRAMMER.INC
+	NEONFOX_SERIAL.INC
+	DE1_FLASH.INC
+	DE1_SRAM.INC
+	DE1_SDRAM64.INC
+
+Digilent Nexys 2:
+	neonfox_programmer.asm
+	NEXYS2_PROGRAMMER.INC
+	NEONFOX_SERIAL.INC
+	NEXYS2_FLASH.INC
+	NEXYS2_PSRAM.INC
+
+DragonBoard:
+	neonfox_programmer.asm
+	DRAGONBOARD_PROGRAMMER.INC
+	DRAGONBOARD_SERIAL.INC
+	DragonBoard_I2C.inc
+	DRAGONBOARD_SDRAM64.INC
+	DragonBoard_EEPROM.inc
+
+Generic I2C:
+	neonfox_programmer.asm
+	I2C_PROGRAMMER.INC
+	NEONFOX_SERIAL.INC
+	NEONFOX_I2C.INC
+	NEONFOX_CAT24M01.INC
