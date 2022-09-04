@@ -16,6 +16,17 @@ Digilent Nexys 2:
 	NEXYS2_FLASH.INC
 	NEXYS2_PSRAM.INC
 
+Digilent Nexys 2 with PMOD memory module:
+	neonfox_programmer.asm
+	Nexys2_PMOD_Programmer.inc
+	NEONFOX_SERIAL.INC
+	NEONFOX_I2C.INC
+	NeonFox_SPI.inc
+	NeonFox_AT24C01.inc
+	NeonFox_BY25Q16.inc
+	NEXYS2_FLASH.INC
+	NEXYS2_PSRAM.INC
+
 DragonBoard:
 	neonfox_programmer.asm
 	DRAGONBOARD_PROGRAMMER.INC
