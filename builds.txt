@@ -9,6 +9,14 @@ terasIC DE1:
 	DE1_SRAM.INC
 	DE1_SDRAM64.INC
 
+terasIC DE2:
+	neonfox_programmer.asm
+	DE2_PROGRAMMER.INC
+	neonfox_serial_gen2.inc
+	DE2_FLASH.INC
+	DE2_SRAM.INC
+	DE2_SDRAM.INC
+
 Digilent Nexys 2:
 	neonfox_programmer.asm
 	NEXYS2_PROGRAMMER.INC
