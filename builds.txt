@@ -27,8 +27,8 @@ Digilent Nexys 2:
 Digilent Nexys 2 with PMOD memory module:
 	neonfox_programmer.asm
 	Nexys2_PMOD_Programmer.inc
-	NEONFOX_SERIAL.INC
-	NEONFOX_I2C.INC
+	neonfox_serial_gen2.inc
+	neonfox_i2c_gen2.inc
 	NeonFox_SPI.inc
 	NeonFox_AT24C01.inc
 	NeonFox_BY25Q16.inc
