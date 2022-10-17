@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">ipcore_dir/BRAM_16K.v</arg>&quot; line <arg fmt="%d" index="2">201</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">BRAM_16K</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">ipcore_dir/BRAM_16K.v</arg>&quot; line <arg fmt="%d" index="2">218</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">BRAM_16K</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="37" delta="old" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">ramstyle</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
@@ -203,13 +203,13 @@
 <msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_stack_mem</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
-<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_Out_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-</msg>
-
 <msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_queue_mem</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
 <msg type="info" file="Xst" num="3217" delta="old" >HDL ADVISOR - Register &lt;<arg fmt="%s" index="1">to_CPU</arg>&gt; currently described with an asynchronous reset, could be combined with distributed RAM &lt;<arg fmt="%s" index="2">Mram_queue_mem</arg>&gt; for implementation on block RAM resources if you made this reset synchronous instead.
+</msg>
+
+<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_Out_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prev_in_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">interrupt_controller</arg>&gt;.
@@ -239,16 +239,16 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">flash_prev_addr_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Nexys2_memory_controller</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tx_frame_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tx_frame_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart_gen2</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tx_frame_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tx_frame_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart_gen2</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tx_frame_sliced1_-1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tx_frame_sliced1_-1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart_gen2</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tx_frame_sliced1_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tx_frame_sliced1_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart_gen2</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">prev_p_cache_miss</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">decode_unit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

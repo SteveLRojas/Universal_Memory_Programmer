@@ -76,561 +76,699 @@ Timing constraint: TS_PLL_inst_CLK0_BUF = PERIOD TIMEGRP "PLL_inst_CLK0_BUF"
 TS_sys_clk HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 171113 paths analyzed, 6457 endpoints analyzed, 0 failing endpoints
+ 177520 paths analyzed, 6681 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  17.303ns.
+ Minimum period is  18.663ns.
 --------------------------------------------------------------------------------
 
-Paths for end point CPU_inst/ALU_inst/z (SLICE_X34Y67.G2), 12180 paths
+Paths for end point CPU_inst/ALU_inst/p (SLICE_X27Y51.F2), 12180 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     2.697ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               CPU_inst/L_en2 (FF)
-  Destination:          CPU_inst/ALU_inst/z (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      17.295ns (Levels of Logic = 12)
-  Clock Path Skew:      -0.008ns (0.110 - 0.118)
-  Source Clock:         clk_sys rising at 0.000ns
-  Destination Clock:    clk_sys rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: CPU_inst/L_en2 to CPU_inst/ALU_inst/z
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X33Y55.XQ      Tcko                  0.591   CPU_inst/L_en2
-                                                       CPU_inst/L_en2
-    SLICE_X30Y70.F1      net (fanout=13)       1.888   CPU_inst/L_en2
-    SLICE_X30Y70.X       Tilo                  0.759   N417
-                                                       CPU_inst/reg_file_inst/ah_forward01_SW0
-    SLICE_X30Y71.G1      net (fanout=1)        0.122   N417
-    SLICE_X30Y71.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/ah_forward01
-    SLICE_X30Y71.F1      net (fanout=2)        0.796   CPU_inst/reg_file_inst/ah_forward0
-    SLICE_X30Y71.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.F1      net (fanout=12)       0.737   CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.X       Tilo                  0.759   CPU_inst/a_data<11>
-                                                       CPU_inst/reg_file_inst/a_data_11_mux0000
-    SLICE_X35Y76.G1      net (fanout=8)        1.881   CPU_inst/a_data<11>
-    SLICE_X35Y76.COUT    Topcyg                1.001   CPU_inst/ALU_inst/add_result<10>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_lut<11>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<12>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<12>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
-    SLICE_X35Y78.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
-    SLICE_X35Y78.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<14>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<14>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<15>
-    SLICE_X35Y69.G3      net (fanout=1)        0.675   CPU_inst/ALU_inst/add_result<15>
-    SLICE_X35Y69.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
-                                                       CPU_inst/ALU_inst/add_result<15>_rt
-                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_5
-    SLICE_X35Y68.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
-    SLICE_X35Y68.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<15>
-                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_5
-    SLICE_X33Y66.G2      net (fanout=5)        0.720   CPU_inst/ALU_inst/alu_result<15>
-    SLICE_X33Y66.Y       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
-                                                       CPU_inst/ALU_inst/z_and001612
-    SLICE_X33Y66.F2      net (fanout=1)        0.710   CPU_inst/ALU_inst/z_and001612/O
-    SLICE_X33Y66.X       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
-                                                       CPU_inst/ALU_inst/z_and001621
-    SLICE_X34Y67.G2      net (fanout=2)        0.455   CPU_inst/ALU_inst/z_and0016
-    SLICE_X34Y67.CLK     Tgck                  0.892   CPU_inst/ALU_inst/z
-                                                       CPU_inst/ALU_inst/z_mux0000411
-                                                       CPU_inst/ALU_inst/z
-    -------------------------------------------------  ---------------------------
-    Total                                     17.295ns (9.311ns logic, 7.984ns route)
-                                                       (53.8% logic, 46.2% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     2.800ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               CPU_inst/L_en2 (FF)
-  Destination:          CPU_inst/ALU_inst/z (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      17.192ns (Levels of Logic = 11)
-  Clock Path Skew:      -0.008ns (0.110 - 0.118)
-  Source Clock:         clk_sys rising at 0.000ns
-  Destination Clock:    clk_sys rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: CPU_inst/L_en2 to CPU_inst/ALU_inst/z
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X33Y55.XQ      Tcko                  0.591   CPU_inst/L_en2
-                                                       CPU_inst/L_en2
-    SLICE_X30Y70.F1      net (fanout=13)       1.888   CPU_inst/L_en2
-    SLICE_X30Y70.X       Tilo                  0.759   N417
-                                                       CPU_inst/reg_file_inst/ah_forward01_SW0
-    SLICE_X30Y71.G1      net (fanout=1)        0.122   N417
-    SLICE_X30Y71.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/ah_forward01
-    SLICE_X30Y71.F1      net (fanout=2)        0.796   CPU_inst/reg_file_inst/ah_forward0
-    SLICE_X30Y71.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.F1      net (fanout=12)       0.737   CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.X       Tilo                  0.759   CPU_inst/a_data<11>
-                                                       CPU_inst/reg_file_inst/a_data_11_mux0000
-    SLICE_X35Y76.G1      net (fanout=8)        1.881   CPU_inst/a_data<11>
-    SLICE_X35Y76.COUT    Topcyg                1.001   CPU_inst/ALU_inst/add_result<10>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_lut<11>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<12>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<12>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<13>
-    SLICE_X37Y77.G2      net (fanout=1)        0.399   CPU_inst/ALU_inst/add_result<13>
-    SLICE_X37Y77.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f54
-                                                       CPU_inst/ALU_inst/add_result<13>_rt
-                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_3
-    SLICE_X37Y76.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f54
-    SLICE_X37Y76.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<13>
-                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_3
-    SLICE_X33Y66.G3      net (fanout=3)        1.011   CPU_inst/ALU_inst/alu_result<13>
-    SLICE_X33Y66.Y       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
-                                                       CPU_inst/ALU_inst/z_and001612
-    SLICE_X33Y66.F2      net (fanout=1)        0.710   CPU_inst/ALU_inst/z_and001612/O
-    SLICE_X33Y66.X       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
-                                                       CPU_inst/ALU_inst/z_and001621
-    SLICE_X34Y67.G2      net (fanout=2)        0.455   CPU_inst/ALU_inst/z_and0016
-    SLICE_X34Y67.CLK     Tgck                  0.892   CPU_inst/ALU_inst/z
-                                                       CPU_inst/ALU_inst/z_mux0000411
-                                                       CPU_inst/ALU_inst/z
-    -------------------------------------------------  ---------------------------
-    Total                                     17.192ns (9.193ns logic, 7.999ns route)
-                                                       (53.5% logic, 46.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     2.810ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               CPU_inst/L_en2 (FF)
-  Destination:          CPU_inst/ALU_inst/z (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      17.182ns (Levels of Logic = 12)
-  Clock Path Skew:      -0.008ns (0.110 - 0.118)
-  Source Clock:         clk_sys rising at 0.000ns
-  Destination Clock:    clk_sys rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: CPU_inst/L_en2 to CPU_inst/ALU_inst/z
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X33Y55.XQ      Tcko                  0.591   CPU_inst/L_en2
-                                                       CPU_inst/L_en2
-    SLICE_X30Y70.F1      net (fanout=13)       1.888   CPU_inst/L_en2
-    SLICE_X30Y70.X       Tilo                  0.759   N417
-                                                       CPU_inst/reg_file_inst/ah_forward01_SW0
-    SLICE_X30Y71.G1      net (fanout=1)        0.122   N417
-    SLICE_X30Y71.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/ah_forward01
-    SLICE_X30Y71.F1      net (fanout=2)        0.796   CPU_inst/reg_file_inst/ah_forward0
-    SLICE_X30Y71.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.F1      net (fanout=12)       0.737   CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.X       Tilo                  0.759   CPU_inst/a_data<11>
-                                                       CPU_inst/reg_file_inst/a_data_11_mux0000
-    SLICE_X35Y76.G1      net (fanout=8)        1.881   CPU_inst/a_data<11>
-    SLICE_X35Y76.COUT    Topcyg                0.888   CPU_inst/ALU_inst/add_result<10>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<12>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<12>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
-    SLICE_X35Y78.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
-    SLICE_X35Y78.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<14>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<14>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<15>
-    SLICE_X35Y69.G3      net (fanout=1)        0.675   CPU_inst/ALU_inst/add_result<15>
-    SLICE_X35Y69.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
-                                                       CPU_inst/ALU_inst/add_result<15>_rt
-                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_5
-    SLICE_X35Y68.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
-    SLICE_X35Y68.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<15>
-                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_5
-    SLICE_X33Y66.G2      net (fanout=5)        0.720   CPU_inst/ALU_inst/alu_result<15>
-    SLICE_X33Y66.Y       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
-                                                       CPU_inst/ALU_inst/z_and001612
-    SLICE_X33Y66.F2      net (fanout=1)        0.710   CPU_inst/ALU_inst/z_and001612/O
-    SLICE_X33Y66.X       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
-                                                       CPU_inst/ALU_inst/z_and001621
-    SLICE_X34Y67.G2      net (fanout=2)        0.455   CPU_inst/ALU_inst/z_and0016
-    SLICE_X34Y67.CLK     Tgck                  0.892   CPU_inst/ALU_inst/z
-                                                       CPU_inst/ALU_inst/z_mux0000411
-                                                       CPU_inst/ALU_inst/z
-    -------------------------------------------------  ---------------------------
-    Total                                     17.182ns (9.198ns logic, 7.984ns route)
-                                                       (53.5% logic, 46.5% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point CPU_inst/ALU_inst/p (SLICE_X35Y67.F2), 12180 paths
---------------------------------------------------------------------------------
-Slack (setup path):     2.759ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               CPU_inst/L_en2 (FF)
+Slack (setup path):     1.337ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU_inst/dest_waddr2_3 (FF)
   Destination:          CPU_inst/ALU_inst/p (FF)
   Requirement:          20.000ns
-  Data Path Delay:      17.233ns (Levels of Logic = 12)
-  Clock Path Skew:      -0.008ns (0.110 - 0.118)
+  Data Path Delay:      18.653ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.010ns (0.046 - 0.056)
   Source Clock:         clk_sys rising at 0.000ns
   Destination Clock:    clk_sys rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: CPU_inst/L_en2 to CPU_inst/ALU_inst/p
+  Maximum Data Path: CPU_inst/dest_waddr2_3 to CPU_inst/ALU_inst/p
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X33Y55.XQ      Tcko                  0.591   CPU_inst/L_en2
-                                                       CPU_inst/L_en2
-    SLICE_X30Y70.F1      net (fanout=13)       1.888   CPU_inst/L_en2
-    SLICE_X30Y70.X       Tilo                  0.759   N417
-                                                       CPU_inst/reg_file_inst/ah_forward01_SW0
-    SLICE_X30Y71.G1      net (fanout=1)        0.122   N417
-    SLICE_X30Y71.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/ah_forward01
-    SLICE_X30Y71.F1      net (fanout=2)        0.796   CPU_inst/reg_file_inst/ah_forward0
-    SLICE_X30Y71.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.F1      net (fanout=12)       0.737   CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.X       Tilo                  0.759   CPU_inst/a_data<11>
-                                                       CPU_inst/reg_file_inst/a_data_11_mux0000
-    SLICE_X35Y76.G1      net (fanout=8)        1.881   CPU_inst/a_data<11>
-    SLICE_X35Y76.COUT    Topcyg                1.001   CPU_inst/ALU_inst/add_result<10>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_lut<11>
+    SLICE_X32Y46.YQ      Tcko                  0.652   CPU_inst/dest_waddr2<2>
+                                                       CPU_inst/dest_waddr2_3
+    SLICE_X20Y63.G3      net (fanout=11)       2.033   CPU_inst/dest_waddr2<3>
+    SLICE_X20Y63.Y       Tilo                  0.759   N302
+                                                       CPU_inst/reg_file_inst/ah_forward0_cmp_eq0000562
+    SLICE_X24Y60.G1      net (fanout=3)        0.739   CPU_inst/reg_file_inst/ah_forward0_cmp_eq0000562
+    SLICE_X24Y60.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/al_forward01
+    SLICE_X24Y60.F4      net (fanout=1)        0.023   CPU_inst/reg_file_inst/al_forward01/O
+    SLICE_X24Y60.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.F1      net (fanout=20)       1.379   CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.X       Tilo                  0.759   CPU_inst/a_data<2>
+                                                       CPU_inst/reg_file_inst/a_data_2_mux0000
+    SLICE_X23Y55.BX      net (fanout=9)        1.576   CPU_inst/a_data<2>
+    SLICE_X23Y55.COUT    Tbxcy                 1.095   CPU_inst/ALU_inst/add_result<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<10>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<10>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<12>
+    SLICE_X23Y60.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
+    SLICE_X23Y60.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<12>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<12>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
-    SLICE_X35Y78.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
-    SLICE_X35Y78.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<14>
+    SLICE_X23Y61.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
+    SLICE_X23Y61.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<14>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<14>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<15>
-    SLICE_X35Y69.G3      net (fanout=1)        0.675   CPU_inst/ALU_inst/add_result<15>
-    SLICE_X35Y69.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+    SLICE_X25Y65.G2      net (fanout=1)        0.639   CPU_inst/ALU_inst/add_result<15>
+    SLICE_X25Y65.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
                                                        CPU_inst/ALU_inst/add_result<15>_rt
                                                        CPU_inst/ALU_inst/Mmux_alu_result_4_f5_5
-    SLICE_X35Y68.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
-    SLICE_X35Y68.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<15>
+    SLICE_X25Y64.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+    SLICE_X25Y64.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<15>
                                                        CPU_inst/ALU_inst/Mmux_alu_result_2_f6_5
-    SLICE_X33Y66.G2      net (fanout=5)        0.720   CPU_inst/ALU_inst/alu_result<15>
-    SLICE_X33Y66.Y       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
+    SLICE_X26Y59.G1      net (fanout=5)        1.023   CPU_inst/ALU_inst/alu_result<15>
+    SLICE_X26Y59.Y       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
                                                        CPU_inst/ALU_inst/z_and001612
-    SLICE_X33Y66.F2      net (fanout=1)        0.710   CPU_inst/ALU_inst/z_and001612/O
-    SLICE_X33Y66.X       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
+    SLICE_X26Y59.F4      net (fanout=1)        0.343   CPU_inst/ALU_inst/z_and001612/O
+    SLICE_X26Y59.X       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
                                                        CPU_inst/ALU_inst/z_and001621
-    SLICE_X35Y67.F2      net (fanout=2)        0.448   CPU_inst/ALU_inst/z_and0016
-    SLICE_X35Y67.CLK     Tfck                  0.837   CPU_inst/ALU_inst/p
+    SLICE_X27Y51.F2      net (fanout=2)        0.905   CPU_inst/ALU_inst/z_and0016
+    SLICE_X27Y51.CLK     Tfck                  0.837   CPU_inst/ALU_inst/p
                                                        CPU_inst/ALU_inst/p_mux0001
                                                        CPU_inst/ALU_inst/p
     -------------------------------------------------  ---------------------------
-    Total                                     17.233ns (9.256ns logic, 7.977ns route)
-                                                       (53.7% logic, 46.3% route)
+    Total                                     18.653ns (9.993ns logic, 8.660ns route)
+                                                       (53.6% logic, 46.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.862ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               CPU_inst/L_en2 (FF)
+Slack (setup path):     1.338ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU_inst/dest_waddr2_0 (FF)
   Destination:          CPU_inst/ALU_inst/p (FF)
   Requirement:          20.000ns
-  Data Path Delay:      17.130ns (Levels of Logic = 11)
-  Clock Path Skew:      -0.008ns (0.110 - 0.118)
+  Data Path Delay:      18.651ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.011ns (0.113 - 0.124)
   Source Clock:         clk_sys rising at 0.000ns
   Destination Clock:    clk_sys rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: CPU_inst/L_en2 to CPU_inst/ALU_inst/p
+  Maximum Data Path: CPU_inst/dest_waddr2_0 to CPU_inst/ALU_inst/p
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X33Y55.XQ      Tcko                  0.591   CPU_inst/L_en2
-                                                       CPU_inst/L_en2
-    SLICE_X30Y70.F1      net (fanout=13)       1.888   CPU_inst/L_en2
-    SLICE_X30Y70.X       Tilo                  0.759   N417
-                                                       CPU_inst/reg_file_inst/ah_forward01_SW0
-    SLICE_X30Y71.G1      net (fanout=1)        0.122   N417
-    SLICE_X30Y71.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/ah_forward01
-    SLICE_X30Y71.F1      net (fanout=2)        0.796   CPU_inst/reg_file_inst/ah_forward0
-    SLICE_X30Y71.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.F1      net (fanout=12)       0.737   CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.X       Tilo                  0.759   CPU_inst/a_data<11>
-                                                       CPU_inst/reg_file_inst/a_data_11_mux0000
-    SLICE_X35Y76.G1      net (fanout=8)        1.881   CPU_inst/a_data<11>
-    SLICE_X35Y76.COUT    Topcyg                1.001   CPU_inst/ALU_inst/add_result<10>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_lut<11>
+    SLICE_X34Y47.YQ      Tcko                  0.652   CPU_inst/dest_waddr2<1>
+                                                       CPU_inst/dest_waddr2_0
+    SLICE_X25Y63.F3      net (fanout=15)       2.427   CPU_inst/dest_waddr2<0>
+    SLICE_X25Y63.X       Tilo                  0.704   N407
+                                                       CPU_inst/reg_file_inst/al_forward01_SW0
+    SLICE_X24Y60.G2      net (fanout=1)        0.398   N407
+    SLICE_X24Y60.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/al_forward01
+    SLICE_X24Y60.F4      net (fanout=1)        0.023   CPU_inst/reg_file_inst/al_forward01/O
+    SLICE_X24Y60.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.F1      net (fanout=20)       1.379   CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.X       Tilo                  0.759   CPU_inst/a_data<2>
+                                                       CPU_inst/reg_file_inst/a_data_2_mux0000
+    SLICE_X23Y55.BX      net (fanout=9)        1.576   CPU_inst/a_data<2>
+    SLICE_X23Y55.COUT    Tbxcy                 1.095   CPU_inst/ALU_inst/add_result<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<10>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<10>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<12>
+    SLICE_X23Y60.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
+    SLICE_X23Y60.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<12>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<12>
-                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<13>
-    SLICE_X37Y77.G2      net (fanout=1)        0.399   CPU_inst/ALU_inst/add_result<13>
-    SLICE_X37Y77.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f54
-                                                       CPU_inst/ALU_inst/add_result<13>_rt
-                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_3
-    SLICE_X37Y76.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f54
-    SLICE_X37Y76.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<13>
-                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_3
-    SLICE_X33Y66.G3      net (fanout=3)        1.011   CPU_inst/ALU_inst/alu_result<13>
-    SLICE_X33Y66.Y       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
+    SLICE_X23Y61.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
+    SLICE_X23Y61.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<14>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<14>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<15>
+    SLICE_X25Y65.G2      net (fanout=1)        0.639   CPU_inst/ALU_inst/add_result<15>
+    SLICE_X25Y65.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+                                                       CPU_inst/ALU_inst/add_result<15>_rt
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_5
+    SLICE_X25Y64.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+    SLICE_X25Y64.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<15>
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_5
+    SLICE_X26Y59.G1      net (fanout=5)        1.023   CPU_inst/ALU_inst/alu_result<15>
+    SLICE_X26Y59.Y       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
                                                        CPU_inst/ALU_inst/z_and001612
-    SLICE_X33Y66.F2      net (fanout=1)        0.710   CPU_inst/ALU_inst/z_and001612/O
-    SLICE_X33Y66.X       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
+    SLICE_X26Y59.F4      net (fanout=1)        0.343   CPU_inst/ALU_inst/z_and001612/O
+    SLICE_X26Y59.X       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
                                                        CPU_inst/ALU_inst/z_and001621
-    SLICE_X35Y67.F2      net (fanout=2)        0.448   CPU_inst/ALU_inst/z_and0016
-    SLICE_X35Y67.CLK     Tfck                  0.837   CPU_inst/ALU_inst/p
+    SLICE_X27Y51.F2      net (fanout=2)        0.905   CPU_inst/ALU_inst/z_and0016
+    SLICE_X27Y51.CLK     Tfck                  0.837   CPU_inst/ALU_inst/p
                                                        CPU_inst/ALU_inst/p_mux0001
                                                        CPU_inst/ALU_inst/p
     -------------------------------------------------  ---------------------------
-    Total                                     17.130ns (9.138ns logic, 7.992ns route)
+    Total                                     18.651ns (9.938ns logic, 8.713ns route)
                                                        (53.3% logic, 46.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.872ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               CPU_inst/L_en2 (FF)
+Slack (setup path):     1.407ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU_inst/H_en2 (FF)
   Destination:          CPU_inst/ALU_inst/p (FF)
   Requirement:          20.000ns
-  Data Path Delay:      17.120ns (Levels of Logic = 12)
-  Clock Path Skew:      -0.008ns (0.110 - 0.118)
+  Data Path Delay:      18.585ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.008ns (0.113 - 0.121)
   Source Clock:         clk_sys rising at 0.000ns
   Destination Clock:    clk_sys rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: CPU_inst/L_en2 to CPU_inst/ALU_inst/p
+  Maximum Data Path: CPU_inst/H_en2 to CPU_inst/ALU_inst/p
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X33Y55.XQ      Tcko                  0.591   CPU_inst/L_en2
-                                                       CPU_inst/L_en2
-    SLICE_X30Y70.F1      net (fanout=13)       1.888   CPU_inst/L_en2
-    SLICE_X30Y70.X       Tilo                  0.759   N417
-                                                       CPU_inst/reg_file_inst/ah_forward01_SW0
-    SLICE_X30Y71.G1      net (fanout=1)        0.122   N417
-    SLICE_X30Y71.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/ah_forward01
-    SLICE_X30Y71.F1      net (fanout=2)        0.796   CPU_inst/reg_file_inst/ah_forward0
-    SLICE_X30Y71.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_15_and0000
-                                                       CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.F1      net (fanout=12)       0.737   CPU_inst/reg_file_inst/a_data_15_and0000
-    SLICE_X28Y65.X       Tilo                  0.759   CPU_inst/a_data<11>
-                                                       CPU_inst/reg_file_inst/a_data_11_mux0000
-    SLICE_X35Y76.G1      net (fanout=8)        1.881   CPU_inst/a_data<11>
-    SLICE_X35Y76.COUT    Topcyg                0.888   CPU_inst/ALU_inst/add_result<10>
+    SLICE_X36Y50.XQ      Tcko                  0.592   CPU_inst/H_en2
+                                                       CPU_inst/H_en2
+    SLICE_X25Y63.F1      net (fanout=19)       2.421   CPU_inst/H_en2
+    SLICE_X25Y63.X       Tilo                  0.704   N407
+                                                       CPU_inst/reg_file_inst/al_forward01_SW0
+    SLICE_X24Y60.G2      net (fanout=1)        0.398   N407
+    SLICE_X24Y60.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/al_forward01
+    SLICE_X24Y60.F4      net (fanout=1)        0.023   CPU_inst/reg_file_inst/al_forward01/O
+    SLICE_X24Y60.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.F1      net (fanout=20)       1.379   CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.X       Tilo                  0.759   CPU_inst/a_data<2>
+                                                       CPU_inst/reg_file_inst/a_data_2_mux0000
+    SLICE_X23Y55.BX      net (fanout=9)        1.576   CPU_inst/a_data<2>
+    SLICE_X23Y55.COUT    Tbxcy                 1.095   CPU_inst/ALU_inst/add_result<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<10>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<10>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
-    SLICE_X35Y77.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<12>
+    SLICE_X23Y60.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
+    SLICE_X23Y60.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<12>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<12>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
-    SLICE_X35Y78.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
-    SLICE_X35Y78.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<14>
+    SLICE_X23Y61.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
+    SLICE_X23Y61.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<14>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<14>
                                                        CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<15>
-    SLICE_X35Y69.G3      net (fanout=1)        0.675   CPU_inst/ALU_inst/add_result<15>
-    SLICE_X35Y69.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+    SLICE_X25Y65.G2      net (fanout=1)        0.639   CPU_inst/ALU_inst/add_result<15>
+    SLICE_X25Y65.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
                                                        CPU_inst/ALU_inst/add_result<15>_rt
                                                        CPU_inst/ALU_inst/Mmux_alu_result_4_f5_5
-    SLICE_X35Y68.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
-    SLICE_X35Y68.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<15>
+    SLICE_X25Y64.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+    SLICE_X25Y64.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<15>
                                                        CPU_inst/ALU_inst/Mmux_alu_result_2_f6_5
-    SLICE_X33Y66.G2      net (fanout=5)        0.720   CPU_inst/ALU_inst/alu_result<15>
-    SLICE_X33Y66.Y       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
+    SLICE_X26Y59.G1      net (fanout=5)        1.023   CPU_inst/ALU_inst/alu_result<15>
+    SLICE_X26Y59.Y       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
                                                        CPU_inst/ALU_inst/z_and001612
-    SLICE_X33Y66.F2      net (fanout=1)        0.710   CPU_inst/ALU_inst/z_and001612/O
-    SLICE_X33Y66.X       Tilo                  0.704   CPU_inst/ALU_inst/z_and0016
+    SLICE_X26Y59.F4      net (fanout=1)        0.343   CPU_inst/ALU_inst/z_and001612/O
+    SLICE_X26Y59.X       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
                                                        CPU_inst/ALU_inst/z_and001621
-    SLICE_X35Y67.F2      net (fanout=2)        0.448   CPU_inst/ALU_inst/z_and0016
-    SLICE_X35Y67.CLK     Tfck                  0.837   CPU_inst/ALU_inst/p
+    SLICE_X27Y51.F2      net (fanout=2)        0.905   CPU_inst/ALU_inst/z_and0016
+    SLICE_X27Y51.CLK     Tfck                  0.837   CPU_inst/ALU_inst/p
                                                        CPU_inst/ALU_inst/p_mux0001
                                                        CPU_inst/ALU_inst/p
     -------------------------------------------------  ---------------------------
-    Total                                     17.120ns (9.143ns logic, 7.977ns route)
-                                                       (53.4% logic, 46.6% route)
+    Total                                     18.585ns (9.878ns logic, 8.707ns route)
+                                                       (53.2% logic, 46.8% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point timer_inst/counter_1 (SLICE_X65Y48.CE), 94 paths
+Paths for end point CPU_inst/ALU_inst/z (SLICE_X26Y50.G1), 12180 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     3.664ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               CPU_inst/ALU_inst/alu_out_12 (FF)
-  Destination:          timer_inst/counter_1 (FF)
+Slack (setup path):     1.553ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU_inst/dest_waddr2_3 (FF)
+  Destination:          CPU_inst/ALU_inst/z (FF)
   Requirement:          20.000ns
-  Data Path Delay:      16.336ns (Levels of Logic = 7)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      18.437ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.010ns (0.046 - 0.056)
   Source Clock:         clk_sys rising at 0.000ns
   Destination Clock:    clk_sys rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: CPU_inst/ALU_inst/alu_out_12 to timer_inst/counter_1
+  Maximum Data Path: CPU_inst/dest_waddr2_3 to CPU_inst/ALU_inst/z
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X37Y65.YQ      Tcko                  0.587   CPU_inst/ALU_inst/alu_out<13>
-                                                       CPU_inst/ALU_inst/alu_out_12
-    SLICE_X28Y39.F4      net (fanout=53)       4.154   CPU_inst/ALU_inst/alu_out<12>
-    SLICE_X28Y39.X       Tilo                  0.759   hex_en17
-                                                       hex_en17
-    SLICE_X28Y38.G2      net (fanout=1)        0.110   hex_en17
-    SLICE_X28Y38.Y       Tilo                  0.759   N15
-                                                       hex_en152
-    SLICE_X28Y38.F4      net (fanout=1)        0.023   hex_en152/O
-    SLICE_X28Y38.X       Tilo                  0.759   N15
-                                                       hex_en1163
-    SLICE_X40Y35.G1      net (fanout=5)        1.415   N15
-    SLICE_X40Y35.Y       Tilo                  0.759   prev_timer_en
-                                                       keyboard_en11
-    SLICE_X40Y35.F3      net (fanout=3)        0.025   N36
-    SLICE_X40Y35.X       Tilo                  0.759   prev_timer_en
-                                                       timer_en1
-    SLICE_X64Y49.G4      net (fanout=5)        2.433   timer_en
-    SLICE_X64Y49.Y       Tilo                  0.759   timer_inst/counter_7_not0001
-                                                       timer_inst/counter_0_mux000011
-    SLICE_X64Y49.F3      net (fanout=9)        0.124   timer_inst/N2
-    SLICE_X64Y49.X       Tilo                  0.759   timer_inst/counter_7_not0001
-                                                       timer_inst/counter_7_not00011
-    SLICE_X65Y48.CE      net (fanout=4)        1.597   timer_inst/counter_7_not0001
-    SLICE_X65Y48.CLK     Tceck                 0.555   timer_inst/counter<1>
-                                                       timer_inst/counter_1
+    SLICE_X32Y46.YQ      Tcko                  0.652   CPU_inst/dest_waddr2<2>
+                                                       CPU_inst/dest_waddr2_3
+    SLICE_X20Y63.G3      net (fanout=11)       2.033   CPU_inst/dest_waddr2<3>
+    SLICE_X20Y63.Y       Tilo                  0.759   N302
+                                                       CPU_inst/reg_file_inst/ah_forward0_cmp_eq0000562
+    SLICE_X24Y60.G1      net (fanout=3)        0.739   CPU_inst/reg_file_inst/ah_forward0_cmp_eq0000562
+    SLICE_X24Y60.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/al_forward01
+    SLICE_X24Y60.F4      net (fanout=1)        0.023   CPU_inst/reg_file_inst/al_forward01/O
+    SLICE_X24Y60.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.F1      net (fanout=20)       1.379   CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.X       Tilo                  0.759   CPU_inst/a_data<2>
+                                                       CPU_inst/reg_file_inst/a_data_2_mux0000
+    SLICE_X23Y55.BX      net (fanout=9)        1.576   CPU_inst/a_data<2>
+    SLICE_X23Y55.COUT    Tbxcy                 1.095   CPU_inst/ALU_inst/add_result<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<10>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<10>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
+    SLICE_X23Y60.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
+    SLICE_X23Y60.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<12>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<12>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
+    SLICE_X23Y61.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
+    SLICE_X23Y61.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<14>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<14>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<15>
+    SLICE_X25Y65.G2      net (fanout=1)        0.639   CPU_inst/ALU_inst/add_result<15>
+    SLICE_X25Y65.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+                                                       CPU_inst/ALU_inst/add_result<15>_rt
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_5
+    SLICE_X25Y64.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+    SLICE_X25Y64.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<15>
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_5
+    SLICE_X26Y59.G1      net (fanout=5)        1.023   CPU_inst/ALU_inst/alu_result<15>
+    SLICE_X26Y59.Y       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
+                                                       CPU_inst/ALU_inst/z_and001612
+    SLICE_X26Y59.F4      net (fanout=1)        0.343   CPU_inst/ALU_inst/z_and001612/O
+    SLICE_X26Y59.X       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
+                                                       CPU_inst/ALU_inst/z_and001621
+    SLICE_X26Y50.G1      net (fanout=2)        0.634   CPU_inst/ALU_inst/z_and0016
+    SLICE_X26Y50.CLK     Tgck                  0.892   CPU_inst/ALU_inst/z
+                                                       CPU_inst/ALU_inst/z_mux0000411
+                                                       CPU_inst/ALU_inst/z
     -------------------------------------------------  ---------------------------
-    Total                                     16.336ns (6.455ns logic, 9.881ns route)
-                                                       (39.5% logic, 60.5% route)
+    Total                                     18.437ns (10.048ns logic, 8.389ns route)
+                                                       (54.5% logic, 45.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     4.189ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               CPU_inst/L_en2 (FF)
-  Destination:          timer_inst/counter_1 (FF)
+Slack (setup path):     1.554ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU_inst/dest_waddr2_0 (FF)
+  Destination:          CPU_inst/ALU_inst/z (FF)
   Requirement:          20.000ns
-  Data Path Delay:      15.811ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      18.435ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.011ns (0.113 - 0.124)
   Source Clock:         clk_sys rising at 0.000ns
   Destination Clock:    clk_sys rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: CPU_inst/L_en2 to timer_inst/counter_1
+  Maximum Data Path: CPU_inst/dest_waddr2_0 to CPU_inst/ALU_inst/z
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X33Y55.XQ      Tcko                  0.591   CPU_inst/L_en2
-                                                       CPU_inst/L_en2
-    SLICE_X32Y38.G2      net (fanout=13)       1.206   CPU_inst/L_en2
-    SLICE_X32Y38.Y       Tilo                  0.759   hex_en132
-                                                       CPU_inst/reg_file_inst/IO_address_7_and00001
-    SLICE_X32Y30.F1      net (fanout=59)       0.673   CPU_inst/reg_file_inst/IO_address_7_and0000
-    SLICE_X32Y30.X       Tilo                  0.759   intcon_inst/status<7>
-                                                       hex_en140
-    SLICE_X28Y38.G3      net (fanout=1)        1.097   hex_en140
-    SLICE_X28Y38.Y       Tilo                  0.759   N15
-                                                       hex_en152
-    SLICE_X28Y38.F4      net (fanout=1)        0.023   hex_en152/O
-    SLICE_X28Y38.X       Tilo                  0.759   N15
-                                                       hex_en1163
-    SLICE_X40Y35.G1      net (fanout=5)        1.415   N15
-    SLICE_X40Y35.Y       Tilo                  0.759   prev_timer_en
-                                                       keyboard_en11
-    SLICE_X40Y35.F3      net (fanout=3)        0.025   N36
-    SLICE_X40Y35.X       Tilo                  0.759   prev_timer_en
-                                                       timer_en1
-    SLICE_X64Y49.G4      net (fanout=5)        2.433   timer_en
-    SLICE_X64Y49.Y       Tilo                  0.759   timer_inst/counter_7_not0001
-                                                       timer_inst/counter_0_mux000011
-    SLICE_X64Y49.F3      net (fanout=9)        0.124   timer_inst/N2
-    SLICE_X64Y49.X       Tilo                  0.759   timer_inst/counter_7_not0001
-                                                       timer_inst/counter_7_not00011
-    SLICE_X65Y48.CE      net (fanout=4)        1.597   timer_inst/counter_7_not0001
-    SLICE_X65Y48.CLK     Tceck                 0.555   timer_inst/counter<1>
-                                                       timer_inst/counter_1
+    SLICE_X34Y47.YQ      Tcko                  0.652   CPU_inst/dest_waddr2<1>
+                                                       CPU_inst/dest_waddr2_0
+    SLICE_X25Y63.F3      net (fanout=15)       2.427   CPU_inst/dest_waddr2<0>
+    SLICE_X25Y63.X       Tilo                  0.704   N407
+                                                       CPU_inst/reg_file_inst/al_forward01_SW0
+    SLICE_X24Y60.G2      net (fanout=1)        0.398   N407
+    SLICE_X24Y60.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/al_forward01
+    SLICE_X24Y60.F4      net (fanout=1)        0.023   CPU_inst/reg_file_inst/al_forward01/O
+    SLICE_X24Y60.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.F1      net (fanout=20)       1.379   CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.X       Tilo                  0.759   CPU_inst/a_data<2>
+                                                       CPU_inst/reg_file_inst/a_data_2_mux0000
+    SLICE_X23Y55.BX      net (fanout=9)        1.576   CPU_inst/a_data<2>
+    SLICE_X23Y55.COUT    Tbxcy                 1.095   CPU_inst/ALU_inst/add_result<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<10>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<10>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
+    SLICE_X23Y60.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
+    SLICE_X23Y60.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<12>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<12>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
+    SLICE_X23Y61.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
+    SLICE_X23Y61.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<14>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<14>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<15>
+    SLICE_X25Y65.G2      net (fanout=1)        0.639   CPU_inst/ALU_inst/add_result<15>
+    SLICE_X25Y65.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+                                                       CPU_inst/ALU_inst/add_result<15>_rt
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_5
+    SLICE_X25Y64.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+    SLICE_X25Y64.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<15>
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_5
+    SLICE_X26Y59.G1      net (fanout=5)        1.023   CPU_inst/ALU_inst/alu_result<15>
+    SLICE_X26Y59.Y       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
+                                                       CPU_inst/ALU_inst/z_and001612
+    SLICE_X26Y59.F4      net (fanout=1)        0.343   CPU_inst/ALU_inst/z_and001612/O
+    SLICE_X26Y59.X       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
+                                                       CPU_inst/ALU_inst/z_and001621
+    SLICE_X26Y50.G1      net (fanout=2)        0.634   CPU_inst/ALU_inst/z_and0016
+    SLICE_X26Y50.CLK     Tgck                  0.892   CPU_inst/ALU_inst/z
+                                                       CPU_inst/ALU_inst/z_mux0000411
+                                                       CPU_inst/ALU_inst/z
     -------------------------------------------------  ---------------------------
-    Total                                     15.811ns (7.218ns logic, 8.593ns route)
-                                                       (45.7% logic, 54.3% route)
+    Total                                     18.435ns (9.993ns logic, 8.442ns route)
+                                                       (54.2% logic, 45.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     4.229ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               CPU_inst/IO_select2 (FF)
-  Destination:          timer_inst/counter_1 (FF)
+Slack (setup path):     1.623ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU_inst/H_en2 (FF)
+  Destination:          CPU_inst/ALU_inst/z (FF)
   Requirement:          20.000ns
-  Data Path Delay:      15.771ns (Levels of Logic = 8)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      18.369ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.008ns (0.113 - 0.121)
   Source Clock:         clk_sys rising at 0.000ns
   Destination Clock:    clk_sys rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: CPU_inst/IO_select2 to timer_inst/counter_1
+  Maximum Data Path: CPU_inst/H_en2 to CPU_inst/ALU_inst/z
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X34Y49.XQ      Tcko                  0.592   CPU_inst/IO_select2
-                                                       CPU_inst/IO_select2
-    SLICE_X32Y38.G1      net (fanout=5)        1.165   CPU_inst/IO_select2
-    SLICE_X32Y38.Y       Tilo                  0.759   hex_en132
-                                                       CPU_inst/reg_file_inst/IO_address_7_and00001
-    SLICE_X32Y30.F1      net (fanout=59)       0.673   CPU_inst/reg_file_inst/IO_address_7_and0000
-    SLICE_X32Y30.X       Tilo                  0.759   intcon_inst/status<7>
-                                                       hex_en140
-    SLICE_X28Y38.G3      net (fanout=1)        1.097   hex_en140
-    SLICE_X28Y38.Y       Tilo                  0.759   N15
-                                                       hex_en152
-    SLICE_X28Y38.F4      net (fanout=1)        0.023   hex_en152/O
-    SLICE_X28Y38.X       Tilo                  0.759   N15
-                                                       hex_en1163
-    SLICE_X40Y35.G1      net (fanout=5)        1.415   N15
-    SLICE_X40Y35.Y       Tilo                  0.759   prev_timer_en
-                                                       keyboard_en11
-    SLICE_X40Y35.F3      net (fanout=3)        0.025   N36
-    SLICE_X40Y35.X       Tilo                  0.759   prev_timer_en
-                                                       timer_en1
-    SLICE_X64Y49.G4      net (fanout=5)        2.433   timer_en
-    SLICE_X64Y49.Y       Tilo                  0.759   timer_inst/counter_7_not0001
-                                                       timer_inst/counter_0_mux000011
-    SLICE_X64Y49.F3      net (fanout=9)        0.124   timer_inst/N2
-    SLICE_X64Y49.X       Tilo                  0.759   timer_inst/counter_7_not0001
-                                                       timer_inst/counter_7_not00011
-    SLICE_X65Y48.CE      net (fanout=4)        1.597   timer_inst/counter_7_not0001
-    SLICE_X65Y48.CLK     Tceck                 0.555   timer_inst/counter<1>
-                                                       timer_inst/counter_1
+    SLICE_X36Y50.XQ      Tcko                  0.592   CPU_inst/H_en2
+                                                       CPU_inst/H_en2
+    SLICE_X25Y63.F1      net (fanout=19)       2.421   CPU_inst/H_en2
+    SLICE_X25Y63.X       Tilo                  0.704   N407
+                                                       CPU_inst/reg_file_inst/al_forward01_SW0
+    SLICE_X24Y60.G2      net (fanout=1)        0.398   N407
+    SLICE_X24Y60.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/al_forward01
+    SLICE_X24Y60.F4      net (fanout=1)        0.023   CPU_inst/reg_file_inst/al_forward01/O
+    SLICE_X24Y60.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.F1      net (fanout=20)       1.379   CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.X       Tilo                  0.759   CPU_inst/a_data<2>
+                                                       CPU_inst/reg_file_inst/a_data_2_mux0000
+    SLICE_X23Y55.BX      net (fanout=9)        1.576   CPU_inst/a_data<2>
+    SLICE_X23Y55.COUT    Tbxcy                 1.095   CPU_inst/ALU_inst/add_result<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<5>
+    SLICE_X23Y57.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<6>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<7>
+    SLICE_X23Y58.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<8>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<9>
+    SLICE_X23Y59.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<10>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<10>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
+    SLICE_X23Y60.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<11>
+    SLICE_X23Y60.COUT    Tbyp                  0.118   CPU_inst/ALU_inst/add_result<12>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<12>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
+    SLICE_X23Y61.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<13>
+    SLICE_X23Y61.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<14>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<14>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<15>
+    SLICE_X25Y65.G2      net (fanout=1)        0.639   CPU_inst/ALU_inst/add_result<15>
+    SLICE_X25Y65.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+                                                       CPU_inst/ALU_inst/add_result<15>_rt
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_5
+    SLICE_X25Y64.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f56
+    SLICE_X25Y64.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<15>
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_5
+    SLICE_X26Y59.G1      net (fanout=5)        1.023   CPU_inst/ALU_inst/alu_result<15>
+    SLICE_X26Y59.Y       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
+                                                       CPU_inst/ALU_inst/z_and001612
+    SLICE_X26Y59.F4      net (fanout=1)        0.343   CPU_inst/ALU_inst/z_and001612/O
+    SLICE_X26Y59.X       Tilo                  0.759   CPU_inst/ALU_inst/z_and0016
+                                                       CPU_inst/ALU_inst/z_and001621
+    SLICE_X26Y50.G1      net (fanout=2)        0.634   CPU_inst/ALU_inst/z_and0016
+    SLICE_X26Y50.CLK     Tgck                  0.892   CPU_inst/ALU_inst/z
+                                                       CPU_inst/ALU_inst/z_mux0000411
+                                                       CPU_inst/ALU_inst/z
     -------------------------------------------------  ---------------------------
-    Total                                     15.771ns (7.219ns logic, 8.552ns route)
-                                                       (45.8% logic, 54.2% route)
+    Total                                     18.369ns (9.933ns logic, 8.436ns route)
+                                                       (54.1% logic, 45.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point CPU_inst/ALU_inst/p (SLICE_X27Y51.F1), 5702 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.705ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU_inst/dest_waddr2_3 (FF)
+  Destination:          CPU_inst/ALU_inst/p (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      17.285ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.010ns (0.046 - 0.056)
+  Source Clock:         clk_sys rising at 0.000ns
+  Destination Clock:    clk_sys rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CPU_inst/dest_waddr2_3 to CPU_inst/ALU_inst/p
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X32Y46.YQ      Tcko                  0.652   CPU_inst/dest_waddr2<2>
+                                                       CPU_inst/dest_waddr2_3
+    SLICE_X20Y63.G3      net (fanout=11)       2.033   CPU_inst/dest_waddr2<3>
+    SLICE_X20Y63.Y       Tilo                  0.759   N302
+                                                       CPU_inst/reg_file_inst/ah_forward0_cmp_eq0000562
+    SLICE_X24Y60.G1      net (fanout=3)        0.739   CPU_inst/reg_file_inst/ah_forward0_cmp_eq0000562
+    SLICE_X24Y60.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/al_forward01
+    SLICE_X24Y60.F4      net (fanout=1)        0.023   CPU_inst/reg_file_inst/al_forward01/O
+    SLICE_X24Y60.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.F1      net (fanout=20)       1.379   CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.X       Tilo                  0.759   CPU_inst/a_data<2>
+                                                       CPU_inst/reg_file_inst/a_data_2_mux0000
+    SLICE_X23Y55.BX      net (fanout=9)        1.576   CPU_inst/a_data<2>
+    SLICE_X23Y55.COUT    Tbxcy                 1.095   CPU_inst/ALU_inst/add_result<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<5>
+    SLICE_X25Y49.G4      net (fanout=1)        0.840   CPU_inst/ALU_inst/add_result<5>
+    SLICE_X25Y49.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f511
+                                                       CPU_inst/ALU_inst/add_result<5>_rt
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_10
+    SLICE_X25Y48.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f511
+    SLICE_X25Y48.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<5>
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_10
+    SLICE_X24Y50.G1      net (fanout=3)        0.447   CPU_inst/ALU_inst/alu_result<5>
+    SLICE_X24Y50.Y       Tilo                  0.759   CPU_inst/ALU_inst/z_and0017
+                                                       CPU_inst/ALU_inst/z_and001712
+    SLICE_X24Y50.F4      net (fanout=1)        0.023   CPU_inst/ALU_inst/z_and001712/O
+    SLICE_X24Y50.X       Tilo                  0.759   CPU_inst/ALU_inst/z_and0017
+                                                       CPU_inst/ALU_inst/z_and001721
+    SLICE_X27Y51.F1      net (fanout=2)        0.822   CPU_inst/ALU_inst/z_and0017
+    SLICE_X27Y51.CLK     Tfck                  0.837   CPU_inst/ALU_inst/p
+                                                       CPU_inst/ALU_inst/p_mux0001
+                                                       CPU_inst/ALU_inst/p
+    -------------------------------------------------  ---------------------------
+    Total                                     17.285ns (9.403ns logic, 7.882ns route)
+                                                       (54.4% logic, 45.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.706ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU_inst/dest_waddr2_0 (FF)
+  Destination:          CPU_inst/ALU_inst/p (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      17.283ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.011ns (0.113 - 0.124)
+  Source Clock:         clk_sys rising at 0.000ns
+  Destination Clock:    clk_sys rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CPU_inst/dest_waddr2_0 to CPU_inst/ALU_inst/p
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y47.YQ      Tcko                  0.652   CPU_inst/dest_waddr2<1>
+                                                       CPU_inst/dest_waddr2_0
+    SLICE_X25Y63.F3      net (fanout=15)       2.427   CPU_inst/dest_waddr2<0>
+    SLICE_X25Y63.X       Tilo                  0.704   N407
+                                                       CPU_inst/reg_file_inst/al_forward01_SW0
+    SLICE_X24Y60.G2      net (fanout=1)        0.398   N407
+    SLICE_X24Y60.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/al_forward01
+    SLICE_X24Y60.F4      net (fanout=1)        0.023   CPU_inst/reg_file_inst/al_forward01/O
+    SLICE_X24Y60.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.F1      net (fanout=20)       1.379   CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.X       Tilo                  0.759   CPU_inst/a_data<2>
+                                                       CPU_inst/reg_file_inst/a_data_2_mux0000
+    SLICE_X23Y55.BX      net (fanout=9)        1.576   CPU_inst/a_data<2>
+    SLICE_X23Y55.COUT    Tbxcy                 1.095   CPU_inst/ALU_inst/add_result<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.Y       Tciny                 0.869   CPU_inst/ALU_inst/add_result<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<5>
+    SLICE_X25Y49.G4      net (fanout=1)        0.840   CPU_inst/ALU_inst/add_result<5>
+    SLICE_X25Y49.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f511
+                                                       CPU_inst/ALU_inst/add_result<5>_rt
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_10
+    SLICE_X25Y48.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f511
+    SLICE_X25Y48.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<5>
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_10
+    SLICE_X24Y50.G1      net (fanout=3)        0.447   CPU_inst/ALU_inst/alu_result<5>
+    SLICE_X24Y50.Y       Tilo                  0.759   CPU_inst/ALU_inst/z_and0017
+                                                       CPU_inst/ALU_inst/z_and001712
+    SLICE_X24Y50.F4      net (fanout=1)        0.023   CPU_inst/ALU_inst/z_and001712/O
+    SLICE_X24Y50.X       Tilo                  0.759   CPU_inst/ALU_inst/z_and0017
+                                                       CPU_inst/ALU_inst/z_and001721
+    SLICE_X27Y51.F1      net (fanout=2)        0.822   CPU_inst/ALU_inst/z_and0017
+    SLICE_X27Y51.CLK     Tfck                  0.837   CPU_inst/ALU_inst/p
+                                                       CPU_inst/ALU_inst/p_mux0001
+                                                       CPU_inst/ALU_inst/p
+    -------------------------------------------------  ---------------------------
+    Total                                     17.283ns (9.348ns logic, 7.935ns route)
+                                                       (54.1% logic, 45.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.717ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CPU_inst/dest_waddr2_3 (FF)
+  Destination:          CPU_inst/ALU_inst/p (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      17.273ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.010ns (0.046 - 0.056)
+  Source Clock:         clk_sys rising at 0.000ns
+  Destination Clock:    clk_sys rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CPU_inst/dest_waddr2_3 to CPU_inst/ALU_inst/p
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X32Y46.YQ      Tcko                  0.652   CPU_inst/dest_waddr2<2>
+                                                       CPU_inst/dest_waddr2_3
+    SLICE_X20Y63.G3      net (fanout=11)       2.033   CPU_inst/dest_waddr2<3>
+    SLICE_X20Y63.Y       Tilo                  0.759   N302
+                                                       CPU_inst/reg_file_inst/ah_forward0_cmp_eq0000562
+    SLICE_X24Y60.G1      net (fanout=3)        0.739   CPU_inst/reg_file_inst/ah_forward0_cmp_eq0000562
+    SLICE_X24Y60.Y       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/al_forward01
+    SLICE_X24Y60.F4      net (fanout=1)        0.023   CPU_inst/reg_file_inst/al_forward01/O
+    SLICE_X24Y60.X       Tilo                  0.759   CPU_inst/reg_file_inst/a_data_7_and0000
+                                                       CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.F1      net (fanout=20)       1.379   CPU_inst/reg_file_inst/a_data_7_and0000
+    SLICE_X26Y51.X       Tilo                  0.759   CPU_inst/a_data<2>
+                                                       CPU_inst/reg_file_inst/a_data_2_mux0000
+    SLICE_X23Y55.BX      net (fanout=9)        1.576   CPU_inst/a_data<2>
+    SLICE_X23Y55.COUT    Tbxcy                 1.095   CPU_inst/ALU_inst/add_result<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<2>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.CIN     net (fanout=1)        0.000   CPU_inst/ALU_inst/Madd_add_result_addsub0001_cy<3>
+    SLICE_X23Y56.X       Tcinx                 0.462   CPU_inst/ALU_inst/add_result<4>
+                                                       CPU_inst/ALU_inst/Madd_add_result_addsub0001_xor<4>
+    SLICE_X27Y47.G2      net (fanout=1)        0.988   CPU_inst/ALU_inst/add_result<4>
+    SLICE_X27Y47.F5      Tif5                  0.875   CPU_inst/ALU_inst/Mmux_alu_result_4_f510
+                                                       CPU_inst/ALU_inst/add_result<4>_rt
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_4_f5_9
+    SLICE_X27Y46.FXINB   net (fanout=1)        0.000   CPU_inst/ALU_inst/Mmux_alu_result_4_f510
+    SLICE_X27Y46.Y       Tif6y                 0.521   CPU_inst/ALU_inst/alu_result<4>
+                                                       CPU_inst/ALU_inst/Mmux_alu_result_2_f6_9
+    SLICE_X24Y50.G2      net (fanout=3)        0.694   CPU_inst/ALU_inst/alu_result<4>
+    SLICE_X24Y50.Y       Tilo                  0.759   CPU_inst/ALU_inst/z_and0017
+                                                       CPU_inst/ALU_inst/z_and001712
+    SLICE_X24Y50.F4      net (fanout=1)        0.023   CPU_inst/ALU_inst/z_and001712/O
+    SLICE_X24Y50.X       Tilo                  0.759   CPU_inst/ALU_inst/z_and0017
+                                                       CPU_inst/ALU_inst/z_and001721
+    SLICE_X27Y51.F1      net (fanout=2)        0.822   CPU_inst/ALU_inst/z_and0017
+    SLICE_X27Y51.CLK     Tfck                  0.837   CPU_inst/ALU_inst/p
+                                                       CPU_inst/ALU_inst/p_mux0001
+                                                       CPU_inst/ALU_inst/p
+    -------------------------------------------------  ---------------------------
+    Total                                     17.273ns (8.996ns logic, 8.277ns route)
+                                                       (52.1% logic, 47.9% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_PLL_inst_CLK0_BUF = PERIOD TIMEGRP "PLL_inst_CLK0_BUF" TS_sys_clk HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point CPU_inst/PC_inst/cstack0/Mram_stack_mem16 (SLICE_X40Y57.BX), 1 path
+Paths for end point CPU_inst/PC_inst/cstack0/Mram_stack_mem30 (SLICE_X48Y71.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.673ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               CPU_inst/PC_inst/cstack0/input_buf_15 (FF)
-  Destination:          CPU_inst/PC_inst/cstack0/Mram_stack_mem16 (RAM)
+Slack (hold path):      0.676ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               CPU_inst/PC_inst/cstack0/input_buf_29 (FF)
+  Destination:          CPU_inst/PC_inst/cstack0/Mram_stack_mem30 (RAM)
   Requirement:          0.000ns
   Data Path Delay:      0.677ns (Levels of Logic = 1)
-  Clock Path Skew:      0.004ns (0.009 - 0.005)
+  Clock Path Skew:      0.001ns (0.006 - 0.005)
   Source Clock:         clk_sys rising at 20.000ns
   Destination Clock:    clk_sys rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: CPU_inst/PC_inst/cstack0/input_buf_15 to CPU_inst/PC_inst/cstack0/Mram_stack_mem16
+  Minimum Data Path: CPU_inst/PC_inst/cstack0/input_buf_29 to CPU_inst/PC_inst/cstack0/Mram_stack_mem30
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X41Y58.XQ      Tcko                  0.473   CPU_inst/PC_inst/cstack0/input_buf<15>
-                                                       CPU_inst/PC_inst/cstack0/input_buf_15
-    SLICE_X40Y57.BX      net (fanout=1)        0.353   CPU_inst/PC_inst/cstack0/input_buf<15>
-    SLICE_X40Y57.CLK     Tdh         (-Th)     0.149   CPU_inst/PC_inst/cstack0/output_buf<15>
-                                                       CPU_inst/PC_inst/cstack0/Mram_stack_mem16
+    SLICE_X49Y72.XQ      Tcko                  0.473   CPU_inst/PC_inst/cstack0/input_buf<29>
+                                                       CPU_inst/PC_inst/cstack0/input_buf_29
+    SLICE_X48Y71.BX      net (fanout=1)        0.353   CPU_inst/PC_inst/cstack0/input_buf<29>
+    SLICE_X48Y71.CLK     Tdh         (-Th)     0.149   CPU_inst/PC_inst/cstack0/output_buf<29>
+                                                       CPU_inst/PC_inst/cstack0/Mram_stack_mem30
     -------------------------------------------------  ---------------------------
     Total                                      0.677ns (0.324ns logic, 0.353ns route)
                                                        (47.9% logic, 52.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point CPU_inst/PC_inst/cstack0/Mram_stack_mem32 (SLICE_X34Y56.BX), 1 path
+Paths for end point CPU_inst/PC_inst/cstack0/Mram_stack_mem32 (SLICE_X48Y72.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.674ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.677ns (requirement - (clock path skew + uncertainty - data path))
   Source:               CPU_inst/PC_inst/cstack0/input_buf_31 (FF)
   Destination:          CPU_inst/PC_inst/cstack0/Mram_stack_mem32 (RAM)
   Requirement:          0.000ns
   Data Path Delay:      0.678ns (Levels of Logic = 1)
-  Clock Path Skew:      0.004ns (0.009 - 0.005)
+  Clock Path Skew:      0.001ns (0.005 - 0.004)
   Source Clock:         clk_sys rising at 20.000ns
   Destination Clock:    clk_sys rising at 20.000ns
   Clock Uncertainty:    0.000ns
@@ -639,10 +777,10 @@ Slack (hold path):      0.674ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X34Y58.XQ      Tcko                  0.474   CPU_inst/PC_inst/cstack0/input_buf<31>
+    SLICE_X48Y74.XQ      Tcko                  0.474   CPU_inst/PC_inst/cstack0/input_buf<31>
                                                        CPU_inst/PC_inst/cstack0/input_buf_31
-    SLICE_X34Y56.BX      net (fanout=1)        0.353   CPU_inst/PC_inst/cstack0/input_buf<31>
-    SLICE_X34Y56.CLK     Tdh         (-Th)     0.149   CPU_inst/PC_inst/cstack0/output_buf<31>
+    SLICE_X48Y72.BX      net (fanout=1)        0.353   CPU_inst/PC_inst/cstack0/input_buf<31>
+    SLICE_X48Y72.CLK     Tdh         (-Th)     0.149   CPU_inst/PC_inst/cstack0/output_buf<31>
                                                        CPU_inst/PC_inst/cstack0/Mram_stack_mem32
     -------------------------------------------------  ---------------------------
     Total                                      0.678ns (0.325ns logic, 0.353ns route)
@@ -650,30 +788,30 @@ Slack (hold path):      0.674ns (requirement - (clock path skew + uncertainty - 
 
 --------------------------------------------------------------------------------
 
-Paths for end point CPU_inst/PC_inst/cstack0/Mram_stack_mem14 (SLICE_X36Y47.BX), 1 path
+Paths for end point CPU_inst/PC_inst/cstack0/Mram_stack_mem16 (SLICE_X50Y70.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.676ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               CPU_inst/PC_inst/cstack0/input_buf_13 (FF)
-  Destination:          CPU_inst/PC_inst/cstack0/Mram_stack_mem14 (RAM)
+Slack (hold path):      0.687ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               CPU_inst/PC_inst/cstack0/input_buf_15 (FF)
+  Destination:          CPU_inst/PC_inst/cstack0/Mram_stack_mem16 (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.677ns (Levels of Logic = 1)
-  Clock Path Skew:      0.001ns (0.018 - 0.017)
+  Data Path Delay:      0.688ns (Levels of Logic = 1)
+  Clock Path Skew:      0.001ns (0.075 - 0.074)
   Source Clock:         clk_sys rising at 20.000ns
   Destination Clock:    clk_sys rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: CPU_inst/PC_inst/cstack0/input_buf_13 to CPU_inst/PC_inst/cstack0/Mram_stack_mem14
+  Minimum Data Path: CPU_inst/PC_inst/cstack0/input_buf_15 to CPU_inst/PC_inst/cstack0/Mram_stack_mem16
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X37Y48.XQ      Tcko                  0.473   CPU_inst/PC_inst/cstack0/input_buf<13>
-                                                       CPU_inst/PC_inst/cstack0/input_buf_13
-    SLICE_X36Y47.BX      net (fanout=1)        0.353   CPU_inst/PC_inst/cstack0/input_buf<13>
-    SLICE_X36Y47.CLK     Tdh         (-Th)     0.149   CPU_inst/PC_inst/cstack0/output_buf<13>
-                                                       CPU_inst/PC_inst/cstack0/Mram_stack_mem14
+    SLICE_X49Y70.XQ      Tcko                  0.473   CPU_inst/PC_inst/cstack0/input_buf<15>
+                                                       CPU_inst/PC_inst/cstack0/input_buf_15
+    SLICE_X50Y70.BX      net (fanout=1)        0.364   CPU_inst/PC_inst/cstack0/input_buf<15>
+    SLICE_X50Y70.CLK     Tdh         (-Th)     0.149   CPU_inst/PC_inst/cstack0/output_buf<15>
+                                                       CPU_inst/PC_inst/cstack0/Mram_stack_mem16
     -------------------------------------------------  ---------------------------
-    Total                                      0.677ns (0.324ns logic, 0.353ns route)
-                                                       (47.9% logic, 52.1% route)
+    Total                                      0.688ns (0.324ns logic, 0.364ns route)
+                                                       (47.1% logic, 52.9% route)
 
 --------------------------------------------------------------------------------
 
@@ -683,27 +821,27 @@ Slack: 16.808ns (period - (min low pulse limit / (low pulse / period)))
   Period: 20.000ns
   Low pulse: 10.000ns
   Low pulse limit: 1.596ns (Trpw)
-  Physical resource: memory_controller_inst/psram_adv_n/SR
-  Logical resource: memory_controller_inst/psram_adv_n/SR
-  Location pin: SLICE_X0Y32.SR
+  Physical resource: memory_controller_inst/state_FSM_FFd7/SR
+  Logical resource: memory_controller_inst/state_FSM_FFd7/SR
+  Location pin: SLICE_X12Y59.SR
   Clock network: rst
 --------------------------------------------------------------------------------
 Slack: 16.808ns (period - (min high pulse limit / (high pulse / period)))
   Period: 20.000ns
   High pulse: 10.000ns
   High pulse limit: 1.596ns (Trpw)
-  Physical resource: memory_controller_inst/psram_adv_n/SR
-  Logical resource: memory_controller_inst/psram_adv_n/SR
-  Location pin: SLICE_X0Y32.SR
+  Physical resource: memory_controller_inst/state_FSM_FFd7/SR
+  Logical resource: memory_controller_inst/state_FSM_FFd7/SR
+  Location pin: SLICE_X12Y59.SR
   Clock network: rst
 --------------------------------------------------------------------------------
 Slack: 16.808ns (period - (min low pulse limit / (low pulse / period)))
   Period: 20.000ns
   Low pulse: 10.000ns
   Low pulse limit: 1.596ns (Trpw)
-  Physical resource: serial_inst/to_CPU<3>/SR
-  Logical resource: serial_inst/to_CPU_3/SR
-  Location pin: SLICE_X24Y21.SR
+  Physical resource: IOMM_inst0/read_increment<11>/SR
+  Logical resource: IOMM_inst0/read_increment_11/SR
+  Location pin: SLICE_X28Y75.SR
   Clock network: rst
 --------------------------------------------------------------------------------
 
@@ -714,87 +852,87 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  1127 paths analyzed, 401 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   7.338ns.
+ Minimum period is   7.891ns.
 --------------------------------------------------------------------------------
 
-Paths for end point hex_inst/seg1_s_2 (SLICE_X53Y80.BY), 1 path
+Paths for end point hex_inst/seg3_s_2 (SLICE_X54Y87.BY), 1 path
 --------------------------------------------------------------------------------
-Slack (setup path):     17.737ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               hex_indicators_6 (FF)
-  Destination:          hex_inst/seg1_s_2 (FF)
+Slack (setup path):     18.345ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hex_indicators_14 (FF)
+  Destination:          hex_inst/seg3_s_2 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      2.263ns (Levels of Logic = 0)
+  Data Path Delay:      1.655ns (Levels of Logic = 0)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_sys rising at 20.000ns
   Destination Clock:    clk_25 rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: hex_indicators_6 to hex_inst/seg1_s_2
+  Maximum Data Path: hex_indicators_14 to hex_inst/seg3_s_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X52Y80.YQ      Tcko                  0.652   hex_indicators<7>
-                                                       hex_indicators_6
-    SLICE_X53Y80.BY      net (fanout=1)        1.250   hex_indicators<6>
-    SLICE_X53Y80.CLK     Tdick                 0.361   hex_inst/seg1_s<3>
-                                                       hex_inst/seg1_s_2
+    SLICE_X55Y85.YQ      Tcko                  0.587   hex_indicators<15>
+                                                       hex_indicators_14
+    SLICE_X54Y87.BY      net (fanout=1)        0.686   hex_indicators<14>
+    SLICE_X54Y87.CLK     Tdick                 0.382   hex_inst/seg3_s<3>
+                                                       hex_inst/seg3_s_2
     -------------------------------------------------  ---------------------------
-    Total                                      2.263ns (1.013ns logic, 1.250ns route)
-                                                       (44.8% logic, 55.2% route)
+    Total                                      1.655ns (0.969ns logic, 0.686ns route)
+                                                       (58.5% logic, 41.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point hex_inst/seg2_s_1 (SLICE_X53Y81.BX), 1 path
+Paths for end point hex_inst/seg0_s_1 (SLICE_X55Y90.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (setup path):     18.380ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               hex_indicators_9 (FF)
-  Destination:          hex_inst/seg2_s_1 (FF)
+Slack (setup path):     18.346ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hex_indicators_1 (FF)
+  Destination:          hex_inst/seg0_s_1 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      1.620ns (Levels of Logic = 0)
+  Data Path Delay:      1.654ns (Levels of Logic = 0)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_sys rising at 20.000ns
   Destination Clock:    clk_25 rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: hex_indicators_9 to hex_inst/seg2_s_1
+  Maximum Data Path: hex_indicators_1 to hex_inst/seg0_s_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X52Y81.XQ      Tcko                  0.592   hex_indicators<9>
-                                                       hex_indicators_9
-    SLICE_X53Y81.BX      net (fanout=1)        0.720   hex_indicators<9>
-    SLICE_X53Y81.CLK     Tdick                 0.308   hex_inst/seg2_s<1>
-                                                       hex_inst/seg2_s_1
+    SLICE_X54Y90.XQ      Tcko                  0.592   hex_indicators<1>
+                                                       hex_indicators_1
+    SLICE_X55Y90.BX      net (fanout=1)        0.754   hex_indicators<1>
+    SLICE_X55Y90.CLK     Tdick                 0.308   hex_inst/seg0_s<1>
+                                                       hex_inst/seg0_s_1
     -------------------------------------------------  ---------------------------
-    Total                                      1.620ns (0.900ns logic, 0.720ns route)
-                                                       (55.6% logic, 44.4% route)
+    Total                                      1.654ns (0.900ns logic, 0.754ns route)
+                                                       (54.4% logic, 45.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point hex_inst/seg2_s_2 (SLICE_X52Y76.BY), 1 path
+Paths for end point hex_inst/seg2_s_3 (SLICE_X55Y89.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (setup path):     18.494ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               hex_indicators_10 (FF)
-  Destination:          hex_inst/seg2_s_2 (FF)
+Slack (setup path):     18.348ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hex_indicators_11 (FF)
+  Destination:          hex_inst/seg2_s_3 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      1.506ns (Levels of Logic = 0)
+  Data Path Delay:      1.652ns (Levels of Logic = 0)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_sys rising at 20.000ns
   Destination Clock:    clk_25 rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: hex_indicators_10 to hex_inst/seg2_s_2
+  Maximum Data Path: hex_indicators_11 to hex_inst/seg2_s_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X50Y77.YQ      Tcko                  0.652   hex_indicators<11>
-                                                       hex_indicators_10
-    SLICE_X52Y76.BY      net (fanout=1)        0.472   hex_indicators<10>
-    SLICE_X52Y76.CLK     Tdick                 0.382   hex_inst/seg2_s<3>
-                                                       hex_inst/seg2_s_2
+    SLICE_X52Y89.XQ      Tcko                  0.592   hex_indicators<11>
+                                                       hex_indicators_11
+    SLICE_X55Y89.BX      net (fanout=1)        0.752   hex_indicators<11>
+    SLICE_X55Y89.CLK     Tdick                 0.308   hex_inst/seg2_s<3>
+                                                       hex_inst/seg2_s_3
     -------------------------------------------------  ---------------------------
-    Total                                      1.506ns (1.034ns logic, 0.472ns route)
-                                                       (68.7% logic, 31.3% route)
+    Total                                      1.652ns (0.900ns logic, 0.752ns route)
+                                                       (54.5% logic, 45.5% route)
 
 --------------------------------------------------------------------------------
 
@@ -802,65 +940,65 @@ Hold Paths: TS_PLL_inst_CLKDV_BUF = PERIOD TIMEGRP "PLL_inst_CLKDV_BUF" TS_sys_c
         HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point hex_inst/seg0_s_1 (SLICE_X53Y84.BX), 1 path
+Paths for end point hex_inst/seg1_s_1 (SLICE_X53Y90.BX), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.930ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               hex_indicators_1 (FF)
-  Destination:          hex_inst/seg0_s_1 (FF)
+  Source:               hex_indicators_5 (FF)
+  Destination:          hex_inst/seg1_s_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.931ns (Levels of Logic = 0)
-  Clock Path Skew:      0.001ns (2.010 - 2.009)
+  Data Path Delay:      0.930ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
   Source Clock:         clk_sys rising at 40.000ns
   Destination Clock:    clk_25 rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: hex_indicators_1 to hex_inst/seg0_s_1
+  Minimum Data Path: hex_indicators_5 to hex_inst/seg1_s_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X52Y85.XQ      Tcko                  0.474   hex_indicators<1>
-                                                       hex_indicators_1
-    SLICE_X53Y84.BX      net (fanout=1)        0.364   hex_indicators<1>
-    SLICE_X53Y84.CLK     Tckdi       (-Th)    -0.093   hex_inst/seg0_s<1>
-                                                       hex_inst/seg0_s_1
+    SLICE_X53Y91.XQ      Tcko                  0.473   hex_indicators<5>
+                                                       hex_indicators_5
+    SLICE_X53Y90.BX      net (fanout=1)        0.364   hex_indicators<5>
+    SLICE_X53Y90.CLK     Tckdi       (-Th)    -0.093   hex_inst/seg1_s<1>
+                                                       hex_inst/seg1_s_1
     -------------------------------------------------  ---------------------------
-    Total                                      0.931ns (0.567ns logic, 0.364ns route)
+    Total                                      0.930ns (0.566ns logic, 0.364ns route)
                                                        (60.9% logic, 39.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point hex_inst/seg0_s_3 (SLICE_X53Y82.BX), 1 path
+Paths for end point hex_inst/seg3_s_1 (SLICE_X55Y87.BX), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.930ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               hex_indicators_3 (FF)
-  Destination:          hex_inst/seg0_s_3 (FF)
+  Source:               hex_indicators_13 (FF)
+  Destination:          hex_inst/seg3_s_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.931ns (Levels of Logic = 0)
-  Clock Path Skew:      0.001ns (2.007 - 2.006)
+  Data Path Delay:      0.930ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
   Source Clock:         clk_sys rising at 40.000ns
   Destination Clock:    clk_25 rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: hex_indicators_3 to hex_inst/seg0_s_3
+  Minimum Data Path: hex_indicators_13 to hex_inst/seg3_s_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X52Y83.XQ      Tcko                  0.474   hex_indicators<3>
-                                                       hex_indicators_3
-    SLICE_X53Y82.BX      net (fanout=1)        0.364   hex_indicators<3>
-    SLICE_X53Y82.CLK     Tckdi       (-Th)    -0.093   hex_inst/seg0_s<3>
-                                                       hex_inst/seg0_s_3
+    SLICE_X55Y86.XQ      Tcko                  0.473   hex_indicators<13>
+                                                       hex_indicators_13
+    SLICE_X55Y87.BX      net (fanout=1)        0.364   hex_indicators<13>
+    SLICE_X55Y87.CLK     Tckdi       (-Th)    -0.093   hex_inst/seg3_s<1>
+                                                       hex_inst/seg3_s_1
     -------------------------------------------------  ---------------------------
-    Total                                      0.931ns (0.567ns logic, 0.364ns route)
+    Total                                      0.930ns (0.566ns logic, 0.364ns route)
                                                        (60.9% logic, 39.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point hex_inst/seg1_s_3 (SLICE_X53Y80.BX), 1 path
+Paths for end point hex_inst/dp_s_1 (SLICE_X51Y84.BX), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.931ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               hex_indicators_7 (FF)
-  Destination:          hex_inst/seg1_s_3 (FF)
+  Source:               led_indicators_9 (FF)
+  Destination:          hex_inst/dp_s_1 (FF)
   Requirement:          0.000ns
   Data Path Delay:      0.931ns (Levels of Logic = 0)
   Clock Path Skew:      0.000ns
@@ -868,15 +1006,15 @@ Slack (hold path):      0.931ns (requirement - (clock path skew + uncertainty - 
   Destination Clock:    clk_25 rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: hex_indicators_7 to hex_inst/seg1_s_3
+  Minimum Data Path: led_indicators_9 to hex_inst/dp_s_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X52Y80.XQ      Tcko                  0.474   hex_indicators<7>
-                                                       hex_indicators_7
-    SLICE_X53Y80.BX      net (fanout=1)        0.364   hex_indicators<7>
-    SLICE_X53Y80.CLK     Tckdi       (-Th)    -0.093   hex_inst/seg1_s<3>
-                                                       hex_inst/seg1_s_3
+    SLICE_X50Y85.XQ      Tcko                  0.474   led_indicators<9>
+                                                       led_indicators_9
+    SLICE_X51Y84.BX      net (fanout=1)        0.364   led_indicators<9>
+    SLICE_X51Y84.CLK     Tckdi       (-Th)    -0.093   hex_inst/dp_s<1>
+                                                       hex_inst/dp_s_1
     -------------------------------------------------  ---------------------------
     Total                                      0.931ns (0.567ns logic, 0.364ns route)
                                                        (60.9% logic, 39.1% route)
@@ -892,7 +1030,7 @@ Slack: 36.808ns (period - (min low pulse limit / (low pulse / period)))
   Low pulse limit: 1.596ns (Trpw)
   Physical resource: debounce_inst/clk_div<0>/SR
   Logical resource: debounce_inst/clk_div_0/SR
-  Location pin: SLICE_X51Y68.SR
+  Location pin: SLICE_X41Y74.SR
   Clock network: rst
 --------------------------------------------------------------------------------
 Slack: 36.808ns (period - (min high pulse limit / (high pulse / period)))
@@ -901,7 +1039,7 @@ Slack: 36.808ns (period - (min high pulse limit / (high pulse / period)))
   High pulse limit: 1.596ns (Trpw)
   Physical resource: debounce_inst/clk_div<0>/SR
   Logical resource: debounce_inst/clk_div_0/SR
-  Location pin: SLICE_X51Y68.SR
+  Location pin: SLICE_X41Y74.SR
   Clock network: rst
 --------------------------------------------------------------------------------
 Slack: 36.808ns (period - (min low pulse limit / (low pulse / period)))
@@ -910,7 +1048,7 @@ Slack: 36.808ns (period - (min low pulse limit / (low pulse / period)))
   Low pulse limit: 1.596ns (Trpw)
   Physical resource: debounce_inst/clk_div<0>/SR
   Logical resource: debounce_inst/clk_div_1/SR
-  Location pin: SLICE_X51Y68.SR
+  Location pin: SLICE_X41Y74.SR
   Clock network: rst
 --------------------------------------------------------------------------------
 
@@ -922,9 +1060,9 @@ Derived Constraints for TS_sys_clk
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk                     |     20.000ns|      6.000ns|     17.303ns|            0|            0|            0|       172240|
-| TS_PLL_inst_CLK0_BUF          |     20.000ns|     17.303ns|          N/A|            0|            0|       171113|            0|
-| TS_PLL_inst_CLKDV_BUF         |     40.000ns|      7.338ns|          N/A|            0|            0|         1127|            0|
+|TS_sys_clk                     |     20.000ns|      6.000ns|     18.663ns|            0|            0|            0|       178647|
+| TS_PLL_inst_CLK0_BUF          |     20.000ns|     18.663ns|          N/A|            0|            0|       177520|            0|
+| TS_PLL_inst_CLKDV_BUF         |     40.000ns|      7.891ns|          N/A|            0|            0|         1127|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -939,7 +1077,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   17.303|         |         |         |
+clk            |   18.663|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -948,23 +1086,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 172240 paths, 0 nets, and 12395 connections
+Constraints cover 178647 paths, 0 nets, and 12739 connections
 
 Design statistics:
-   Minimum period:  17.303ns{1}   (Maximum frequency:  57.793MHz)
+   Minimum period:  18.663ns{1}   (Maximum frequency:  53.582MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sun Sep  4 02:04:57 2022 
+Analysis completed Sun Oct 16 22:30:08 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 402 MB
+Peak Memory Usage: 403 MB
 
 
 

@@ -30,18 +30,19 @@
 ;****************************************************
 
 ;Address map for IO space:
-; 0x0000 to 0xFFD7	unused
+; 0x0000 to 0xFFD3	unused
+; 0xFFD4 to 0xFFD7	I2C module (read write)
 ; 0xFFD8 to 0xFFDF	IOMM0 (read write)
 ; 0xFFE0 to 0xFFE7	IOMM1 (read write)
 ; 0xFFE8 to 0xFFEB	SPI module
-; 0xFFEC to 0xFFED	I2C module
+; 0xFFEC to 0xFFED	unused
 ; 0xFFEE to 0xFFEF	interrupt controller (read write)
 ; 0xFFF0 to 0xFFF3	timer module (read write)
 ; 0xFFF4 to 0xFFF5	keyboard module (read write)
 ; 0xFFF6 to 0xFFF7	unused
-; 0xFFF8 to 0xFFFB	unused
+; 0xFFF8 to 0xFFFB	RS-232 module	(read write)
 ; 0xFFFC to 0xFFFD	hex display (write only)
-; 0xFFFE to 0xFFFF	RS-232 module	(read write)
+; 0xFFFE to 0xFFFF	unused
 
 ; RS-232 module address map
 ; 0 data register
@@ -54,6 +55,8 @@
 ;		bit 5: RX queue full
 ;		bit 6: reserved
 ;		bit 7: busy flag
+; 2 clk_div_l
+; 3 clk_div_h
 
 ; keyboard module address map
 ; 0 data register
@@ -87,6 +90,9 @@
 ;		bit 4: MASTER_ACK
 ;		bit 5: SLAVE_ACK
 ;		bit 6: READY
+;		bit 7: reserved
+; 2 clk_div_l
+; 3 clk_div_h
 
 ; SPI module address map
 ; 0 data register
@@ -140,14 +146,18 @@ KB_STATUS EQU $FFF5
 HEX_INDICATORS EQU $FFFC
 LED_INDICATORS EQU $FFFD
 
-UART_DATA EQU $FFFE
-UART_STATUS EQU $FFFF
+UART_DATA		EQU $FFF8
+UART_STATUS		EQU $FFF9
+UART_CLK_DIV_L	EQU $FFFA
+UART_CLK_DIV_H	EQU $FFFB
 
 INTERRUPT_STATUS EQU $FFEE
 INTERRUPT_CONTROL EQU $FFEF
 
-I2C_DATA EQU $FFEC
-I2C_STATUS EQU $FFED
+I2C_DATA	EQU $FFD4
+I2C_STATUS	EQU $FFD5
+I2C_CLK_DIV_L	EQU $FFD6
+I2C_CLK_DIV_H	EQU $FFD7
 
 SPI_DATA	EQU $FFE8
 SPI_STATUS	EQU $FFE9
@@ -330,6 +340,21 @@ TARGET_SIZE
 ENDMACRO PLATFORM_STRINGS
 
 MACRO INIT_PLATFORM
+	LIM H, AUX0, `LH SERIAL_INIT
+	LIM L, AUX0, `LL SERIAL_INIT
+	MOVE W, AUX0, CAL
+	LIM H, AUX0, `LH 433	;CLOCK DIVIDER FOR 115200 BAUD
+	LIM L, AUX0, `LL 433
+	CALL
+	MOVE W, AUX0, R0
+
+	LIM H, AUX0, `LH I2C_INIT
+	LIM L, AUX0, `LL I2C_INIT
+	MOVE W, AUX0, CAL
+	LIM W, AUX0, `LL 61	;CLOCK DIVIDER FOR 400KHZ
+	CALL
+	MOVE W, AUX0, R0
+
 	LIM H, AUX0, `LH FLASH_INIT
 	LIM L, AUX0, `LL FLASH_INIT
 	MOVE W, AUX0, CAL

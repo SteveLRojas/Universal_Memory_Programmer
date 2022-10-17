@@ -73,18 +73,19 @@ module Nexys2_programmer(
 	);
 
 //Address map for IO space:
-// 0x0000 to 0xFFD7	unused
+// 0x0000 to 0xFFD3	unused
+//	0xFFD4 to 0xFFD7	I2C module (read write)
 // 0xFFD8 to 0xFFDF	IOMM0 (read write)
 // 0xFFE0 to 0xFFE7	IOMM1 (read write)
 // 0xFFE8 to 0xFFEB	SPI module (read write)
-// 0xFFEC to 0xFFED	I2C module (read write)
+// 0xFFEC to 0xFFED	unused
 // 0xFFEE to 0xFFEF	interrupt controller (read write)
 // 0xFFF0 to 0xFFF3	timer module (read write)
 // 0xFFF4 to 0xFFF5	keyboard module (read write)
 // 0xFFF6 to 0xFFF7	unused
-// 0xFFF8 to 0xFFFB	unused
+// 0xFFF8 to 0xFFFB	RS-232 module	(read write)
 // 0xFFFC to 0xFFFD	hex display (write only)
-// 0xFFFE to 0xFFFF	RS-232 module	(read write)
+// 0xFFFE to 0xFFFF	unused
 
 //Address map for data and program space:
 // 0x00000000 to 0x00003FFF	32KB main memory
@@ -99,6 +100,22 @@ module Nexys2_programmer(
 //		bit 3: RX ready
 //		bit 4: TX queue empty
 //		bit 5: RX queue full
+// 2 clk_div_l
+// 3 clk_div_h
+
+// I2C module address map
+// 0 data register
+// 1 status register
+//		bit 0: reserved
+//		bit 1: reserved
+//		bit 2: reserved
+//		bit 3: reserved
+//		bit 4: master ACK
+//		bit 5: slave ACK
+//		bit 6: ready flag
+//		bit 7: reserved
+// 2 clk_div_l
+// 3 clk_div_h
 
 // Keyboard module memory map
 // 0 data register
@@ -217,21 +234,21 @@ module Nexys2_programmer(
 	wire[7:0] from_serial;
 	wire uart_rx_int;
 	wire uart_tx_int;
-	assign serial_en = &IO_address[15:1];	//0xFFFE - 0xFFFF
+	assign serial_en = &IO_address[15:3] & ~IO_address[2];	//0xFFF8 - 0xFFFB
 
-	serial serial_inst(
+	serial_gen2 serial_inst(
 			.clk(clk_sys),
 			.reset(rst),
-			.A(IO_address[0]),
-			.CE(serial_en),
-			.WREN(IO_wren),
-			.REN(IO_ren),
+			.addr(IO_address[1:0]),
+			.en(serial_en),
+			.wren(IO_wren),
+			.ren(IO_ren),
 			.rx(rxd),
 			.tx(txd),
 			.rx_int(uart_rx_int),
 			.tx_int(uart_tx_int),
-			.to_CPU(from_serial),
-			.from_CPU(from_cpu[7:0]));
+			.to_cpu(from_serial),
+			.from_cpu(from_cpu[7:0]));
 //#############################################################################
 
 //####### keyboard Module #####################################################
@@ -297,18 +314,18 @@ module Nexys2_programmer(
 	wire i2c_en;
 	wire[7:0] from_i2c;
 	wire i2c_int;
-	assign i2c_en = (&IO_address[15:5] & ~IO_address[4] & (&IO_address[3:2]) & ~IO_address[1]);	//0xFFEC - 0xFFED
+	assign i2c_en = (&IO_address[15:6] & ~IO_address[5] & IO_address[4] & ~IO_address[3] & IO_address[2]);	//0xFFD4 - 0xFFD7
 
-	I2C_ri i2c_ri_inst(
+	I2C_ri_gen2 i2c_ri_inst(
 			.clk(clk_sys),
 			.reset(rst),
-			.a(IO_address[0]),
+			.addr(IO_address[1:0]),
 			.ce(i2c_en),
 			.wren(IO_wren),
 			.ren(IO_ren),
 			.i2c_int(i2c_int),
-			.to_CPU(from_i2c),
-			.from_CPU(from_cpu[7:0]),
+			.to_cpu(from_i2c),
+			.from_cpu(from_cpu[7:0]),
 			.i2c_sda(i2c_sda),
 			.i2c_scl(i2c_scl));
 //#############################################################################

@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: Nexys2_programmer.prj
@@ -110,17 +110,17 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "UART.v" in library work
+Compiling verilog file "uart_gen2.v" in library work
 Compiling verilog file "spi_master.v" in library work
-Module <UART> compiled
-Compiling verilog file "queue_8_8.v" in library work
-Module <spi_master> compiled
+Module <uart_gen2> compiled
 Compiling verilog file "ps2_host.v" in library work
-Module <queue_8_8> compiled
-Compiling verilog file "I2C_phy.v" in library work
+Module <spi_master> compiled
+Compiling verilog file "I2C_phy_gen2.v" in library work
 Module <ps2_host> compiled
+Compiling verilog file "fifo.v" in library work
+Module <I2C_phy_gen2> compiled
 Compiling verilog file "CPU/reg_file.v" in library work
-Module <I2C_phy> compiled
+Module <fifo> compiled
 Compiling verilog file "CPU/PC.v" in library work
 Module <reg_file> compiled
 Module <PC> compiled
@@ -134,10 +134,10 @@ Compiling verilog file "timer.v" in library work
 Module <ALU> compiled
 Compiling verilog file "SPI_ri.v" in library work
 Module <timer> compiled
-Compiling verilog file "serial.v" in library work
+Compiling verilog file "serial_gen2.v" in library work
 Module <SPI_ri> compiled
 Compiling verilog file "Nexys2_PS2_driver.v" in library work
-Module <serial> compiled
+Module <serial_gen2> compiled
 Compiling verilog file "Nexys2_memory_controller.v" in library work
 Module <Nexys2_PS2_driver> compiled
 Compiling verilog file "Nexys2_hex_driver.v" in library work
@@ -154,10 +154,10 @@ Compiling verilog file "IOMM16.v" in library work
 Module <BRAM_16K> compiled
 Compiling verilog file "interrupt_controller.v" in library work
 Module <IOMM> compiled
-Compiling verilog file "I2C_ri.v" in library work
+Compiling verilog file "I2C_ri_gen2.v" in library work
 Module <interrupt_controller> compiled
 Compiling verilog file "CPU/NeonFox.v" in library work
-Module <I2C_ri> compiled
+Module <I2C_ri_gen2> compiled
 Compiling verilog file "button_debounce.v" in library work
 Module <NeonFox> compiled
 Compiling verilog file "Toplevel.v" in library work
@@ -178,7 +178,7 @@ Analyzing hierarchy for module <Nexys2_hex_driver> in library <work>.
 
 Analyzing hierarchy for module <button_debounce> in library <work>.
 
-Analyzing hierarchy for module <serial> in library <work>.
+Analyzing hierarchy for module <serial_gen2> in library <work>.
 
 Analyzing hierarchy for module <keyboard> in library <work>.
 
@@ -186,7 +186,7 @@ Analyzing hierarchy for module <Nexys2_PS2_driver> in library <work>.
 
 Analyzing hierarchy for module <timer> in library <work>.
 
-Analyzing hierarchy for module <I2C_ri> in library <work>.
+Analyzing hierarchy for module <I2C_ri_gen2> in library <work>.
 
 Analyzing hierarchy for module <SPI_ri> in library <work>.
 
@@ -223,13 +223,15 @@ Analyzing hierarchy for module <hexdriver> in library <work>.
 
 Analyzing hierarchy for module <frame_clk> in library <work>.
 
-Analyzing hierarchy for module <queue_8_8> in library <work>.
+Analyzing hierarchy for module <fifo> in library <work> with parameters.
+	BUS_WIDTH = "00000000000000000000000000001000"
+	NUM_WORDS = "00000000000000000000000000001000"
 
-Analyzing hierarchy for module <UART> in library <work>.
+Analyzing hierarchy for module <uart_gen2> in library <work>.
 
 Analyzing hierarchy for module <ps2_host> in library <work>.
 
-Analyzing hierarchy for module <I2C_phy> in library <work>.
+Analyzing hierarchy for module <I2C_phy_gen2> in library <work>.
 
 Analyzing hierarchy for module <spi_master> in library <work>.
 
@@ -263,7 +265,7 @@ Analyzing hierarchy for module <call_stack> in library <work>.
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <Nexys2_programmer>.
-WARNING:Xst:2211 - "ipcore_dir/BRAM_16K.v" line 201: Instantiating black box module <BRAM_16K>.
+WARNING:Xst:2211 - "ipcore_dir/BRAM_16K.v" line 218: Instantiating black box module <BRAM_16K>.
 Module <Nexys2_programmer> is correct for synthesis.
  
 Analyzing module <PLL0> in library <work>.
@@ -300,15 +302,31 @@ Module <frame_clk> is correct for synthesis.
 Analyzing module <button_debounce> in library <work>.
 Module <button_debounce> is correct for synthesis.
  
-Analyzing module <serial> in library <work>.
-Module <serial> is correct for synthesis.
+Analyzing module <serial_gen2> in library <work>.
+Module <serial_gen2> is correct for synthesis.
  
-Analyzing module <queue_8_8> in library <work>.
-Module <queue_8_8> is correct for synthesis.
+Analyzing module <fifo> in library <work>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+	BUS_WIDTH = 32'sb00000000000000000000000000001000
+	NUM_WORDS = 32'sb00000000000000000000000000001000
+	Calling function <clog2>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+	Calling function <clog2>.
+Module <fifo> is correct for synthesis.
  
 WARNING:Xst:37 - Detected unknown constraint/property "ramstyle". This constraint/property is not supported by the current software release and will be ignored.
-Analyzing module <UART> in library <work>.
-Module <UART> is correct for synthesis.
+Analyzing module <uart_gen2> in library <work>.
+Module <uart_gen2> is correct for synthesis.
  
 Analyzing module <keyboard> in library <work>.
 Module <keyboard> is correct for synthesis.
@@ -322,11 +340,11 @@ Module <Nexys2_PS2_driver> is correct for synthesis.
 Analyzing module <timer> in library <work>.
 Module <timer> is correct for synthesis.
  
-Analyzing module <I2C_ri> in library <work>.
-Module <I2C_ri> is correct for synthesis.
+Analyzing module <I2C_ri_gen2> in library <work>.
+Module <I2C_ri_gen2> is correct for synthesis.
  
-Analyzing module <I2C_phy> in library <work>.
-Module <I2C_phy> is correct for synthesis.
+Analyzing module <I2C_phy_gen2> in library <work>.
+Module <I2C_phy_gen2> is correct for synthesis.
  
 Analyzing module <SPI_ri> in library <work>.
 Module <SPI_ri> is correct for synthesis.
@@ -571,23 +589,23 @@ Synthesizing Unit <frame_clk>.
 Unit <frame_clk> synthesized.
 
 
-Synthesizing Unit <queue_8_8>.
-    Related source file is "queue_8_8.v".
+Synthesizing Unit <fifo>.
+    Related source file is "fifo.v".
     Found 8x8-bit dual-port RAM <Mram_queue_mem> for signal <queue_mem>.
-    Found 1-bit xor2 for signal <addr_comp$xor0000> created at line 17.
-    Found 1-bit xor2 for signal <addr_comp$xor0001> created at line 17.
-    Found 1-bit xor2 for signal <addr_comp$xor0002> created at line 17.
-    Found 1-bit xor2 for signal <full$xor0000> created at line 20.
+    Found 1-bit xor2 for signal <addr_comp$xor0000> created at line 31.
+    Found 1-bit xor2 for signal <addr_comp$xor0001> created at line 31.
+    Found 1-bit xor2 for signal <addr_comp$xor0002> created at line 31.
+    Found 1-bit xor2 for signal <full$xor0000> created at line 34.
     Found 4-bit up counter for signal <read_addr>.
     Found 4-bit up counter for signal <write_addr>.
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Counter(s).
-Unit <queue_8_8> synthesized.
+Unit <fifo> synthesized.
 
 
-Synthesizing Unit <UART>.
-    Related source file is "UART.v".
+Synthesizing Unit <uart_gen2>.
+    Related source file is "uart_gen2.v".
     Found 1-bit register for signal <tx_ready>.
     Found 8-bit register for signal <rx_data>.
     Found 1-bit register for signal <rx_ready>.
@@ -595,14 +613,19 @@ Synthesizing Unit <UART>.
     Found 1-bit register for signal <rx_active>.
     Found 10-bit register for signal <rx_frame>.
     Found 1-bit register for signal <rx_s>.
-    Found 9-bit up counter for signal <rx_timer>.
+    Found 16-bit comparator equal for signal <rx_time>.
+    Found 16-bit register for signal <rx_timer>.
+    Found 16-bit adder for signal <rx_timer$addsub0000> created at line 60.
     Found 1-bit register for signal <tx_active>.
     Found 10-bit register for signal <tx_frame>.
-    Found 9-bit up counter for signal <tx_timer>.
+    Found 16-bit comparator equal for signal <tx_time>.
+    Found 16-bit up counter for signal <tx_timer>.
     Summary:
-	inferred   2 Counter(s).
-	inferred  34 D-type flip-flop(s).
-Unit <UART> synthesized.
+	inferred   1 Counter(s).
+	inferred  50 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <uart_gen2> synthesized.
 
 
 Synthesizing Unit <ps2_host>.
@@ -630,14 +653,16 @@ Synthesizing Unit <ps2_host>.
 Unit <ps2_host> synthesized.
 
 
-Synthesizing Unit <I2C_phy>.
-    Related source file is "I2C_phy.v".
+Synthesizing Unit <I2C_phy_gen2>.
+    Related source file is "I2C_phy_gen2.v".
     Found 1-bit register for signal <ready>.
     Found 1-bit tristate buffer for signal <i2c_sda>.
     Found 1-bit tristate buffer for signal <i2c_scl>.
     Found 1-bit register for signal <clk_active>.
-    Found 6-bit up counter for signal <clk_div>.
+    Found 16-bit up counter for signal <clk_cnt>.
+    Found 16-bit comparator equal for signal <clk_cnt$cmp_eq0000> created at line 93.
     Found 1-bit register for signal <clk_i2c>.
+    Found 16-bit comparator equal for signal <clk_p2>.
     Found 1-bit register for signal <prev_read_req>.
     Found 1-bit register for signal <prev_start_req>.
     Found 1-bit register for signal <prev_stop_req>.
@@ -653,8 +678,9 @@ Synthesizing Unit <I2C_phy>.
     Summary:
 	inferred   1 Counter(s).
 	inferred  33 D-type flip-flop(s).
+	inferred   2 Comparator(s).
 	inferred   2 Tristate(s).
-Unit <I2C_phy> synthesized.
+Unit <I2C_phy_gen2> synthesized.
 
 
 Synthesizing Unit <spi_master>.
@@ -822,16 +848,19 @@ Synthesizing Unit <Nexys2_hex_driver>.
 Unit <Nexys2_hex_driver> synthesized.
 
 
-Synthesizing Unit <serial>.
-    Related source file is "serial.v".
-    Found 8-bit register for signal <to_CPU>.
-    Found 1-bit register for signal <busy>.
+Synthesizing Unit <serial_gen2>.
+    Related source file is "serial_gen2.v".
+    Found 8-bit register for signal <to_cpu>.
+    Found 8-bit register for signal <clk_div_h>.
+    Found 8-bit register for signal <clk_div_l>.
     Found 1-bit register for signal <rx_overwrite>.
+    Found 8-bit 4-to-1 multiplexer for signal <to_cpu$mux0000> created at line 61.
     Found 1-bit register for signal <tx_active>.
     Found 1-bit register for signal <tx_overwrite>.
     Summary:
-	inferred  12 D-type flip-flop(s).
-Unit <serial> synthesized.
+	inferred  27 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <serial_gen2> synthesized.
 
 
 Synthesizing Unit <keyboard>.
@@ -845,19 +874,23 @@ Synthesizing Unit <keyboard>.
 Unit <keyboard> synthesized.
 
 
-Synthesizing Unit <I2C_ri>.
-    Related source file is "I2C_ri.v".
-    Found 8-bit register for signal <to_CPU>.
+Synthesizing Unit <I2C_ri_gen2>.
+    Related source file is "I2C_ri_gen2.v".
+    Found 8-bit register for signal <to_cpu>.
+    Found 8-bit register for signal <clk_div_h>.
+    Found 8-bit register for signal <clk_div_l>.
     Found 8-bit register for signal <data_from_master>.
     Found 1-bit register for signal <master_ack>.
     Found 1-bit register for signal <read_req>.
     Found 1-bit register for signal <ready_flag>.
     Found 1-bit register for signal <start_req>.
     Found 1-bit register for signal <stop_req>.
+    Found 8-bit 4-to-1 multiplexer for signal <to_cpu$mux0000> created at line 52.
     Found 1-bit register for signal <write_req>.
     Summary:
-	inferred  22 D-type flip-flop(s).
-Unit <I2C_ri> synthesized.
+	inferred  38 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <I2C_ri_gen2> synthesized.
 
 
 Synthesizing Unit <SPI_ri>.
@@ -985,46 +1018,46 @@ Macro Statistics
  8x8-bit dual-port RAM                                 : 4
 # ROMs                                                 : 4
  16x7-bit ROM                                          : 4
-# Adders/Subtractors                                   : 10
+# Adders/Subtractors                                   : 11
  11-bit subtractor                                     : 1
+ 16-bit adder                                          : 1
  16-bit adder carry out                                : 1
  17-bit adder                                          : 1
  24-bit subtractor                                     : 1
  32-bit adder                                          : 5
  4-bit adder                                           : 1
-# Counters                                             : 20
+# Counters                                             : 19
  13-bit down counter                                   : 1
- 16-bit up counter                                     : 1
+ 16-bit up counter                                     : 3
  18-bit up counter                                     : 1
  4-bit down counter                                    : 1
  4-bit up counter                                      : 8
  4-bit updown counter                                  : 4
- 6-bit up counter                                      : 1
  8-bit up counter                                      : 1
- 9-bit up counter                                      : 2
 # Accumulators                                         : 1
  4-bit up accumulator                                  : 1
-# Registers                                            : 957
- 1-bit register                                        : 882
+# Registers                                            : 961
+ 1-bit register                                        : 881
  10-bit register                                       : 4
  11-bit register                                       : 1
  12-bit register                                       : 1
- 16-bit register                                       : 17
+ 16-bit register                                       : 18
  2-bit register                                        : 1
  23-bit register                                       : 2
  32-bit register                                       : 10
  4-bit register                                        : 11
  5-bit register                                        : 6
  7-bit register                                        : 4
- 8-bit register                                        : 17
+ 8-bit register                                        : 21
  9-bit register                                        : 1
-# Comparators                                          : 3
+# Comparators                                          : 7
+ 16-bit comparator equal                               : 4
  5-bit comparator equal                                : 2
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 5
+# Multiplexers                                         : 7
  16-bit 8-to-1 multiplexer                             : 1
  32-bit 4-to-1 multiplexer                             : 1
- 8-bit 4-to-1 multiplexer                              : 3
+ 8-bit 4-to-1 multiplexer                              : 5
 # Logic shifters                                       : 2
  16-bit shifter logical left                           : 1
  32-bit shifter logical left                           : 1
@@ -1134,11 +1167,7 @@ INFO:Xst:3231 - The small RAM <Mram_stack_mem> will be implemented on LUTs in or
     -----------------------------------------------------------------------
 Unit <call_stack> synthesized (advanced).
 
-Synthesizing (advanced) Unit <hexdriver>.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_Out_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-Unit <hexdriver> synthesized (advanced).
-
-Synthesizing (advanced) Unit <queue_8_8>.
+Synthesizing (advanced) Unit <fifo>.
 INFO:Xst:3231 - The small RAM <Mram_queue_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -1156,7 +1185,11 @@ INFO:Xst:3231 - The small RAM <Mram_queue_mem> will be implemented on LUTs in or
     |     doB            | connected to signal <dout>          |          |
     -----------------------------------------------------------------------
 INFO:Xst:3217 - HDL ADVISOR - Register <to_CPU> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_queue_mem> for implementation on block RAM resources if you made this reset synchronous instead.
-Unit <queue_8_8> synthesized (advanced).
+Unit <fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hexdriver>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_Out_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <hexdriver> synthesized (advanced).
 WARNING:Xst:2677 - Node <prev_in_1> of sequential type is unconnected in block <interrupt_controller>.
 WARNING:Xst:2677 - Node <prev_in_2> of sequential type is unconnected in block <interrupt_controller>.
 WARNING:Xst:2677 - Node <prev_in_4> of sequential type is unconnected in block <interrupt_controller>.
@@ -1166,10 +1199,10 @@ WARNING:Xst:2677 - Node <prev_in_9> of sequential type is unconnected in block <
 WARNING:Xst:2677 - Node <prev_in_13> of sequential type is unconnected in block <interrupt_controller>.
 WARNING:Xst:2677 - Node <flash_prev_addr_0> of sequential type is unconnected in block <Nexys2_memory_controller>.
 WARNING:Xst:2677 - Node <flash_prev_addr_1> of sequential type is unconnected in block <Nexys2_memory_controller>.
-WARNING:Xst:2677 - Node <tx_frame_0> of sequential type is unconnected in block <UART>.
-WARNING:Xst:2677 - Node <tx_frame_9> of sequential type is unconnected in block <UART>.
-WARNING:Xst:2677 - Node <tx_frame_sliced1_-1> of sequential type is unconnected in block <UART>.
-WARNING:Xst:2677 - Node <tx_frame_sliced1_0> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <tx_frame_0> of sequential type is unconnected in block <uart_gen2>.
+WARNING:Xst:2677 - Node <tx_frame_9> of sequential type is unconnected in block <uart_gen2>.
+WARNING:Xst:2677 - Node <tx_frame_sliced1_-1> of sequential type is unconnected in block <uart_gen2>.
+WARNING:Xst:2677 - Node <tx_frame_sliced1_0> of sequential type is unconnected in block <uart_gen2>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -1181,32 +1214,32 @@ Macro Statistics
  8x8-bit dual-port distributed RAM                     : 4
 # ROMs                                                 : 4
  16x7-bit ROM                                          : 4
-# Adders/Subtractors                                   : 10
+# Adders/Subtractors                                   : 11
  11-bit subtractor                                     : 1
+ 16-bit adder                                          : 1
  16-bit adder carry out                                : 1
  17-bit adder                                          : 1
  24-bit subtractor                                     : 1
  32-bit adder                                          : 5
  4-bit adder                                           : 1
-# Counters                                             : 20
+# Counters                                             : 19
  13-bit down counter                                   : 1
- 16-bit up counter                                     : 1
+ 16-bit up counter                                     : 3
  18-bit up counter                                     : 1
  4-bit down counter                                    : 1
  4-bit up counter                                      : 8
  4-bit updown counter                                  : 4
- 6-bit up counter                                      : 1
  8-bit up counter                                      : 1
- 9-bit up counter                                      : 2
 # Accumulators                                         : 1
  4-bit up accumulator                                  : 1
-# Registers                                            : 1823
- Flip-Flops                                            : 1823
-# Comparators                                          : 3
+# Registers                                            : 1870
+ Flip-Flops                                            : 1870
+# Comparators                                          : 7
+ 16-bit comparator equal                               : 4
  5-bit comparator equal                                : 2
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 43
- 1-bit 4-to-1 multiplexer                              : 40
+# Multiplexers                                         : 59
+ 1-bit 4-to-1 multiplexer                              : 56
  16-bit 8-to-1 multiplexer                             : 1
  8-bit 4-to-1 multiplexer                              : 2
 # Logic shifters                                       : 2
@@ -1290,9 +1323,9 @@ Optimizing unit <IOMM> ...
 
 Optimizing unit <hexdriver> ...
 
-Optimizing unit <queue_8_8> ...
+Optimizing unit <fifo> ...
 
-Optimizing unit <UART> ...
+Optimizing unit <uart_gen2> ...
 
 Optimizing unit <ps2_host> ...
 
@@ -1308,7 +1341,7 @@ Optimizing unit <call_stack> ...
 
 Optimizing unit <Nexys2_hex_driver> ...
 
-Optimizing unit <serial> ...
+Optimizing unit <serial_gen2> ...
 
 Optimizing unit <keyboard> ...
 
@@ -1359,7 +1392,7 @@ Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <CPU_inst/reg_file_inst/prev_a_address_0> in Unit <Nexys2_programmer> is equivalent to the following FF/Latch, which will be removed : <CPU_inst/I_field1_5> 
 INFO:Xst:2261 - The FF/Latch <CPU_inst/reg_file_inst/prev_a_address_1> in Unit <Nexys2_programmer> is equivalent to the following FF/Latch, which will be removed : <CPU_inst/I_field1_6> 
 INFO:Xst:2261 - The FF/Latch <CPU_inst/reg_file_inst/prev_a_address_2> in Unit <Nexys2_programmer> is equivalent to the following FF/Latch, which will be removed : <CPU_inst/I_field1_7> 
-Found area constraint ratio of 100 (+ 5) on block Nexys2_programmer, actual ratio is 36.
+Found area constraint ratio of 100 (+ 5) on block Nexys2_programmer, actual ratio is 38.
 FlipFlop CPU_inst/dest_waddr2_1 has been replicated 1 time(s)
 FlipFlop CPU_inst/dest_waddr2_2 has been replicated 1 time(s)
 
@@ -1378,8 +1411,8 @@ Unit <Nexys2_programmer> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1866
- Flip-Flops                                            : 1866
+# Registers                                            : 1921
+ Flip-Flops                                            : 1921
 # Shift Registers                                      : 6
  2-bit shift register                                  : 5
  3-bit shift register                                  : 1
@@ -1411,34 +1444,33 @@ Design Statistics
 # IOs                              : 87
 
 Cell Usage :
-# BELS                             : 3362
+# BELS                             : 3555
 #      GND                         : 2
-#      INV                         : 77
-#      LUT1                        : 95
-#      LUT2                        : 180
-#      LUT2_D                      : 2
-#      LUT2_L                      : 1
-#      LUT3                        : 703
+#      INV                         : 78
+#      LUT1                        : 124
+#      LUT2                        : 184
+#      LUT2_D                      : 1
+#      LUT3                        : 734
 #      LUT3_D                      : 14
-#      LUT3_L                      : 9
-#      LUT4                        : 1245
-#      LUT4_D                      : 26
+#      LUT3_L                      : 5
+#      LUT4                        : 1270
+#      LUT4_D                      : 29
 #      LUT4_L                      : 29
 #      MULT_AND                    : 30
-#      MUXCY                       : 470
-#      MUXF5                       : 195
+#      MUXCY                       : 532
+#      MUXF5                       : 209
 #      MUXF6                       : 34
 #      VCC                         : 2
-#      XORCY                       : 248
-# FlipFlops/Latches                : 1878
+#      XORCY                       : 278
+# FlipFlops/Latches                : 1933
 #      FD                          : 285
-#      FDC                         : 157
+#      FDC                         : 156
 #      FDCE                        : 455
-#      FDE                         : 690
+#      FDE                         : 722
 #      FDP                         : 5
-#      FDR                         : 60
+#      FDR                         : 89
 #      FDRE                        : 143
-#      FDRS                        : 6
+#      FDRS                        : 1
 #      FDRSE                       : 6
 #      FDS                         : 23
 #      FDSE                        : 48
@@ -1466,10 +1498,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                     1700  out of   4656    36%  
- Number of Slice Flip Flops:           1878  out of   9312    20%  
- Number of 4 input LUTs:               2483  out of   9312    26%  
-    Number used as logic:              2381
+ Number of Slices:                     1765  out of   4656    37%  
+ Number of Slice Flip Flops:           1933  out of   9312    20%  
+ Number of 4 input LUTs:               2570  out of   9312    27%  
+    Number used as logic:              2468
     Number used as Shift registers:       6
     Number used as RAMs:                 96
  Number of IOs:                          87
@@ -1499,7 +1531,7 @@ Clock Information:
 -----------------------------------+---------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)     | Load  |
 -----------------------------------+---------------------------+-------+
-clk                                | PLL_inst/DCM_SP_INST:CLK0 | 1842  |
+clk                                | PLL_inst/DCM_SP_INST:CLK0 | 1897  |
 clk                                | PLL_inst/DCM_SP_INST:CLKDV| 121   |
 -----------------------------------+---------------------------+-------+
 
@@ -1508,7 +1540,7 @@ Asynchronous Control Signals Information:
 -----------------------------------+-----------------------------+-------+
 Control Signal                     | Buffer(FF name)             | Load  |
 -----------------------------------+-----------------------------+-------+
-rst(rst:Q)                         | NONE(IOMM_inst0/read_active)| 429   |
+rst(rst:Q)                         | NONE(IOMM_inst0/read_active)| 428   |
 _or0000(_or00001:O)                | NONE(CPU_inst/IO_select1)   | 188   |
 -----------------------------------+-----------------------------+-------+
 
@@ -1528,7 +1560,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 15.700ns (frequency: 63.694MHz)
-  Total number of paths / destination ports: 172262 / 4355
+  Total number of paths / destination ports: 178669 / 4462
 -------------------------------------------------------------------------
 Delay:               15.700ns (Levels of Logic = 20)
   Source:            CPU_inst/reg_file_inst/prev_w_address_4 (FF)
@@ -1579,7 +1611,7 @@ Offset:              2.059ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.218   0.420  ps2_data_IOBUF (N352)
+     IOBUF:IO->O           1   1.218   0.420  ps2_data_IOBUF (N366)
      SRL16:D                   0.421          keyboard_inst/ps2_host_inst/Mshreg_ps2_data_s
     ----------------------------------------
     Total                      2.059ns (1.639ns logic, 0.420ns route)
@@ -1608,13 +1640,13 @@ Offset:              6.048ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 15.23 secs
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.06 secs
  
 --> 
 
 
-Total memory usage is 677416 kilobytes
+Total memory usage is 678776 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  156 (   0 filtered)

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Sep 04 02:04:35 2022
+// Written by: Map P.20131013 on Sun Oct 16 22:29:45 2022
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -438,23 +438,23 @@ TIMEGRP PLL_inst_CLK0_BUF = BEL "prev_serial_en" BEL "prev_keyboard_en" BEL
         "i2c_ri_inst/i2c_phy_inst/ready" BEL
         "i2c_ri_inst/i2c_phy_inst/clk_i2c" BEL
         "i2c_ri_inst/i2c_phy_inst/tx_frame_10" BEL
-        "i2c_ri_inst/i2c_phy_inst/tx_frame_7" BEL
         "i2c_ri_inst/i2c_phy_inst/tx_frame_9" BEL
         "i2c_ri_inst/i2c_phy_inst/tx_frame_8" BEL
+        "i2c_ri_inst/i2c_phy_inst/tx_frame_7" BEL
         "i2c_ri_inst/i2c_phy_inst/tx_frame_6" BEL
         "i2c_ri_inst/i2c_phy_inst/tx_frame_5" BEL
         "i2c_ri_inst/i2c_phy_inst/tx_frame_4" BEL
         "i2c_ri_inst/i2c_phy_inst/tx_frame_3" BEL
-        "i2c_ri_inst/i2c_phy_inst/tx_frame_0" BEL
         "i2c_ri_inst/i2c_phy_inst/tx_frame_2" BEL
-        "i2c_ri_inst/i2c_phy_inst/tx_frame_1" BEL
         "i2c_ri_inst/i2c_phy_inst/clk_active" BEL
+        "i2c_ri_inst/i2c_phy_inst/tx_frame_1" BEL
+        "i2c_ri_inst/i2c_phy_inst/tx_frame_0" BEL
         "i2c_ri_inst/i2c_phy_inst/tx_active" BEL
         "i2c_ri_inst/i2c_phy_inst/rx_active" BEL
         "i2c_ri_inst/i2c_phy_inst/prev_start_req" BEL
-        "i2c_ri_inst/i2c_phy_inst/prev_read_req" BEL
         "i2c_ri_inst/i2c_phy_inst/prev_stop_req" BEL
         "i2c_ri_inst/i2c_phy_inst/prev_write_req" BEL
+        "i2c_ri_inst/i2c_phy_inst/prev_read_req" BEL
         "i2c_ri_inst/i2c_phy_inst/start_req_flag" BEL
         "i2c_ri_inst/i2c_phy_inst/stop_req_flag" BEL
         "i2c_ri_inst/i2c_phy_inst/write_req_flag" BEL
@@ -468,22 +468,40 @@ TIMEGRP PLL_inst_CLK0_BUF = BEL "prev_serial_en" BEL "prev_keyboard_en" BEL
         "i2c_ri_inst/i2c_phy_inst/rx_frame_6" BEL
         "i2c_ri_inst/i2c_phy_inst/rx_frame_7" BEL
         "i2c_ri_inst/i2c_phy_inst/rx_frame_8" BEL
-        "i2c_ri_inst/i2c_phy_inst/clk_div_0" BEL
-        "i2c_ri_inst/i2c_phy_inst/clk_div_1" BEL
-        "i2c_ri_inst/i2c_phy_inst/clk_div_2" BEL
-        "i2c_ri_inst/i2c_phy_inst/clk_div_3" BEL
-        "i2c_ri_inst/i2c_phy_inst/clk_div_4" BEL
-        "i2c_ri_inst/i2c_phy_inst/clk_div_5" BEL "i2c_ri_inst/ready_flag" BEL
-        "i2c_ri_inst/master_ack" BEL "i2c_ri_inst/data_from_master_7" BEL
-        "i2c_ri_inst/data_from_master_6" BEL "i2c_ri_inst/data_from_master_5"
-        BEL "i2c_ri_inst/data_from_master_4" BEL
-        "i2c_ri_inst/data_from_master_3" BEL "i2c_ri_inst/data_from_master_2"
-        BEL "i2c_ri_inst/data_from_master_1" BEL
-        "i2c_ri_inst/data_from_master_0" BEL "i2c_ri_inst/to_CPU_7" BEL
-        "i2c_ri_inst/to_CPU_6" BEL "i2c_ri_inst/to_CPU_5" BEL
-        "i2c_ri_inst/to_CPU_4" BEL "i2c_ri_inst/to_CPU_3" BEL
-        "i2c_ri_inst/to_CPU_2" BEL "i2c_ri_inst/to_CPU_1" BEL
-        "i2c_ri_inst/to_CPU_0" BEL "i2c_ri_inst/write_req" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_0" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_1" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_2" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_3" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_4" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_5" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_6" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_7" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_8" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_9" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_10" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_11" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_12" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_13" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_14" BEL
+        "i2c_ri_inst/i2c_phy_inst/clk_cnt_15" BEL "i2c_ri_inst/to_cpu_7" BEL
+        "i2c_ri_inst/to_cpu_6" BEL "i2c_ri_inst/to_cpu_5" BEL
+        "i2c_ri_inst/to_cpu_4" BEL "i2c_ri_inst/to_cpu_3" BEL
+        "i2c_ri_inst/to_cpu_2" BEL "i2c_ri_inst/to_cpu_1" BEL
+        "i2c_ri_inst/to_cpu_0" BEL "i2c_ri_inst/ready_flag" BEL
+        "i2c_ri_inst/clk_div_h_7" BEL "i2c_ri_inst/clk_div_h_6" BEL
+        "i2c_ri_inst/clk_div_h_5" BEL "i2c_ri_inst/clk_div_h_4" BEL
+        "i2c_ri_inst/clk_div_h_3" BEL "i2c_ri_inst/clk_div_h_2" BEL
+        "i2c_ri_inst/clk_div_h_1" BEL "i2c_ri_inst/clk_div_h_0" BEL
+        "i2c_ri_inst/clk_div_l_7" BEL "i2c_ri_inst/clk_div_l_6" BEL
+        "i2c_ri_inst/clk_div_l_5" BEL "i2c_ri_inst/clk_div_l_4" BEL
+        "i2c_ri_inst/clk_div_l_3" BEL "i2c_ri_inst/clk_div_l_2" BEL
+        "i2c_ri_inst/clk_div_l_1" BEL "i2c_ri_inst/clk_div_l_0" BEL
+        "i2c_ri_inst/data_from_master_7" BEL "i2c_ri_inst/data_from_master_6"
+        BEL "i2c_ri_inst/data_from_master_5" BEL
+        "i2c_ri_inst/data_from_master_4" BEL "i2c_ri_inst/data_from_master_3"
+        BEL "i2c_ri_inst/data_from_master_2" BEL
+        "i2c_ri_inst/data_from_master_1" BEL "i2c_ri_inst/data_from_master_0"
+        BEL "i2c_ri_inst/master_ack" BEL "i2c_ri_inst/write_req" BEL
         "i2c_ri_inst/read_req" BEL "i2c_ri_inst/start_req" BEL
         "i2c_ri_inst/stop_req" BEL "timer_inst/to_cpu_7" BEL
         "timer_inst/to_cpu_6" BEL "timer_inst/to_cpu_5" BEL
@@ -685,57 +703,71 @@ TIMEGRP PLL_inst_CLK0_BUF = BEL "prev_serial_en" BEL "prev_keyboard_en" BEL
         "IOMM_inst0/write_address_high_1" BEL
         "IOMM_inst0/write_address_high_4" BEL
         "IOMM_inst0/write_address_high_5" BEL
-        "IOMM_inst0/write_address_high_6" BEL "serial_inst/UART_inst/rx_s" BEL
-        "serial_inst/UART_inst/prev_tx_req" BEL
-        "serial_inst/UART_inst/tx_ready" BEL "serial_inst/UART_inst/tx_active"
-        BEL "serial_inst/UART_inst/tx_frame_1" BEL
-        "serial_inst/UART_inst/tx_frame_2" BEL
-        "serial_inst/UART_inst/tx_frame_3" BEL
-        "serial_inst/UART_inst/tx_frame_4" BEL
-        "serial_inst/UART_inst/tx_frame_5" BEL
-        "serial_inst/UART_inst/tx_frame_6" BEL
-        "serial_inst/UART_inst/tx_frame_7" BEL
-        "serial_inst/UART_inst/tx_frame_8" BEL
-        "serial_inst/UART_inst/rx_ready" BEL
-        "serial_inst/UART_inst/tx_frame_sliced_1" BEL
-        "serial_inst/UART_inst/tx_frame_sliced_0" BEL
-        "serial_inst/UART_inst/rx_active" BEL
-        "serial_inst/UART_inst/rx_frame_0" BEL
-        "serial_inst/UART_inst/rx_frame_1" BEL
-        "serial_inst/UART_inst/rx_frame_2" BEL
-        "serial_inst/UART_inst/rx_frame_3" BEL
-        "serial_inst/UART_inst/rx_frame_4" BEL
-        "serial_inst/UART_inst/rx_frame_5" BEL
-        "serial_inst/UART_inst/rx_frame_6" BEL
-        "serial_inst/UART_inst/rx_frame_7" BEL
-        "serial_inst/UART_inst/rx_frame_8" BEL
-        "serial_inst/UART_inst/rx_frame_9" BEL
-        "serial_inst/UART_inst/rx_data_0" BEL
-        "serial_inst/UART_inst/rx_data_1" BEL
-        "serial_inst/UART_inst/rx_data_2" BEL
-        "serial_inst/UART_inst/rx_data_3" BEL
-        "serial_inst/UART_inst/rx_data_4" BEL
-        "serial_inst/UART_inst/rx_data_5" BEL
-        "serial_inst/UART_inst/rx_data_6" BEL
-        "serial_inst/UART_inst/rx_data_7" BEL
-        "serial_inst/UART_inst/rx_timer_1" BEL
-        "serial_inst/UART_inst/rx_timer_0" BEL
-        "serial_inst/UART_inst/rx_timer_4" BEL
-        "serial_inst/UART_inst/rx_timer_2" BEL
-        "serial_inst/UART_inst/rx_timer_3" BEL
-        "serial_inst/UART_inst/rx_timer_7" BEL
-        "serial_inst/UART_inst/rx_timer_5" BEL
-        "serial_inst/UART_inst/rx_timer_6" BEL
-        "serial_inst/UART_inst/tx_timer_0" BEL
-        "serial_inst/UART_inst/tx_timer_1" BEL
-        "serial_inst/UART_inst/tx_timer_2" BEL
-        "serial_inst/UART_inst/tx_timer_3" BEL
-        "serial_inst/UART_inst/tx_timer_4" BEL
-        "serial_inst/UART_inst/tx_timer_5" BEL
-        "serial_inst/UART_inst/tx_timer_6" BEL
-        "serial_inst/UART_inst/tx_timer_7" BEL
-        "serial_inst/UART_inst/tx_timer_8" BEL
-        "serial_inst/UART_inst/rx_timer_8" BEL
+        "IOMM_inst0/write_address_high_6" BEL "serial_inst/uart_inst/rx_s" BEL
+        "serial_inst/uart_inst/prev_tx_req" BEL
+        "serial_inst/uart_inst/rx_timer_0" BEL
+        "serial_inst/uart_inst/rx_timer_1" BEL
+        "serial_inst/uart_inst/rx_timer_2" BEL
+        "serial_inst/uart_inst/rx_timer_3" BEL
+        "serial_inst/uart_inst/rx_timer_4" BEL
+        "serial_inst/uart_inst/rx_timer_5" BEL
+        "serial_inst/uart_inst/rx_timer_6" BEL
+        "serial_inst/uart_inst/rx_timer_7" BEL
+        "serial_inst/uart_inst/rx_timer_8" BEL
+        "serial_inst/uart_inst/rx_timer_9" BEL
+        "serial_inst/uart_inst/rx_timer_10" BEL
+        "serial_inst/uart_inst/rx_timer_11" BEL
+        "serial_inst/uart_inst/rx_timer_12" BEL
+        "serial_inst/uart_inst/rx_timer_13" BEL
+        "serial_inst/uart_inst/rx_timer_14" BEL
+        "serial_inst/uart_inst/rx_timer_15" BEL
+        "serial_inst/uart_inst/tx_active" BEL "serial_inst/uart_inst/tx_ready"
+        BEL "serial_inst/uart_inst/rx_ready" BEL
+        "serial_inst/uart_inst/tx_frame_1" BEL
+        "serial_inst/uart_inst/tx_frame_2" BEL
+        "serial_inst/uart_inst/tx_frame_3" BEL
+        "serial_inst/uart_inst/tx_frame_4" BEL
+        "serial_inst/uart_inst/tx_frame_5" BEL
+        "serial_inst/uart_inst/tx_frame_6" BEL
+        "serial_inst/uart_inst/tx_frame_7" BEL
+        "serial_inst/uart_inst/tx_frame_8" BEL
+        "serial_inst/uart_inst/tx_frame_sliced_1" BEL
+        "serial_inst/uart_inst/tx_frame_sliced_0" BEL
+        "serial_inst/uart_inst/rx_active" BEL
+        "serial_inst/uart_inst/rx_frame_0" BEL
+        "serial_inst/uart_inst/rx_frame_1" BEL
+        "serial_inst/uart_inst/rx_frame_2" BEL
+        "serial_inst/uart_inst/rx_frame_3" BEL
+        "serial_inst/uart_inst/rx_frame_4" BEL
+        "serial_inst/uart_inst/rx_frame_5" BEL
+        "serial_inst/uart_inst/rx_frame_6" BEL
+        "serial_inst/uart_inst/rx_frame_7" BEL
+        "serial_inst/uart_inst/rx_frame_8" BEL
+        "serial_inst/uart_inst/rx_frame_9" BEL
+        "serial_inst/uart_inst/rx_data_0" BEL
+        "serial_inst/uart_inst/rx_data_1" BEL
+        "serial_inst/uart_inst/rx_data_2" BEL
+        "serial_inst/uart_inst/rx_data_3" BEL
+        "serial_inst/uart_inst/rx_data_4" BEL
+        "serial_inst/uart_inst/rx_data_5" BEL
+        "serial_inst/uart_inst/rx_data_6" BEL
+        "serial_inst/uart_inst/rx_data_7" BEL
+        "serial_inst/uart_inst/tx_timer_0" BEL
+        "serial_inst/uart_inst/tx_timer_1" BEL
+        "serial_inst/uart_inst/tx_timer_2" BEL
+        "serial_inst/uart_inst/tx_timer_3" BEL
+        "serial_inst/uart_inst/tx_timer_4" BEL
+        "serial_inst/uart_inst/tx_timer_5" BEL
+        "serial_inst/uart_inst/tx_timer_6" BEL
+        "serial_inst/uart_inst/tx_timer_7" BEL
+        "serial_inst/uart_inst/tx_timer_8" BEL
+        "serial_inst/uart_inst/tx_timer_9" BEL
+        "serial_inst/uart_inst/tx_timer_10" BEL
+        "serial_inst/uart_inst/tx_timer_11" BEL
+        "serial_inst/uart_inst/tx_timer_12" BEL
+        "serial_inst/uart_inst/tx_timer_13" BEL
+        "serial_inst/uart_inst/tx_timer_14" BEL
+        "serial_inst/uart_inst/tx_timer_15" BEL
         "serial_inst/tx_queue/Mram_queue_mem2.SLICEM_F" BEL
         "serial_inst/tx_queue/Mram_queue_mem2.SLICEM_G" BEL
         "serial_inst/tx_queue/Mram_queue_mem1.SLICEM_F" BEL
@@ -783,13 +815,20 @@ TIMEGRP PLL_inst_CLK0_BUF = BEL "prev_serial_en" BEL "prev_keyboard_en" BEL
         "serial_inst/rx_queue/read_addr_0" BEL
         "serial_inst/rx_queue/read_addr_1" BEL
         "serial_inst/rx_queue/read_addr_2" BEL
-        "serial_inst/rx_queue/read_addr_3" BEL "serial_inst/tx_active" BEL
-        "serial_inst/busy" BEL "serial_inst/to_CPU_7" BEL
-        "serial_inst/to_CPU_6" BEL "serial_inst/to_CPU_5" BEL
-        "serial_inst/to_CPU_4" BEL "serial_inst/to_CPU_3" BEL
-        "serial_inst/to_CPU_2" BEL "serial_inst/to_CPU_1" BEL
-        "serial_inst/to_CPU_0" BEL "serial_inst/tx_overwrite" BEL
-        "serial_inst/rx_overwrite" BEL
+        "serial_inst/rx_queue/read_addr_3" BEL "serial_inst/to_cpu_7" BEL
+        "serial_inst/to_cpu_6" BEL "serial_inst/to_cpu_5" BEL
+        "serial_inst/to_cpu_4" BEL "serial_inst/to_cpu_3" BEL
+        "serial_inst/to_cpu_2" BEL "serial_inst/to_cpu_1" BEL
+        "serial_inst/to_cpu_0" BEL "serial_inst/tx_active" BEL
+        "serial_inst/clk_div_l_7" BEL "serial_inst/clk_div_l_6" BEL
+        "serial_inst/clk_div_l_5" BEL "serial_inst/clk_div_l_4" BEL
+        "serial_inst/clk_div_l_3" BEL "serial_inst/clk_div_l_2" BEL
+        "serial_inst/clk_div_l_1" BEL "serial_inst/clk_div_l_0" BEL
+        "serial_inst/clk_div_h_7" BEL "serial_inst/clk_div_h_6" BEL
+        "serial_inst/clk_div_h_5" BEL "serial_inst/clk_div_h_4" BEL
+        "serial_inst/clk_div_h_3" BEL "serial_inst/clk_div_h_2" BEL
+        "serial_inst/clk_div_h_1" BEL "serial_inst/clk_div_h_0" BEL
+        "serial_inst/tx_overwrite" BEL "serial_inst/rx_overwrite" BEL
         "keyboard_inst/ps2_host_inst/prev_tx_req" BEL
         "keyboard_inst/ps2_host_inst/prev_tx_last" BEL
         "keyboard_inst/ps2_host_inst/rx_shift_reg_0" BEL

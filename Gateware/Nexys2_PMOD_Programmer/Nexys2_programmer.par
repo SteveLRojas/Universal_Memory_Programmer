@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-localhost.localdomain::  Sun Sep 04 02:04:38 2022
+localhost.localdomain::  Sun Oct 16 22:29:48 2022
 
 par -w -intstyle ise -ol high -t 1 Nexys2_programmer_map.ncd
 Nexys2_programmer.ncd Nexys2_programmer.pcf 
@@ -49,7 +49,7 @@ Design Summary Report:
    Number of BUFGMUXs                        2 out of 24      8%
    Number of DCMs                            1 out of 4      25%
    Number of RAMB16s                        15 out of 20     75%
-   Number of Slices                       1811 out of 4656   38%
+   Number of Slices                       1868 out of 4656   40%
       Number of SLICEMs                     54 out of 2328    2%
 
 
@@ -68,41 +68,41 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:1b8b5d0b) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:ec2b459e) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:1b8b5d0b) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:ec2b459e) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:1b8b5d0b) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:ec2b459e) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:bfdbf97b) REAL time: 2 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:4db5c766) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:bfdbf97b) REAL time: 2 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:4db5c766) REAL time: 2 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:bfdbf97b) REAL time: 2 secs 
+Phase 6.36  Local Placement Optimization (Checksum:4db5c766) REAL time: 2 secs 
 
 Phase 7.8  Global Placement
-.............................
-.................................................
-.............
-............
-Phase 7.8  Global Placement (Checksum:e0bf7fea) REAL time: 5 secs 
+...........................
+.....................................................................
+...............
+........
+Phase 7.8  Global Placement (Checksum:d1d806a3) REAL time: 5 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:e0bf7fea) REAL time: 5 secs 
+Phase 8.5  Local Placement Optimization (Checksum:d1d806a3) REAL time: 5 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:51540b91) REAL time: 6 secs 
+Phase 9.18  Placement Optimization (Checksum:fd4aa46f) REAL time: 6 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:51540b91) REAL time: 6 secs 
+Phase 10.5  Local Placement Optimization (Checksum:fd4aa46f) REAL time: 6 secs 
 
-Total REAL time to Placer completion: 6 secs 
+Total REAL time to Placer completion: 7 secs 
 Total CPU  time to Placer completion: 6 secs 
 Writing design to file Nexys2_programmer.ncd
 
@@ -111,21 +111,21 @@ Writing design to file Nexys2_programmer.ncd
 Starting Router
 
 
-Phase  1  : 13053 unrouted;      REAL time: 9 secs 
+Phase  1  : 13399 unrouted;      REAL time: 9 secs 
 
-Phase  2  : 11709 unrouted;      REAL time: 9 secs 
+Phase  2  : 12024 unrouted;      REAL time: 9 secs 
 
-Phase  3  : 3161 unrouted;      REAL time: 10 secs 
+Phase  3  : 3252 unrouted;      REAL time: 10 secs 
 
-Phase  4  : 3161 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 10 secs 
+Phase  4  : 3252 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 10 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 12 secs 
 
 Updating file: Nexys2_programmer.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 12 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 12 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
 
 Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
 
@@ -148,9 +148,9 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|             clk_sys | BUFGMUX_X1Y10| No   | 1112 |  0.080     |  0.197      |
+|             clk_sys | BUFGMUX_X1Y10| No   | 1138 |  0.082     |  0.199      |
 +---------------------+--------------+------+------+------------+-------------+
-|              clk_25 | BUFGMUX_X2Y11| No   |   75 |  0.082     |  0.202      |
+|              clk_25 | BUFGMUX_X2Y11| No   |   75 |  0.074     |  0.202      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -172,13 +172,13 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_PLL_inst_CLK0_BUF = PERIOD TIMEGRP "PL | SETUP       |     2.697ns|    17.303ns|       0|           0
-  L_inst_CLK0_BUF" TS_sys_clk HIGH 50%      | HOLD        |     0.673ns|            |       0|           0
+  TS_PLL_inst_CLK0_BUF = PERIOD TIMEGRP "PL | SETUP       |     1.337ns|    18.663ns|       0|           0
+  L_inst_CLK0_BUF" TS_sys_clk HIGH 50%      | HOLD        |     0.676ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   TS_sys_clk = PERIOD TIMEGRP "sys_clk" 50  | MINLOWPULSE |    14.000ns|     6.000ns|       0|           0
   MHz HIGH 50%                              |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_PLL_inst_CLKDV_BUF = PERIOD TIMEGRP "P | SETUP       |    17.737ns|     7.338ns|       0|           0
+  TS_PLL_inst_CLKDV_BUF = PERIOD TIMEGRP "P | SETUP       |    18.345ns|     7.891ns|       0|           0
   LL_inst_CLKDV_BUF" TS_sys_clk / 2         | HOLD        |     0.930ns|            |       0|           0
    HIGH 50%                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
@@ -194,9 +194,9 @@ Derived Constraints for TS_sys_clk
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk                     |     20.000ns|      6.000ns|     17.303ns|            0|            0|            0|       172240|
-| TS_PLL_inst_CLK0_BUF          |     20.000ns|     17.303ns|          N/A|            0|            0|       171113|            0|
-| TS_PLL_inst_CLKDV_BUF         |     40.000ns|      7.338ns|          N/A|            0|            0|         1127|            0|
+|TS_sys_clk                     |     20.000ns|      6.000ns|     18.663ns|            0|            0|            0|       178647|
+| TS_PLL_inst_CLK0_BUF          |     20.000ns|     18.663ns|          N/A|            0|            0|       177520|            0|
+| TS_PLL_inst_CLKDV_BUF         |     40.000ns|      7.891ns|          N/A|            0|            0|         1127|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -206,10 +206,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 14 secs 
+Total REAL time to PAR completion: 15 secs 
 Total CPU time to PAR completion: 13 secs 
 
-Peak Memory Usage:  714 MB
+Peak Memory Usage:  715 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

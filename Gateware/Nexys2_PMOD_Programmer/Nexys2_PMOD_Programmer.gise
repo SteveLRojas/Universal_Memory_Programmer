@@ -78,9 +78,6 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="nexys2_programmer.bgn" xil_pn:subbranch="FPGAConfiguration"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="nexys2_programmer.bit" xil_pn:subbranch="FPGAConfiguration"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="nexys2_programmer.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testbench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testbench_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testbench_isim_beh.wdb"/>
@@ -104,32 +101,11 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="CPU/ALU.v"/>
-      <outfile xil_pn:name="CPU/NeonFox.v"/>
-      <outfile xil_pn:name="CPU/PC.v"/>
-      <outfile xil_pn:name="CPU/decode_unit.v"/>
-      <outfile xil_pn:name="CPU/hazard_unit.v"/>
-      <outfile xil_pn:name="CPU/reg_file.v"/>
-      <outfile xil_pn:name="I2C_phy.v"/>
-      <outfile xil_pn:name="I2C_ri.v"/>
-      <outfile xil_pn:name="IOMM16.v"/>
-      <outfile xil_pn:name="Nexys2_PS2_driver.v"/>
-      <outfile xil_pn:name="Nexys2_hex_driver.v"/>
-      <outfile xil_pn:name="Nexys2_memory_controller.v"/>
-      <outfile xil_pn:name="SPI_ri.v"/>
-      <outfile xil_pn:name="Toplevel.v"/>
-      <outfile xil_pn:name="UART.v"/>
-      <outfile xil_pn:name="button_debounce.v"/>
-      <outfile xil_pn:name="interrupt_controller.v"/>
-      <outfile xil_pn:name="keyboard.v"/>
-      <outfile xil_pn:name="ps2_host.v"/>
-      <outfile xil_pn:name="queue_8_8.v"/>
-      <outfile xil_pn:name="serial.v"/>
-      <outfile xil_pn:name="spi_master.v"/>
-      <outfile xil_pn:name="testbench.v"/>
-      <outfile xil_pn:name="timer.v"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1662245584" xil_pn:in_ck="2640051752094892869" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1854889385420917559" xil_pn:start_ts="1662245584">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -157,33 +133,9 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="CPU/ALU.v"/>
-      <outfile xil_pn:name="CPU/NeonFox.v"/>
-      <outfile xil_pn:name="CPU/PC.v"/>
-      <outfile xil_pn:name="CPU/decode_unit.v"/>
-      <outfile xil_pn:name="CPU/hazard_unit.v"/>
-      <outfile xil_pn:name="CPU/reg_file.v"/>
-      <outfile xil_pn:name="I2C_phy.v"/>
-      <outfile xil_pn:name="I2C_ri.v"/>
-      <outfile xil_pn:name="IOMM16.v"/>
-      <outfile xil_pn:name="Nexys2_PS2_driver.v"/>
-      <outfile xil_pn:name="Nexys2_hex_driver.v"/>
-      <outfile xil_pn:name="Nexys2_memory_controller.v"/>
-      <outfile xil_pn:name="PLL0.v"/>
-      <outfile xil_pn:name="SPI_ri.v"/>
-      <outfile xil_pn:name="Toplevel.v"/>
-      <outfile xil_pn:name="UART.v"/>
-      <outfile xil_pn:name="button_debounce.v"/>
-      <outfile xil_pn:name="interrupt_controller.v"/>
-      <outfile xil_pn:name="ipcore_dir/BRAM_16K.v"/>
-      <outfile xil_pn:name="keyboard.v"/>
-      <outfile xil_pn:name="ps2_host.v"/>
-      <outfile xil_pn:name="queue_8_8.v"/>
-      <outfile xil_pn:name="serial.v"/>
-      <outfile xil_pn:name="spi_master.v"/>
-      <outfile xil_pn:name="testbench.v"/>
-      <outfile xil_pn:name="timer.v"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1662245591" xil_pn:in_ck="-3609797594706818235" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4057335136015247887" xil_pn:start_ts="1662245584">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -193,23 +145,20 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="testbench_beh.prj"/>
-      <outfile xil_pn:name="testbench_isim_beh.exe"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1662245591" xil_pn:in_ck="7130759491340027311" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6765454836195340814" xil_pn:start_ts="1662245591">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="testbench_isim_beh.wdb"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1662086756" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1662086756">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -219,7 +168,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1662257047" xil_pn:in_ck="30373937205703706" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="4887877801419864963" xil_pn:start_ts="1662257047">
+    <transform xil_pn:end_ts="1665959356" xil_pn:in_ck="30373937205703706" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="4887877801419864963" xil_pn:start_ts="1665959356">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/BRAM_16K.ngc"/>
@@ -242,7 +191,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1662257067" xil_pn:in_ck="-6535423973207671487" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5768097506491126442" xil_pn:start_ts="1662257047">
+    <transform xil_pn:end_ts="1665959376" xil_pn:in_ck="-3491626859881802946" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5768097506491126442" xil_pn:start_ts="1665959356">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -264,7 +213,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1662257071" xil_pn:in_ck="877283806727514969" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-4698921495911724954" xil_pn:start_ts="1662257067">
+    <transform xil_pn:end_ts="1665959381" xil_pn:in_ck="877283806727514969" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-4698921495911724954" xil_pn:start_ts="1665959376">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Nexys2_programmer.bld"/>
@@ -273,7 +222,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1662257077" xil_pn:in_ck="4093021281451403378" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1662257071">
+    <transform xil_pn:end_ts="1665959387" xil_pn:in_ck="4093021281451403378" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1665959381">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -289,7 +238,7 @@
       <outfile xil_pn:name="Nexys2_programmer_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1662257098" xil_pn:in_ck="-2557457420035153781" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1662257077">
+    <transform xil_pn:end_ts="1665959409" xil_pn:in_ck="-2557457420035153781" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1665959387">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Nexys2_programmer.ncd"/>
@@ -303,7 +252,7 @@
       <outfile xil_pn:name="Nexys2_programmer_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1662257105" xil_pn:in_ck="-4436753361857727929" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="1164069486101132963" xil_pn:start_ts="1662257098">
+    <transform xil_pn:end_ts="1665959417" xil_pn:in_ck="-4436753361857727929" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="1164069486101132963" xil_pn:start_ts="1665959409">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Nexys2_programmer.bgn"/>
@@ -315,13 +264,11 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1662239228" xil_pn:in_ck="-4436753361857740783" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1662239227">
+    <transform xil_pn:end_ts="1665971007" xil_pn:in_ck="-4436753361857740783" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1665971005">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1662257098" xil_pn:in_ck="4093021281451403246" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1662257094">
+    <transform xil_pn:end_ts="1665959409" xil_pn:in_ck="4093021281451403246" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1665959405">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Nexys2_programmer.twr"/>

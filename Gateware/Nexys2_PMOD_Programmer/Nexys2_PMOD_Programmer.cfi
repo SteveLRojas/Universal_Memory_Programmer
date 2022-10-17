@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE            10/17/2022 -  1:45
+SOURCE          /home/ise/VM_share/Nexys2_PMOD_Programmer/Nexys2_PMOD_Programmer.mcs
+DEVICE          XCF04S
+DATA_WIDTH      8
+FILL_DATA       0xFF
+SIGNATURE       0x0457774D
+START_ADDRESS   0x00000000 END_ADDRESS 0x0004547F DIRECTION_UP   "/home/ise/VM_share/Nexys2_PMOD_Programmer/Nexys2_programmer.bit" 3s500efg320
