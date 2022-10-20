@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o /home/ise/VM_share/Nexys2_programmer//Nexys2_Programmer -x xcf04s -u 00000000 /home/ise/VM_share/Nexys2_programmer/Nexys2_programmer.bit 
+
+PROM /home/ise/VM_share/Nexys2_programmer/Nexys2_Programmer.prm map: Mon Oct 17 01:36:22 2022
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          512K
+PROM start    0000:0000
+PROM end      0007:ffff
+PROM checksum 0456cdd1
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0004:547f     Jul 16 14:55:52 2022 /home/ise/VM_share/Nexys2_programmer/Nexys2_programmer.bit

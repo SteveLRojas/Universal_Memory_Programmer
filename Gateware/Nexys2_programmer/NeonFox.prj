@@ -1,6 +1,0 @@
-verilog work "CPU/reg_file.v"
-verilog work "CPU/PC.v"
-verilog work "CPU/hazard_unit.v"
-verilog work "CPU/decode_unit.v"
-verilog work "CPU/ALU.v"
-verilog work "CPU/NeonFox.v"
