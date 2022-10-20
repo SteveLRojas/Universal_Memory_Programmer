@@ -28,6 +28,9 @@
 ;* ROM programmer project.                        *
 ;**************************************************
 
+CAT_CHIP_ADDRESS_R EQU %10100001
+CAT_CHIP_ADDRESS_W EQU %10100000
+
 ;#############################################################################
 CAT_NULL
 	LIM H, AUX0, $E0
@@ -81,7 +84,7 @@ CAT_SET_ADDRESS_READ
 	LIM L, AUX0, `LL I2C_BYTE_ADDR_H
 	MOVE W, AUX0, DAL
 	MOVE W, ZERO, AUX0
-	LIM L, AUX0, %1010 0001
+	LIM L, AUX0, CAT_CHIP_ADDRESS_R
 	ROL W, DD, AUX1
 	LIM H, AUX2, `LH I2C_SEND_BYTE
 	LIM L, AUX2, `LL I2C_SEND_BYTE
@@ -130,7 +133,7 @@ CAT_SET_ADDRESS_WRITE
 	LIM L, AUX0, `LL I2C_BYTE_ADDR_H
 	MOVE W, AUX0, DAL
 	MOVE W, ZERO, AUX0
-	LIM L, AUX0, %1010 0000
+	LIM L, AUX0, CAT_CHIP_ADDRESS_W
 	ROL W, DD, AUX1
 
 	LIM H, AUX2, `LH I2C_SEND_BYTE

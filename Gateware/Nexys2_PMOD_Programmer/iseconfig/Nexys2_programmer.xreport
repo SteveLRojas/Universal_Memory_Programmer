@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-10-16T21:22:41</DateModified>
+  <DateModified>2022-10-20T02:42:15</DateModified>
   <ModuleName>Nexys2_programmer</ModuleName>
-  <SummaryTimeStamp>2022-09-02T12:31:55</SummaryTimeStamp>
+  <SummaryTimeStamp>2022-10-20T02:28:29</SummaryTimeStamp>
   <SavedFilePath>/home/ise/VM_share/Nexys2_PMOD_Programmer/iseconfig/Nexys2_programmer.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/ise/VM_share/Nexys2_PMOD_Programmer/</ImplementationReportsDirectory>
   <DateInitialized>2022-09-01T19:17:13</DateInitialized>
