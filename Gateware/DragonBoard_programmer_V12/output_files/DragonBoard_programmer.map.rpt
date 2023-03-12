@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DragonBoard_programmer
-Sun Jul 10 15:32:29 2022
+Sun Mar 12 14:21:56 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -68,13 +68,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jul 10 15:32:29 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 12 14:21:56 2023       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; DragonBoard_programmer                      ;
 ; Top-level Entity Name              ; DragonBoard_programmer                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,881                                       ;
-;     Total combinational functions  ; 2,972                                       ;
+; Total logic elements               ; 4,880                                       ;
+;     Total combinational functions  ; 2,971                                       ;
 ;     Dedicated logic registers      ; 2,881                                       ;
 ; Total registers                    ; 2881                                        ;
 ; Total pins                         ; 47                                          ;
@@ -180,12 +180,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 ;     Processor 5            ;   0.1%      ;
@@ -196,53 +196,53 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
-; UART.v                           ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/UART.v                     ;         ;
-; Toplevel.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v                 ;         ;
-; timer.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/timer.v                    ;         ;
-; serial.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/serial.v                   ;         ;
-; SDRAM_SP8_B8_I.sv                ; yes             ; User SystemVerilog HDL File            ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/SDRAM_SP8_B8_I.sv          ;         ;
-; queue_8_8.sv                     ; yes             ; User SystemVerilog HDL File            ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/queue_8_8.sv               ;         ;
-; ps2_host.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/ps2_host.v                 ;         ;
-; memory_arbiter.sv                ; yes             ; User SystemVerilog HDL File            ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/memory_arbiter.sv          ;         ;
-; keyboard.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/keyboard.v                 ;         ;
-; IOMM64.sv                        ; yes             ; User SystemVerilog HDL File            ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/IOMM64.sv                  ;         ;
-; interrupt_controller.v           ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/interrupt_controller.v     ;         ;
-; I2C_ri.sv                        ; yes             ; User SystemVerilog HDL File            ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/I2C_ri.sv                  ;         ;
-; I2C_phy.sv                       ; yes             ; User SystemVerilog HDL File            ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/I2C_phy.sv                 ;         ;
-; button_debounce.sv               ; yes             ; User SystemVerilog HDL File            ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/button_debounce.sv         ;         ;
-; CPU/reg_file.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/reg_file.v             ;         ;
-; CPU/PC.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/PC.v                   ;         ;
-; CPU/NeonFox.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/NeonFox.v              ;         ;
-; CPU/hazard_unit.v                ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/hazard_unit.v          ;         ;
-; CPU/decode_unit.v                ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/decode_unit.v          ;         ;
-; CPU/ALU.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/ALU.v                  ;         ;
-; PLL0.v                           ; yes             ; User Wizard-Generated File             ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/PLL0.v                     ;         ;
-; BRAM_8K.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/BRAM_8K.v                  ;         ;
-; PRG_ROM.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/PRG_ROM.v                  ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altpll.tdf              ;         ;
-; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc          ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_pll.inc         ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratixii_pll.inc       ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/cycloneii_pll.inc       ;         ;
-; db/pll0_altpll.v                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/db/pll0_altpll.v           ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc              ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_4ql2.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/db/altsyncram_4ql2.tdf     ;         ;
-; dragonboard_programmer.mif       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/dragonboard_programmer.mif ;         ;
-; db/altsyncram_vha1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/db/altsyncram_vha1.tdf     ;         ;
-; r3_rom_8_bit.mif                 ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Steve/Workspace/DragonBoard_programmer_V12/r3_rom_8_bit.mif           ;         ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                  ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                    ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; UART.v                           ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/UART.v                     ;         ;
+; Toplevel.v                       ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v                 ;         ;
+; timer.v                          ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/timer.v                    ;         ;
+; serial.v                         ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/serial.v                   ;         ;
+; SDRAM_SP8_B8_I.sv                ; yes             ; User SystemVerilog HDL File            ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/SDRAM_SP8_B8_I.sv          ;         ;
+; queue_8_8.sv                     ; yes             ; User SystemVerilog HDL File            ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/queue_8_8.sv               ;         ;
+; ps2_host.v                       ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/ps2_host.v                 ;         ;
+; memory_arbiter.sv                ; yes             ; User SystemVerilog HDL File            ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/memory_arbiter.sv          ;         ;
+; keyboard.v                       ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/keyboard.v                 ;         ;
+; IOMM64.sv                        ; yes             ; User SystemVerilog HDL File            ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/IOMM64.sv                  ;         ;
+; interrupt_controller.v           ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/interrupt_controller.v     ;         ;
+; I2C_ri.sv                        ; yes             ; User SystemVerilog HDL File            ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/I2C_ri.sv                  ;         ;
+; I2C_phy.sv                       ; yes             ; User SystemVerilog HDL File            ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/I2C_phy.sv                 ;         ;
+; button_debounce.sv               ; yes             ; User SystemVerilog HDL File            ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/button_debounce.sv         ;         ;
+; CPU/reg_file.v                   ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/reg_file.v             ;         ;
+; CPU/PC.v                         ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/PC.v                   ;         ;
+; CPU/NeonFox.v                    ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/NeonFox.v              ;         ;
+; CPU/hazard_unit.v                ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/hazard_unit.v          ;         ;
+; CPU/decode_unit.v                ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/decode_unit.v          ;         ;
+; CPU/ALU.v                        ; yes             ; User Verilog HDL File                  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/ALU.v                  ;         ;
+; PLL0.v                           ; yes             ; User Wizard-Generated File             ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/PLL0.v                     ;         ;
+; BRAM_8K.v                        ; yes             ; User Wizard-Generated File             ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/BRAM_8K.v                  ;         ;
+; PRG_ROM.v                        ; yes             ; User Wizard-Generated File             ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/PRG_ROM.v                  ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altpll.tdf                                   ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc                               ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/stratix_pll.inc                              ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/stratixii_pll.inc                            ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/cycloneii_pll.inc                            ;         ;
+; db/PLL0_altpll.v                 ; yes             ; Auto-Generated Megafunction            ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/db/PLL0_altpll.v           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf                               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc                        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc                                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc                               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc                                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altrom.inc                                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altram.inc                                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altdpram.inc                                 ;         ;
+; db/altsyncram_4ql2.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/db/altsyncram_4ql2.tdf     ;         ;
+; dragonboard_programmer.mif       ; yes             ; Auto-Found Memory Initialization File  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/dragonboard_programmer.mif ;         ;
+; db/altsyncram_vha1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/db/altsyncram_vha1.tdf     ;         ;
+; r3_rom_8_bit.mif                 ; yes             ; Auto-Found Memory Initialization File  ; /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/r3_rom_8_bit.mif           ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------+
@@ -250,16 +250,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                             ;
 +---------------------------------------------+-----------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 4,881                                                                             ;
+; Estimated Total logic elements              ; 4,880                                                                             ;
 ;                                             ;                                                                                   ;
-; Total combinational functions               ; 2972                                                                              ;
+; Total combinational functions               ; 2971                                                                              ;
 ; Logic element usage by number of LUT inputs ;                                                                                   ;
-;     -- 4 input functions                    ; 1852                                                                              ;
-;     -- 3 input functions                    ; 670                                                                               ;
-;     -- <=2 input functions                  ; 450                                                                               ;
+;     -- 4 input functions                    ; 1854                                                                              ;
+;     -- 3 input functions                    ; 673                                                                               ;
+;     -- <=2 input functions                  ; 444                                                                               ;
 ;                                             ;                                                                                   ;
 ; Logic elements by mode                      ;                                                                                   ;
-;     -- normal mode                          ; 2731                                                                              ;
+;     -- normal mode                          ; 2730                                                                              ;
 ;     -- arithmetic mode                      ; 241                                                                               ;
 ;                                             ;                                                                                   ;
 ; Total registers                             ; 2881                                                                              ;
@@ -276,7 +276,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                                   ;
 ; Maximum fan-out node                        ; PLL0:PLL_inst|altpll:altpll_component|PLL0_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 2907                                                                              ;
-; Total fan-out                               ; 20153                                                                             ;
+; Total fan-out                               ; 20158                                                                             ;
 ; Average fan-out                             ; 3.37                                                                              ;
 +---------------------------------------------+-----------------------------------------------------------------------------------+
 
@@ -286,20 +286,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Entity Name            ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |DragonBoard_programmer                   ; 2972 (52)           ; 2881 (50)                 ; 196608      ; 0            ; 0       ; 0         ; 47   ; 0            ; |DragonBoard_programmer                                                                                 ; DragonBoard_programmer ; work         ;
+; |DragonBoard_programmer                   ; 2971 (52)           ; 2881 (50)                 ; 196608      ; 0            ; 0       ; 0         ; 47   ; 0            ; |DragonBoard_programmer                                                                                 ; DragonBoard_programmer ; work         ;
 ;    |BRAM_8K:main_mem|                     ; 0 (0)               ; 0 (0)                     ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|BRAM_8K:main_mem                                                                ; BRAM_8K                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|BRAM_8K:main_mem|altsyncram:altsyncram_component                                ; altsyncram             ; work         ;
 ;          |altsyncram_4ql2:auto_generated| ; 0 (0)               ; 0 (0)                     ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|BRAM_8K:main_mem|altsyncram:altsyncram_component|altsyncram_4ql2:auto_generated ; altsyncram_4ql2        ; work         ;
 ;    |I2C_ri:i2c_ri_inst|                   ; 73 (17)             ; 60 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst                                                              ; I2C_ri                 ; work         ;
 ;       |I2C_phy:i2c_phy_inst|              ; 56 (56)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst                                         ; I2C_phy                ; work         ;
 ;    |IOMM64:IOMM_inst|                     ; 145 (145)           ; 216 (216)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|IOMM64:IOMM_inst                                                                ; IOMM64                 ; work         ;
-;    |NeonFox:CPU_inst|                     ; 1512 (90)           ; 1436 (66)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst                                                                ; NeonFox                ; work         ;
-;       |ALU:ALU_inst|                      ; 214 (214)           ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst|ALU:ALU_inst                                                   ; ALU                    ; work         ;
-;       |PC:PC_inst|                        ; 636 (278)           ; 807 (226)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst                                                     ; PC                     ; work         ;
+;    |NeonFox:CPU_inst|                     ; 1511 (90)           ; 1436 (66)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst                                                                ; NeonFox                ; work         ;
+;       |ALU:ALU_inst|                      ; 212 (212)           ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst|ALU:ALU_inst                                                   ; ALU                    ; work         ;
+;       |PC:PC_inst|                        ; 634 (276)           ; 807 (226)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst                                                     ; PC                     ; work         ;
 ;          |call_stack:cstack0|             ; 358 (358)           ; 581 (581)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|call_stack:cstack0                                  ; call_stack             ; work         ;
 ;       |decode_unit:decoder_inst|          ; 81 (81)             ; 68 (68)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst                                       ; decode_unit            ; work         ;
 ;       |hazard_unit:hazard_inst|           ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst|hazard_unit:hazard_inst                                        ; hazard_unit            ; work         ;
-;       |reg_file:reg_file_inst|            ; 482 (482)           ; 475 (475)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst                                         ; reg_file               ; work         ;
+;       |reg_file:reg_file_inst|            ; 485 (485)           ; 475 (475)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst                                         ; reg_file               ; work         ;
 ;    |PLL0:PLL_inst|                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|PLL0:PLL_inst                                                                   ; PLL0                   ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|PLL0:PLL_inst|altpll:altpll_component                                           ; altpll                 ; work         ;
 ;          |PLL0_altpll:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DragonBoard_programmer|PLL0:PLL_inst|altpll:altpll_component|PLL0_altpll:auto_generated                ; PLL0_altpll            ; work         ;
@@ -648,9 +648,9 @@ Encoding Type:  One-Hot
 ; rst_s                                                          ; 1       ;
 ; I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|tx_frame[10]           ; 2       ;
 ; I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|clk_i2c                ; 8       ;
-; NeonFox:CPU_inst|alu_op1[1]                                    ; 15      ;
-; NeonFox:CPU_inst|alu_op1[0]                                    ; 31      ;
-; NeonFox:CPU_inst|alu_op1[2]                                    ; 17      ;
+; NeonFox:CPU_inst|alu_op1[0]                                    ; 34      ;
+; NeonFox:CPU_inst|alu_op1[1]                                    ; 17      ;
+; NeonFox:CPU_inst|alu_op1[2]                                    ; 16      ;
 ; I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|tx_frame[9]            ; 1       ;
 ; I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|tx_frame[0]            ; 2       ;
 ; I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|tx_frame[1]            ; 2       ;
@@ -661,12 +661,12 @@ Encoding Type:  One-Hot
 ; I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|tx_frame[6]            ; 2       ;
 ; I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|tx_frame[7]            ; 2       ;
 ; I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|tx_frame[8]            ; 2       ;
-; serial:serial_inst1|UART:UART_inst|rx_frame[6]                 ; 2       ;
-; serial:serial_inst1|UART:UART_inst|rx_frame[0]                 ; 3       ;
-; serial:serial_inst0|UART:UART_inst|rx_frame[6]                 ; 2       ;
-; serial:serial_inst0|UART:UART_inst|rx_frame[0]                 ; 3       ;
 ; serial:serial_inst1|UART:UART_inst|rx_frame[5]                 ; 2       ;
+; serial:serial_inst1|UART:UART_inst|rx_frame[0]                 ; 3       ;
 ; serial:serial_inst0|UART:UART_inst|rx_frame[5]                 ; 2       ;
+; serial:serial_inst0|UART:UART_inst|rx_frame[0]                 ; 3       ;
+; serial:serial_inst1|UART:UART_inst|rx_frame[6]                 ; 2       ;
+; serial:serial_inst0|UART:UART_inst|rx_frame[6]                 ; 2       ;
 ; serial:serial_inst1|UART:UART_inst|rx_frame[4]                 ; 2       ;
 ; serial:serial_inst0|UART:UART_inst|rx_frame[4]                 ; 2       ;
 ; serial:serial_inst1|UART:UART_inst|rx_frame[3]                 ; 2       ;
@@ -693,85 +693,85 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|ps2_host:ps2_host_inst|rx_data[3]      ;
-; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DragonBoard_programmer|memory_arbiter:arbiter_inst|mem_address_base[3]               ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|queue_8_8:tx_queue|read_addr[3]           ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|queue_8_8:tx_queue|read_addr[3]           ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|refresh_timer[8]             ;
-; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|init_address[6]              ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|to_CPU[7]                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|to_CPU[5]                                  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|timer:timer_inst|to_cpu[5]                                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|ps2_host:ps2_host_inst|rx_data[0]      ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DragonBoard_programmer|memory_arbiter:arbiter_inst|mem_address_base[13]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|queue_8_8:tx_queue|read_addr[2]           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|queue_8_8:tx_queue|read_addr[2]           ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|refresh_timer[2]             ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|init_address[17]             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|to_CPU[3]                                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|to_CPU[4]                                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|timer:timer_inst|to_cpu[6]                                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|timer:timer_inst|to_cpu[1]                                    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|queue_8_8:tx_queue|write_addr[3]          ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|queue_8_8:tx_queue|write_addr[0]          ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|queue_8_8:tx_queue|read_addr[0]        ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|ps2_host:ps2_host_inst|tx_shift_reg[3] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|init_refresh_count[2]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|queue_8_8:tx_queue|write_addr[0]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|queue_8_8:tx_queue|write_addr[2]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|queue_8_8:tx_queue|read_addr[2]        ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|ps2_host:ps2_host_inst|tx_shift_reg[8] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|init_refresh_count[0]        ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|queue_8_8:tx_queue|write_addr[0]       ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|IOMM64:IOMM_inst|read_address_low[6]                          ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|IOMM64:IOMM_inst|write_address_low[1]                         ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|IOMM64:IOMM_inst|read_address_high[0]                         ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|IOMM64:IOMM_inst|write_address_high[13]                       ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|clk_div[4]            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|read_req                                   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|IOMM64:IOMM_inst|read_address_low[5]                          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|IOMM64:IOMM_inst|write_address_low[5]                         ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|IOMM64:IOMM_inst|read_address_high[10]                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|IOMM64:IOMM_inst|write_address_high[3]                        ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|clk_div[2]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|write_req                                  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|alu_op[0]           ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|ral[11]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|rah[15]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|ral[1]                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|rah[0]                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|ral[15]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|rah[8]                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|ral[7]                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|rah[5]                ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|interrupt_controller:intcon_inst|status[0]                    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|interrupt_controller:intcon_inst|control[4]                   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|queue_8_8:rx_queue|read_addr[2]           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|interrupt_controller:intcon_inst|control[6]                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|queue_8_8:rx_queue|read_addr[3]           ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|queue_8_8:rx_queue|read_addr[3]           ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|queue_8_8:rx_queue|read_addr[0]        ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|I_alternate[13]     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|UART:UART_inst|rx_data[3]                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|queue_8_8:rx_queue|read_addr[3]        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|I_alternate[2]      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|UART:UART_inst|rx_data[0]                 ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|UART:UART_inst|rx_data[4]                 ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|A_current_I_alternate[23]         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|A_pipe0[31]                       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|ALU:ALU_inst|p                               ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|ps2_host:ps2_host_inst|timer[10]       ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|UART:UART_inst|tx_timer[7]                ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|UART:UART_inst|tx_timer[8]                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|A_current_I_alternate[21]         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|A_pipe0[4]                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|ALU:ALU_inst|n                               ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|ps2_host:ps2_host_inst|timer[0]        ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|UART:UART_inst|tx_timer[5]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|UART:UART_inst|tx_timer[4]                ;
 ; 5:1                ; 13 bits   ; 39 LEs        ; 39 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|IOMM64:IOMM_inst|to_CPU[15]                                   ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|IOMM64:IOMM_inst|to_CPU[7]                                    ;
 ; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |DragonBoard_programmer|keyboard:keyboard_inst|ps2_host:ps2_host_inst|rx_shift_reg[5] ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|I_reg[11]           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|interrupt_controller:intcon_inst|timer[1]                     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|timer:timer_inst|counter[5]                                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|timer:timer_inst|counter[13]                                  ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|timer:timer_inst|counter[16]                                  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|A_current_I[7]                    ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|UART:UART_inst|rx_timer[4]                ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|UART:UART_inst|rx_timer[2]                ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |DragonBoard_programmer|memory_arbiter:arbiter_inst|burst_offset[0]                   ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|led_reg[0]                                                    ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|sdram_a[0]                   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|sdram_a[4]                   ;
-; 13:1               ; 3 bits    ; 24 LEs        ; 3 LEs                ; 21 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|dest_waddr[3]       ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|I_reg[13]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|interrupt_controller:intcon_inst|timer[3]                     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|timer:timer_inst|counter[6]                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|timer:timer_inst|counter[8]                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|timer:timer_inst|counter[21]                                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|A_current_I[15]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|UART:UART_inst|rx_timer[5]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|UART:UART_inst|rx_timer[3]                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |DragonBoard_programmer|memory_arbiter:arbiter_inst|burst_offset[1]                   ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|led_reg[2]                                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|sdram_a[1]                   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|sdram_a[5]                   ;
+; 13:1               ; 3 bits    ; 24 LEs        ; 3 LEs                ; 21 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|dest_waddr[2]       ;
 ; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|dest_waddr[1]       ;
-; 5:1                ; 28 bits   ; 84 LEs        ; 84 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|PC_reg[31]                        ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|PC_reg[2]                         ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|pc_call             ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|UART:UART_inst|tx_frame[2]                ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|UART:UART_inst|tx_frame[7]                ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|address_hold[18]             ;
-; 29:1               ; 12 bits   ; 228 LEs       ; 216 LEs              ; 12 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|a_reg[14]             ;
-; 29:1               ; 4 bits    ; 76 LEs        ; 76 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|a_reg[0]              ;
-; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|data_select         ;
-; 18:1               ; 3 bits    ; 36 LEs        ; 3 LEs                ; 33 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|data_ren            ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|memory_arbiter:arbiter_inst|memory_p1_to_mem[5]               ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 84 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|PC_reg[26]                        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|PC:PC_inst|PC_reg[3]                         ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|pc_jmp              ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|UART:UART_inst|tx_frame[7]                ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|UART:UART_inst|tx_frame[4]                ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|address_hold[6]              ;
+; 29:1               ; 12 bits   ; 228 LEs       ; 216 LEs              ; 12 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|a_reg[11]             ;
+; 29:1               ; 4 bits    ; 76 LEs        ; 76 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|a_reg[3]              ;
+; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|IO_select           ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 3 LEs                ; 33 LEs                 ; Yes        ; |DragonBoard_programmer|NeonFox:CPU_inst|decode_unit:decoder_inst|status_ren          ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |DragonBoard_programmer|memory_arbiter:arbiter_inst|memory_p1_to_mem[6]               ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|burst_count[0]               ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|tx_frame[7]           ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|data_out[1]                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|UART:UART_inst|rx_frame[5]                ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|UART:UART_inst|rx_frame[3]                ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|a_data[14]            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst|tx_frame[9]           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|data_out[7]                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DragonBoard_programmer|serial:serial_inst0|UART:UART_inst|rx_frame[4]                ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DragonBoard_programmer|serial:serial_inst1|UART:UART_inst|rx_frame[5]                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|a_data[8]             ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DragonBoard_programmer|NeonFox:CPU_inst|reg_file:reg_file_inst|a_data[7]             ;
-; 10:1               ; 9 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |DragonBoard_programmer|NeonFox:CPU_inst|ALU:ALU_inst|Mux8                            ;
+; 10:1               ; 9 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |DragonBoard_programmer|NeonFox:CPU_inst|ALU:ALU_inst|Mux0                            ;
 ; 11:1               ; 7 bits    ; 49 LEs        ; 42 LEs               ; 7 LEs                  ; No         ; |DragonBoard_programmer|NeonFox:CPU_inst|ALU:ALU_inst|Mux7                            ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |DragonBoard_programmer|memory_arbiter:arbiter_inst|Selector5                         ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |DragonBoard_programmer|memory_arbiter:arbiter_inst|Selector7                         ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |DragonBoard_programmer|memory_arbiter:arbiter_inst|Selector9                         ;
 ; 14:1               ; 5 bits    ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; No         ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|state                        ;
 ; 15:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; No         ; |DragonBoard_programmer|SDRAM8_SP8_B8_I:SDRAM_controller|state                        ;
@@ -1463,21 +1463,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 17                          ;
 ;     plain             ; 351                         ;
 ; cycloneiii_io_obuf    ; 10                          ;
-; cycloneiii_lcell_comb ; 2973                        ;
+; cycloneiii_lcell_comb ; 2972                        ;
 ;     arith             ; 241                         ;
 ;         2 data inputs ; 147                         ;
 ;         3 data inputs ; 94                          ;
-;     normal            ; 2732                        ;
+;     normal            ; 2731                        ;
 ;         0 data inputs ; 3                           ;
 ;         1 data inputs ; 26                          ;
-;         2 data inputs ; 275                         ;
-;         3 data inputs ; 576                         ;
-;         4 data inputs ; 1852                        ;
+;         2 data inputs ; 269                         ;
+;         3 data inputs ; 579                         ;
+;         4 data inputs ; 1854                        ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 24                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 14.00                       ;
-; Average LUT depth     ; 3.78                        ;
+; Max LUT depth         ; 13.50                       ;
+; Average LUT depth     ; 3.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1486,7 +1486,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -1496,63 +1496,63 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sun Jul 10 15:32:16 2022
+    Info: Processing started: Sun Mar 12 14:21:45 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DragonBoard_programmer_V12 -c DragonBoard_programmer
 Info (20032): Parallel compilation is enabled and will use up to 16 processors
-Info (12021): Found 1 design units, including 1 entities, in source file uart.v
-    Info (12023): Found entity 1: UART File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/UART.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file toplevel.v
-    Info (12023): Found entity 1: DragonBoard_programmer File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file UART.v
+    Info (12023): Found entity 1: UART File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/UART.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Toplevel.v
+    Info (12023): Found entity 1: DragonBoard_programmer File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file timer.v
-    Info (12023): Found entity 1: timer File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/timer.v Line: 1
+    Info (12023): Found entity 1: timer File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/timer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
-    Info (12023): Found entity 1: testbench File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/testbench.v Line: 25
+    Info (12023): Found entity 1: testbench File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/testbench.v Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file serial.v
-    Info (12023): Found entity 1: serial File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/serial.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sdram_sp8_b8_i.sv
-    Info (12023): Found entity 1: SDRAM8_SP8_B8_I File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/SDRAM_SP8_B8_I.sv Line: 41
+    Info (12023): Found entity 1: serial File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/serial.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file SDRAM_SP8_B8_I.sv
+    Info (12023): Found entity 1: SDRAM8_SP8_B8_I File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/SDRAM_SP8_B8_I.sv Line: 41
 Info (12021): Found 1 design units, including 1 entities, in source file queue_8_8.sv
-    Info (12023): Found entity 1: queue_8_8 File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/queue_8_8.sv Line: 1
+    Info (12023): Found entity 1: queue_8_8 File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/queue_8_8.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ps2_host.v
-    Info (12023): Found entity 1: ps2_host File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/ps2_host.v Line: 1
+    Info (12023): Found entity 1: ps2_host File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/ps2_host.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file memory_arbiter.sv
-    Info (12023): Found entity 1: memory_arbiter File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/memory_arbiter.sv Line: 1
+    Info (12023): Found entity 1: memory_arbiter File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/memory_arbiter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file keyboard.v
-    Info (12023): Found entity 1: keyboard File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/keyboard.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file iomm64.sv
-    Info (12023): Found entity 1: IOMM64 File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/IOMM64.sv Line: 30
+    Info (12023): Found entity 1: keyboard File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/keyboard.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file IOMM64.sv
+    Info (12023): Found entity 1: IOMM64 File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/IOMM64.sv Line: 30
 Info (12021): Found 1 design units, including 1 entities, in source file interrupt_controller.v
-    Info (12023): Found entity 1: interrupt_controller File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/interrupt_controller.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file i2c_ri.sv
-    Info (12023): Found entity 1: I2C_ri File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/I2C_ri.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file i2c_phy.sv
-    Info (12023): Found entity 1: I2C_phy File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/I2C_phy.sv Line: 1
+    Info (12023): Found entity 1: interrupt_controller File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/interrupt_controller.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file I2C_ri.sv
+    Info (12023): Found entity 1: I2C_ri File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/I2C_ri.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file I2C_phy.sv
+    Info (12023): Found entity 1: I2C_phy File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/I2C_phy.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file button_debounce.sv
-    Info (12023): Found entity 1: button_debounce File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/button_debounce.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file cpu/reg_file.v
-    Info (12023): Found entity 1: reg_file File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/reg_file.v Line: 1
-Info (12021): Found 2 design units, including 2 entities, in source file cpu/pc.v
-    Info (12023): Found entity 1: PC File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/PC.v Line: 1
-    Info (12023): Found entity 2: call_stack File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/PC.v Line: 205
-Info (12021): Found 1 design units, including 1 entities, in source file cpu/neonfox.v
-    Info (12023): Found entity 1: NeonFox File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file cpu/hazard_unit.v
-    Info (12023): Found entity 1: hazard_unit File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/hazard_unit.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file cpu/decode_unit.v
-    Info (12023): Found entity 1: decode_unit File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/decode_unit.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file cpu/alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/ALU.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file pll0.v
-    Info (12023): Found entity 1: PLL0 File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/PLL0.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file bram_8k.v
-    Info (12023): Found entity 1: BRAM_8K File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/BRAM_8K.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file prg_rom.v
-    Info (12023): Found entity 1: PRG_ROM File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/PRG_ROM.v Line: 40
+    Info (12023): Found entity 1: button_debounce File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/button_debounce.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file CPU/reg_file.v
+    Info (12023): Found entity 1: reg_file File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/reg_file.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file CPU/PC.v
+    Info (12023): Found entity 1: PC File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/PC.v Line: 1
+    Info (12023): Found entity 2: call_stack File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/PC.v Line: 205
+Info (12021): Found 1 design units, including 1 entities, in source file CPU/NeonFox.v
+    Info (12023): Found entity 1: NeonFox File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file CPU/hazard_unit.v
+    Info (12023): Found entity 1: hazard_unit File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/hazard_unit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file CPU/decode_unit.v
+    Info (12023): Found entity 1: decode_unit File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/decode_unit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file CPU/ALU.v
+    Info (12023): Found entity 1: ALU File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/ALU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file PLL0.v
+    Info (12023): Found entity 1: PLL0 File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/PLL0.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file BRAM_8K.v
+    Info (12023): Found entity 1: BRAM_8K File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/BRAM_8K.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file PRG_ROM.v
+    Info (12023): Found entity 1: PRG_ROM File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/PRG_ROM.v Line: 40
 Info (12127): Elaborating entity "DragonBoard_programmer" for the top level hierarchy
-Info (12128): Elaborating entity "PLL0" for hierarchy "PLL0:PLL_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 123
-Info (12128): Elaborating entity "altpll" for hierarchy "PLL0:PLL_inst|altpll:altpll_component" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/PLL0.v Line: 99
-Info (12130): Elaborated megafunction instantiation "PLL0:PLL_inst|altpll:altpll_component" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/PLL0.v Line: 99
-Info (12133): Instantiated megafunction "PLL0:PLL_inst|altpll:altpll_component" with the following parameter: File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/PLL0.v Line: 99
+Info (12128): Elaborating entity "PLL0" for hierarchy "PLL0:PLL_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 123
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL0:PLL_inst|altpll:altpll_component" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/PLL0.v Line: 99
+Info (12130): Elaborated megafunction instantiation "PLL0:PLL_inst|altpll:altpll_component" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/PLL0.v Line: 99
+Info (12133): Instantiated megafunction "PLL0:PLL_inst|altpll:altpll_component" with the following parameter: File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/PLL0.v Line: 99
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1615,14 +1615,14 @@ Info (12133): Instantiated megafunction "PLL0:PLL_inst|altpll:altpll_component" 
     Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/pll0_altpll.v
-    Info (12023): Found entity 1: PLL0_altpll File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/db/pll0_altpll.v Line: 30
-Info (12128): Elaborating entity "PLL0_altpll" for hierarchy "PLL0:PLL_inst|altpll:altpll_component|PLL0_altpll:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "button_debounce" for hierarchy "button_debounce:debounce_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 186
-Info (12128): Elaborating entity "BRAM_8K" for hierarchy "BRAM_8K:main_mem" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 205
-Info (12128): Elaborating entity "altsyncram" for hierarchy "BRAM_8K:main_mem|altsyncram:altsyncram_component" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/BRAM_8K.v Line: 98
-Info (12130): Elaborated megafunction instantiation "BRAM_8K:main_mem|altsyncram:altsyncram_component" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/BRAM_8K.v Line: 98
-Info (12133): Instantiated megafunction "BRAM_8K:main_mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/BRAM_8K.v Line: 98
+Info (12021): Found 1 design units, including 1 entities, in source file db/PLL0_altpll.v
+    Info (12023): Found entity 1: PLL0_altpll File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/db/PLL0_altpll.v Line: 30
+Info (12128): Elaborating entity "PLL0_altpll" for hierarchy "PLL0:PLL_inst|altpll:altpll_component|PLL0_altpll:auto_generated" File: /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "button_debounce" for hierarchy "button_debounce:debounce_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 186
+Info (12128): Elaborating entity "BRAM_8K" for hierarchy "BRAM_8K:main_mem" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 205
+Info (12128): Elaborating entity "altsyncram" for hierarchy "BRAM_8K:main_mem|altsyncram:altsyncram_component" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/BRAM_8K.v Line: 98
+Info (12130): Elaborated megafunction instantiation "BRAM_8K:main_mem|altsyncram:altsyncram_component" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/BRAM_8K.v Line: 98
+Info (12133): Instantiated megafunction "BRAM_8K:main_mem|altsyncram:altsyncram_component" with the following parameter: File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/BRAM_8K.v Line: 98
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
@@ -1651,23 +1651,23 @@ Info (12133): Instantiated megafunction "BRAM_8K:main_mem|altsyncram:altsyncram_
     Info (12134): Parameter "width_byteena_b" = "1"
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4ql2.tdf
-    Info (12023): Found entity 1: altsyncram_4ql2 File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/db/altsyncram_4ql2.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_4ql2" for hierarchy "BRAM_8K:main_mem|altsyncram:altsyncram_component|altsyncram_4ql2:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "serial" for hierarchy "serial:serial_inst0" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 227
-Info (12128): Elaborating entity "queue_8_8" for hierarchy "serial:serial_inst0|queue_8_8:tx_queue" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/serial.v Line: 93
-Info (12128): Elaborating entity "UART" for hierarchy "serial:serial_inst0|UART:UART_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/serial.v Line: 95
-Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:keyboard_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 271
-Info (12128): Elaborating entity "ps2_host" for hierarchy "keyboard:keyboard_inst|ps2_host:ps2_host_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/keyboard.v Line: 88
-Info (12128): Elaborating entity "timer" for hierarchy "timer:timer_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 294
-Info (12128): Elaborating entity "I2C_ri" for hierarchy "I2C_ri:i2c_ri_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 314
-Info (12128): Elaborating entity "I2C_phy" for hierarchy "I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/I2C_ri.sv Line: 96
-Info (12128): Elaborating entity "IOMM64" for hierarchy "IOMM64:IOMM_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 345
-Info (12128): Elaborating entity "memory_arbiter" for hierarchy "memory_arbiter:arbiter_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 387
-Info (12128): Elaborating entity "SDRAM8_SP8_B8_I" for hierarchy "SDRAM8_SP8_B8_I:SDRAM_controller" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 415
-Info (12128): Elaborating entity "PRG_ROM" for hierarchy "PRG_ROM:PRG_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 425
-Info (12128): Elaborating entity "altsyncram" for hierarchy "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/PRG_ROM.v Line: 82
-Info (12130): Elaborated megafunction instantiation "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/PRG_ROM.v Line: 82
-Info (12133): Instantiated megafunction "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/PRG_ROM.v Line: 82
+    Info (12023): Found entity 1: altsyncram_4ql2 File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/db/altsyncram_4ql2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_4ql2" for hierarchy "BRAM_8K:main_mem|altsyncram:altsyncram_component|altsyncram_4ql2:auto_generated" File: /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "serial" for hierarchy "serial:serial_inst0" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 227
+Info (12128): Elaborating entity "queue_8_8" for hierarchy "serial:serial_inst0|queue_8_8:tx_queue" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/serial.v Line: 93
+Info (12128): Elaborating entity "UART" for hierarchy "serial:serial_inst0|UART:UART_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/serial.v Line: 95
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:keyboard_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 271
+Info (12128): Elaborating entity "ps2_host" for hierarchy "keyboard:keyboard_inst|ps2_host:ps2_host_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/keyboard.v Line: 88
+Info (12128): Elaborating entity "timer" for hierarchy "timer:timer_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 294
+Info (12128): Elaborating entity "I2C_ri" for hierarchy "I2C_ri:i2c_ri_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 314
+Info (12128): Elaborating entity "I2C_phy" for hierarchy "I2C_ri:i2c_ri_inst|I2C_phy:i2c_phy_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/I2C_ri.sv Line: 96
+Info (12128): Elaborating entity "IOMM64" for hierarchy "IOMM64:IOMM_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 345
+Info (12128): Elaborating entity "memory_arbiter" for hierarchy "memory_arbiter:arbiter_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 387
+Info (12128): Elaborating entity "SDRAM8_SP8_B8_I" for hierarchy "SDRAM8_SP8_B8_I:SDRAM_controller" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 415
+Info (12128): Elaborating entity "PRG_ROM" for hierarchy "PRG_ROM:PRG_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 425
+Info (12128): Elaborating entity "altsyncram" for hierarchy "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/PRG_ROM.v Line: 82
+Info (12130): Elaborated megafunction instantiation "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/PRG_ROM.v Line: 82
+Info (12133): Instantiated megafunction "PRG_ROM:PRG_inst|altsyncram:altsyncram_component" with the following parameter: File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/PRG_ROM.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1683,52 +1683,52 @@ Info (12133): Instantiated megafunction "PRG_ROM:PRG_inst|altsyncram:altsyncram_
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vha1.tdf
-    Info (12023): Found entity 1: altsyncram_vha1 File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/db/altsyncram_vha1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_vha1" for hierarchy "PRG_ROM:PRG_inst|altsyncram:altsyncram_component|altsyncram_vha1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "interrupt_controller" for hierarchy "interrupt_controller:intcon_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 460
-Info (12128): Elaborating entity "NeonFox" for hierarchy "NeonFox:CPU_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 525
-Info (12128): Elaborating entity "reg_file" for hierarchy "NeonFox:CPU_inst|reg_file:reg_file_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 238
-Info (12128): Elaborating entity "ALU" for hierarchy "NeonFox:CPU_inst|ALU:ALU_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 251
-Info (12128): Elaborating entity "PC" for hierarchy "NeonFox:CPU_inst|PC:PC_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 279
-Info (12128): Elaborating entity "call_stack" for hierarchy "NeonFox:CPU_inst|PC:PC_inst|call_stack:cstack0" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/PC.v Line: 69
-Info (12128): Elaborating entity "decode_unit" for hierarchy "NeonFox:CPU_inst|decode_unit:decoder_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 311
-Info (12128): Elaborating entity "hazard_unit" for hierarchy "NeonFox:CPU_inst|hazard_unit:hazard_inst" File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 338
+    Info (12023): Found entity 1: altsyncram_vha1 File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/db/altsyncram_vha1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_vha1" for hierarchy "PRG_ROM:PRG_inst|altsyncram:altsyncram_component|altsyncram_vha1:auto_generated" File: /home/dragomir/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "interrupt_controller" for hierarchy "interrupt_controller:intcon_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 460
+Info (12128): Elaborating entity "NeonFox" for hierarchy "NeonFox:CPU_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 525
+Info (12128): Elaborating entity "reg_file" for hierarchy "NeonFox:CPU_inst|reg_file:reg_file_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 238
+Info (12128): Elaborating entity "ALU" for hierarchy "NeonFox:CPU_inst|ALU:ALU_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 251
+Info (12128): Elaborating entity "PC" for hierarchy "NeonFox:CPU_inst|PC:PC_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 279
+Info (12128): Elaborating entity "call_stack" for hierarchy "NeonFox:CPU_inst|PC:PC_inst|call_stack:cstack0" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/PC.v Line: 69
+Info (12128): Elaborating entity "decode_unit" for hierarchy "NeonFox:CPU_inst|decode_unit:decoder_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 311
+Info (12128): Elaborating entity "hazard_unit" for hierarchy "NeonFox:CPU_inst|hazard_unit:hazard_inst" File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 338
 Info (276014): Found 8 instances of uninferred RAM logic
-    Info (276004): RAM logic "serial:serial_inst0|queue_8_8:tx_queue|queue_mem" is uninferred due to inappropriate RAM size File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
-    Info (276004): RAM logic "serial:serial_inst1|queue_8_8:tx_queue|queue_mem" is uninferred due to inappropriate RAM size File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
-    Info (276004): RAM logic "keyboard:keyboard_inst|queue_8_8:tx_queue|queue_mem" is uninferred due to inappropriate RAM size File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
-    Info (276004): RAM logic "SDRAM8_SP8_B8_I:SDRAM_controller|queue_8_8:init_fifo_inst|queue_mem" is uninferred due to inappropriate RAM size File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
-    Info (276004): RAM logic "serial:serial_inst0|queue_8_8:rx_queue|queue_mem" is uninferred due to inappropriate RAM size File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
-    Info (276004): RAM logic "serial:serial_inst1|queue_8_8:rx_queue|queue_mem" is uninferred due to inappropriate RAM size File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
-    Info (276004): RAM logic "keyboard:keyboard_inst|queue_8_8:rx_queue|queue_mem" is uninferred due to inappropriate RAM size File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
-    Info (276006): RAM logic "NeonFox:CPU_inst|PC:PC_inst|call_stack:cstack0|stack_mem" is uninferred due to "logic" being set as ramstyle synthesis attribute File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/PC.v Line: 210
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 133
+    Info (276004): RAM logic "serial:serial_inst0|queue_8_8:tx_queue|queue_mem" is uninferred due to inappropriate RAM size File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
+    Info (276004): RAM logic "serial:serial_inst1|queue_8_8:tx_queue|queue_mem" is uninferred due to inappropriate RAM size File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
+    Info (276004): RAM logic "keyboard:keyboard_inst|queue_8_8:tx_queue|queue_mem" is uninferred due to inappropriate RAM size File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
+    Info (276004): RAM logic "SDRAM8_SP8_B8_I:SDRAM_controller|queue_8_8:init_fifo_inst|queue_mem" is uninferred due to inappropriate RAM size File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
+    Info (276004): RAM logic "serial:serial_inst0|queue_8_8:rx_queue|queue_mem" is uninferred due to inappropriate RAM size File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
+    Info (276004): RAM logic "serial:serial_inst1|queue_8_8:rx_queue|queue_mem" is uninferred due to inappropriate RAM size File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
+    Info (276004): RAM logic "keyboard:keyboard_inst|queue_8_8:rx_queue|queue_mem" is uninferred due to inappropriate RAM size File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/queue_8_8.sv Line: 15
+    Info (276006): RAM logic "NeonFox:CPU_inst|PC:PC_inst|call_stack:cstack0|stack_mem" is uninferred due to "logic" being set as ramstyle synthesis attribute File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/PC.v Line: 210
+Info (13000): Registers with preset signals will power-up high File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/CPU/NeonFox.v Line: 133
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sdram_cke" is stuck at VCC File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 55
-    Warning (13410): Pin "sdram_cs_n" is stuck at GND File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/Toplevel.v Line: 56
+    Warning (13410): Pin "sdram_cke" is stuck at VCC File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 55
+    Warning (13410): Pin "sdram_cs_n" is stuck at GND File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/Toplevel.v Line: 56
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 82 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/Steve/Workspace/DragonBoard_programmer_V12/output_files/DragonBoard_programmer.map.smsg
+Info (144001): Generated suppressed messages file /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/output_files/DragonBoard_programmer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5018 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5017 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 27 output pins
     Info (21060): Implemented 10 bidirectional pins
-    Info (21061): Implemented 4946 logic cells
+    Info (21061): Implemented 4945 logic cells
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4885 megabytes
-    Info: Processing ended: Sun Jul 10 15:32:29 2022
-    Info: Elapsed time: 00:00:13
+    Info: Peak virtual memory: 1067 megabytes
+    Info: Processing ended: Sun Mar 12 14:21:56 2023
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Steve/Workspace/DragonBoard_programmer_V12/output_files/DragonBoard_programmer.map.smsg.
+The suppressed messages can be found in /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/output_files/DragonBoard_programmer.map.smsg.
 
 

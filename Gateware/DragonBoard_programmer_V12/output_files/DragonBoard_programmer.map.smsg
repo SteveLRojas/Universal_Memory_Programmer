@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at I2C_phy.sv(61): always construct contains both blocking and non-blocking assignments File: C:/Users/Steve/Workspace/DragonBoard_programmer_V12/I2C_phy.sv Line: 61
+Warning (10268): Verilog HDL information at I2C_phy.sv(61): always construct contains both blocking and non-blocking assignments File: /home/dragomir/repos/Universal_Memory_Programmer/Gateware/DragonBoard_programmer_V12/I2C_phy.sv Line: 61

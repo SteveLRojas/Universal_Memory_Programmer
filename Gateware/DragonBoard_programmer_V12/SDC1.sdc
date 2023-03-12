@@ -8,13 +8,13 @@ set_false_path -from * -to [get_ports {led* txd0 txd1 ps2_clk_q ps2_data_q i2c_s
 set_false_path -from [get_ports {reset button* rxd0 rxd1 ps2_clk_d ps2_data_d i2c_sda}] -to *
 
 # board delay + Tco(max) of external devices (memory)
-set_input_delay -clock mem_clk -max 7.0 [get_ports {sdram_dq[*]}]
+set_input_delay -clock mem_clk -max 6.0 [get_ports {sdram_dq[*]}]
 
 # board delay + Tco(min) of external devices
-set_input_delay -clock mem_clk -min 3.0 [get_ports {sdram_dq[*]}]
+set_input_delay -clock mem_clk -min 2.5 [get_ports {sdram_dq[*]}]
 
 # board delay + Tsu of external devices
-set_output_delay -clock mem_clk -max 3.0 [get_ports {sdram_cke sdram_cs_n sdram_wre_n sdram_cas_n sdram_ras_n sdram_a* sdram_ba sdram_dqm sdram_dq*}]
+set_output_delay -clock mem_clk -max 1.5 [get_ports {sdram_cke sdram_cs_n sdram_wre_n sdram_cas_n sdram_ras_n sdram_a* sdram_ba sdram_dqm sdram_dq*}]
 
 # board delay - Th of external devices
-set_output_delay -clock mem_clk -min -1.0 [get_ports {sdram_cke sdram_cs_n sdram_wre_n sdram_cas_n sdram_ras_n sdram_a* sdram_ba sdram_dqm sdram_dq*}]
+set_output_delay -clock mem_clk -min -0.8 [get_ports {sdram_cke sdram_cs_n sdram_wre_n sdram_cas_n sdram_ras_n sdram_a* sdram_ba sdram_dqm sdram_dq*}]

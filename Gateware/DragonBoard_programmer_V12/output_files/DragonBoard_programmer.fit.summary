@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun Jul 10 15:32:41 2022
+Fitter Status : Successful - Sun Mar 12 14:22:08 2023
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : DragonBoard_programmer
 Top-level Entity Name : DragonBoard_programmer
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 3,961 / 6,272 ( 63 % )
-    Total combinational functions : 2,972 / 6,272 ( 47 % )
+Total logic elements : 3,962 / 6,272 ( 63 % )
+    Total combinational functions : 2,971 / 6,272 ( 47 % )
     Dedicated logic registers : 2,881 / 6,272 ( 46 % )
 Total registers : 2881
 Total pins : 47 / 92 ( 51 % )
