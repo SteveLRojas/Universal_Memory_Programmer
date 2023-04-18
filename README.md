@@ -5,7 +5,8 @@ Tool to program and test onboard memories on a wide range of FPGA boards.
 - terasIC DE1  
 - terasIC DE2  
 - Digilent Nexys 2  
-- DragonBoard (version 1.2)  
+- Digilent Nexys 3  
+- DragonBoard (versions 1.0 1.2)  
 
 ## What is it for?
 This project is intended to program flash and EEPROM memories on FPGA boards.  
