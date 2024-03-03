@@ -113,6 +113,7 @@ def connectToBoard(serialObj):
 def readTarget(serialObj, maxReadSize=None):
 	# Connect & Handshake 
 	amtToRead = connectToBoard(serialObj)
+	serialObj.timeout = 100
 
 	if (maxReadSize is not None and (maxReadSize < amtToRead)):
 			amtToRead = maxReadSize
@@ -129,7 +130,6 @@ def readTarget(serialObj, maxReadSize=None):
 	readSize = int.from_bytes(readCmdRes, byteorder='big', signed=False)
 
 	# Read data from Target and write to file
-	serialObj.timeout = 100
 	block_size = 1024
 	amt_read = 0
 	data = bytearray()
@@ -232,6 +232,8 @@ def handleWrite(serialObj, fileName):
 
 	# Connect & Handshake 
 	mem_size = connectToBoard(serialObj)
+	serialObj.timeout = 30
+	serialObj.write_timeout = 1200
 
 	print("Mem size: " + str(mem_size))
 	if(file_size > mem_size):
@@ -247,8 +249,6 @@ def handleWrite(serialObj, fileName):
 	#transfer blocks
 	p_bar = tqdm(total = file_size)
 	bytes_written = 0
-	serialObj.timeout = 30
-	serialObj.write_timeout = 1200
 	while bytes_written != file_size:
 		res = serialObj.read(SIZE_RESPONSE_SIZE)
 		block_size = int.from_bytes(res, byteorder='big', signed=False)
